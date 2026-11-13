@@ -1,0 +1,38 @@
+name: CI
+
+# รันทุกครั้งที่ push หรือเปิด PR ด้วย LLM_BACKEND=stub (ไม่ต้องมี GPU หรือ Ollama)
+# ตรวจตรรกะของ workflow, การเตรียมข้อมูล และชุดคำถามทดสอบ — ความแม่นของโมเดลจริงวัดด้วย eval.py บนเครื่องที่มี GPU
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      LLM_BACKEND: stub
+      COLUMNS: "120"
+      PYTHONUTF8: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: |
+            requirements.txt
+            requirements-dev.txt
+      - name: Install
+        run: pip install -r requirements-dev.txt
+      - name: Lint (pyflakes)
+        run: python -m pyflakes helpdesk tools tests prep.py chat.py eval.py
+      - name: Unit tests
+        run: python -m pytest
+      - name: Smoke test — prep
+        run: python prep.py
+      - name: Smoke test — chat demo
+        run: python chat.py --demo --no-pause
+      - name: Smoke test — eval (stub)
+        run: python eval.py --file data/eval/final_check.jsonl
