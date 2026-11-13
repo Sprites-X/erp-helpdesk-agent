@@ -1,0 +1,22 @@
+{"id": "q01", "question": "จะสร้างใบขอซื้อต้องเข้าเมนูไหน", "intent": "how_to", "module": "PR", "outcome": "answer", "expected_sources": ["PR-2"], "must_include": ["สร้างใหม่"]}
+{"id": "q02", "question": "PR ยอด 300,000 บาท ใครต้องอนุมัติ", "intent": "how_to", "module": "PR", "outcome": "answer", "expected_sources": ["PR-3", "FAQ-2"], "must_include": ["ผู้จัดการโครงการ"]}
+{"id": "q03", "question": "PO อนุมัติไปแล้ว อยากเพิ่มจำนวนต้องทำยังไง", "intent": "how_to", "module": "PO", "outcome": "answer", "expected_sources": ["PO-4", "FAQ-4", "FAQ-5"], "must_include": ["Revision"]}
+{"id": "q04", "question": "ซื้อของเกินแสนต้องมีใบเสนอราคากี่เจ้า", "intent": "how_to", "module": "PO", "outcome": "answer", "expected_sources": ["PO-3"], "must_include": ["3"]}
+{"id": "q05", "question": "ของมาส่งไม่ครบ บันทึกรับยังไง", "intent": "how_to", "module": "RCV", "outcome": "answer", "expected_sources": ["RCV-3"], "must_include": ["ค้างรับ"]}
+{"id": "q06", "question": "ของที่รับมาชำรุดต้องคืนยังไง", "intent": "how_to", "module": "RCV", "outcome": "answer", "expected_sources": ["RCV-4"], "must_include": ["คืนสินค้า"]}
+{"id": "q07", "question": "3-way matching คืออะไร", "intent": "how_to", "module": "AP", "outcome": "answer", "expected_sources": ["AP-2"], "must_include": ["ใบรับสินค้า"]}
+{"id": "q08", "question": "เงินประกันผลงานจะคืนผู้รับเหมาได้เมื่อไหร่", "intent": "how_to", "module": "AP", "outcome": "answer", "expected_sources": ["AP-4", "FAQ-8"], "must_include": ["รับประกัน"]}
+{"id": "q09", "question": "งบรหัสต้นทุนนี้ไม่พอ ขอย้ายงบจากอีกรหัสได้ไหม", "intent": "how_to", "module": "BUDGET", "outcome": "answer", "expected_sources": ["BUDGET-3", "FAQ-10"], "must_include": ["โอนงบ"]}
+{"id": "q10", "question": "รายงานงบขึ้นสีแดงแปลว่าอะไร", "intent": "how_to", "module": "BUDGET", "outcome": "answer", "expected_sources": ["BUDGET-4"], "must_include": ["100"]}
+{"id": "q11", "question": "ตั้งงบโครงการใหม่จาก BOQ ทำยังไง", "intent": "how_to", "module": "BUDGET", "outcome": "answer", "expected_sources": ["BUDGET-2"], "must_include": ["BOQ"]}
+{"id": "q12", "question": "ลืมรหัสผ่านเข้าระบบ", "intent": "how_to", "module": "GENERAL", "outcome": "answer", "expected_sources": ["FAQ-12"], "must_include": ["ลืมรหัสผ่าน"]}
+{"id": "q13", "question": "บันทึกรับของไม่ได้ ขึ้น RCV-E01", "intent": "problem", "module": "RCV", "outcome": "answer", "expected_sources": ["RCV-5", "FAQ-7"], "must_include": ["5"]}
+{"id": "q14", "question": "ออก PR ไม่ผ่าน ขึ้นว่างบประมาณคงเหลือไม่พอ", "intent": "problem", "module": "PR", "outcome": "answer", "expected_sources": ["PR-5"], "must_include": ["โอนงบ"]}
+{"id": "q15", "question": "ตั้งหนี้ไม่ได้ ระบบแจ้ง AP-E01", "intent": "problem", "module": "AP", "outcome": "answer", "expected_sources": ["AP-6"], "must_include": ["ซ้ำ"]}
+{"id": "q16", "question": "เลือกผู้ขายใน PO แล้วขึ้นว่าผู้ขายถูกระงับ", "intent": "problem", "module": "PO", "outcome": "answer", "expected_sources": ["PO-6"], "must_include": ["ฝ่ายบัญชี"]}
+{"id": "q17", "question": "กดปุ่มพิมพ์เช็คแล้วโปรแกรมค้าง หน้าจอขาว ต้องปิดทิ้งทุกครั้ง", "intent": "problem", "module": "AP", "outcome": "ticket", "expected_sources": [], "must_include": []}
+{"id": "q18", "question": "ขึ้น error PO-E07 ตอนกดอนุมัติ", "intent": "problem", "module": "PO", "outcome": "ticket", "expected_sources": [], "must_include": []}
+{"id": "q19", "question": "Export รายงาน Budget vs Actual เป็น Excel แล้วตัวหนังสือภาษาไทยเพี้ยนอ่านไม่ออก", "intent": "problem", "module": "BUDGET", "outcome": "ticket", "expected_sources": [], "must_include": []}
+{"id": "q20", "question": "เข้าระบบไม่ได้ทั้งออฟฟิศตั้งแต่เช้า", "intent": "problem", "module": "GENERAL", "outcome": "ticket", "expected_sources": [], "must_include": []}
+{"id": "q21", "question": "แนะนำร้านกาแฟแถวไซต์งานบางนาหน่อย", "intent": "out_of_scope", "module": "UNKNOWN", "outcome": "out_of_scope", "expected_sources": [], "must_include": []}
+{"id": "q22", "question": "ช่วยเขียนแคปชันอวยพรวันเกิดหัวหน้าให้หน่อย", "intent": "out_of_scope", "module": "UNKNOWN", "outcome": "out_of_scope", "expected_sources": [], "must_include": []}

@@ -1,0 +1,757 @@
+{
+  "config": {
+    "backend": "ollama",
+    "chat_model": "qwen2.5:7b",
+    "embed_model": "bge-m3",
+    "min_score": 0.55,
+    "top_k": 4
+  },
+  "summary": {
+    "intent_ok": {
+      "correct": 20,
+      "total": 22
+    },
+    "module_ok": {
+      "correct": 17,
+      "total": 20
+    },
+    "retrieval_ok": {
+      "correct": 16,
+      "total": 16
+    },
+    "outcome_ok": {
+      "correct": 20,
+      "total": 22
+    },
+    "content_ok": {
+      "correct": 14,
+      "total": 16
+    },
+    "answered_but_should_ticket": 0,
+    "ticket_but_should_answer": 1,
+    "latency_avg_s": 10.5,
+    "latency_max_s": 16.63,
+    "re_searched": 0,
+    "re_searched_then_answered_correctly": 0
+  },
+  "records": [
+    {
+      "id": "h01",
+      "question": "แนบไฟล์ใน PR ได้ขนาดสูงสุดเท่าไหร่",
+      "expected": {
+        "intent": "how_to",
+        "module": "PR",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "how_to",
+        "module": "PR",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": true,
+      "top_score": 0.6224,
+      "searches": 1,
+      "queries": [
+        "ขนาดไฟล์ที่สามารถแนบในใบขอซื้อสูงสุดคือเท่าใด"
+      ],
+      "hits": [
+        "PR-2",
+        "PO-3",
+        "PR-1",
+        "PR-3",
+        "FAQ-1"
+      ],
+      "reply": "ขนาดไฟล์ที่สามารถแนบได้สูงสุดคือ 10 MB ต่อไฟล์",
+      "latency_s": 10.66
+    },
+    {
+      "id": "h02",
+      "question": "PR เกินห้าแสนต้องผ่านใครเพิ่ม",
+      "expected": {
+        "intent": "how_to",
+        "module": "PR",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "how_to",
+        "module": "PR",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": true,
+      "top_score": 0.6622,
+      "searches": 1,
+      "queries": [
+        "ใบขอซื้อที่มูลค่าเกินห้าแสนบาทต้องผ่านการอนุมัติด้วยวิธีใด"
+      ],
+      "hits": [
+        "PR-3",
+        "PR-2",
+        "PO-3",
+        "PR-1",
+        "FAQ-2"
+      ],
+      "reply": "ใบขอซื้อเกิน 500,000 บาทต้องผ่านผู้อำนวยการฝ่ายก่อสร้างอนุมัติเพิ่มอีกหนึ่งขั้น",
+      "latency_s": 10.5
+    },
+    {
+      "id": "h03",
+      "question": "PR ที่กลายเป็น PO ไปแล้วยกเลิกได้ไหม",
+      "expected": {
+        "intent": "how_to",
+        "module": "PR",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "how_to",
+        "module": "PR",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": true,
+      "top_score": 0.6455,
+      "searches": 1,
+      "queries": [
+        "หลังจากแปลง PR ให้เป็น PO แล้ว สามารถยกเลิก PO นั้นได้หรือไม่"
+      ],
+      "hits": [
+        "PR-4",
+        "PO-4",
+        "FAQ-5",
+        "PO-1",
+        "FAQ-1",
+        "FAQ-15"
+      ],
+      "reply": "ไม่สามารถยกเลิก PR ที่กลายเป็น PO ได้ ต้องไปยกเลิกที่ใบสั่งซื้อแทน",
+      "latency_s": 10.49
+    },
+    {
+      "id": "h04",
+      "question": "PO ใบเดียวรวมของจากหลาย PR ได้หรือเปล่า",
+      "expected": {
+        "intent": "how_to",
+        "module": "PO",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "how_to",
+        "module": "PO",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": true,
+      "top_score": 0.7205,
+      "searches": 1,
+      "queries": [
+        "สามารถสร้างใบสั่งซื้อจากหลายใบขอซื้อได้หรือไม่"
+      ],
+      "hits": [
+        "PO-1",
+        "PO-2",
+        "PR-1",
+        "PO-4",
+        "PO-3"
+      ],
+      "reply": "ได้ แต่ต้องเป็นโครงการเดียวกันและผู้ขายรายเดียวกัน",
+      "latency_s": 10.19
+    },
+    {
+      "id": "h05",
+      "question": "เลขที่ PO ฉบับแก้ไขจะออกมาเป็นแบบไหน",
+      "expected": {
+        "intent": "how_to",
+        "module": "PO",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "how_to",
+        "module": "PO",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": true,
+      "top_score": 0.6599,
+      "searches": 1,
+      "queries": [
+        "เลขที่ PO ฉบับแก้ไขจะมีรูปแบบเป็นอย่างไร"
+      ],
+      "hits": [
+        "PO-4",
+        "FAQ-5",
+        "AP-6",
+        "PO-6",
+        "PO-1"
+      ],
+      "reply": "เลขที่ PO ฉบับแก้ไขจะออกมาเป็นเลขเดิมต่อท้ายด้วย -R1 หรือ -R2 ตามลำดับ",
+      "latency_s": 10.31
+    },
+    {
+      "id": "h06",
+      "question": "อยากส่ง PO ให้ซัพพลายเออร์ทางเมล ทำยังไง",
+      "expected": {
+        "intent": "how_to",
+        "module": "PO",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "how_to",
+        "module": "PO",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": true,
+      "top_score": 0.6669,
+      "searches": 1,
+      "queries": [
+        "应该如何通过邮件发送采购订单？"
+      ],
+      "hits": [
+        "PO-5",
+        "FAQ-3",
+        "PO-2",
+        "RCV-2",
+        "PO-1"
+      ],
+      "reply": "หลังจากอนุมัติ PO ให้กด 'ส่งอีเมล' ระบบจะแนบไฟล์ PDF ของ PO ไปยังอีเมลผู้ขายที่บันทึกไว้ หรือกด 'พิมพ์' เพื่อพิมพ์ฉบับที่มีลายเซ็นผู้อนุมัติ",
+      "latency_s": 11.55
+    },
+    {
+      "id": "h07",
+      "question": "หน้างานไม่มีเน็ต บันทึกรับของได้ไหม",
+      "expected": {
+        "intent": "how_to",
+        "module": "RCV",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "problem",
+        "module": "RCV",
+        "outcome": "answer"
+      },
+      "intent_ok": false,
+      "module_ok": true,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": true,
+      "top_score": 0.6042,
+      "searches": 1,
+      "queries": [
+        "มีปัญหาในการบันทึกรับสินค้าเมื่อไม่มีเน็ต"
+      ],
+      "hits": [
+        "RCV-2",
+        "RCV-3",
+        "RCV-1",
+        "RCV-5"
+      ],
+      "reply": "ได้ แอปจะเก็บข้อมูลไว้และส่งอัตโนมัติเมื่อกลับมาออนไลน์",
+      "latency_s": 10.47
+    },
+    {
+      "id": "h08",
+      "question": "ซัพพลายเออร์บอกว่าจะไม่ส่งของที่เหลือแล้ว ต้องทำอะไรกับ PO",
+      "expected": {
+        "intent": "how_to",
+        "module": "RCV",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "how_to",
+        "module": "PO",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": false,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": true,
+      "top_score": 0.6523,
+      "searches": 1,
+      "queries": [
+        "เมื่อซัพพลายเออร์บอกว่าจะไม่ส่งของที่เหลือแล้วต้องทำอย่างไรกับใบสั่งซื้อ"
+      ],
+      "hits": [
+        "RCV-3",
+        "PO-4",
+        "PR-4",
+        "PO-1",
+        "PO-2",
+        "PO-5"
+      ],
+      "reply": "กดปิดยอดค้างรับใน PO",
+      "latency_s": 10.09
+    },
+    {
+      "id": "h09",
+      "question": "อัตราหัก ณ ที่จ่ายของผู้ขายรายนี้ผิด ต้องแก้ตรงไหน",
+      "expected": {
+        "intent": "how_to",
+        "module": "AP",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "how_to",
+        "module": "AP",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": true,
+      "top_score": 0.5598,
+      "searches": 1,
+      "queries": [
+        "应该如何调整供应商的预扣税率？"
+      ],
+      "hits": [
+        "AP-3",
+        "PO-4",
+        "PR-4",
+        "PO-2",
+        "AP-2",
+        "FAQ-8"
+      ],
+      "reply": "ให้แก้ไขอัตราหัก ณ ที่จ่ายที่ข้อมูลผู้ขาย",
+      "latency_s": 10.1
+    },
+    {
+      "id": "h10",
+      "question": "ทำชุดจ่ายเงินให้เจ้าหนี้ยังไง",
+      "expected": {
+        "intent": "how_to",
+        "module": "AP",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "how_to",
+        "module": "AP",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": true,
+      "top_score": 0.6486,
+      "searches": 1,
+      "queries": [
+        "应该如何为供应商创建付款单？"
+      ],
+      "hits": [
+        "PO-2",
+        "AP-5",
+        "PR-2",
+        "PO-1",
+        "AP-1",
+        "AP-2"
+      ],
+      "reply": "ไปที่เมนู เจ้าหนี้ > วางแผนจ่ายเงิน แล้วเลือกช่วงวันครบกำหนด ระบบจะแสดงหนี้ที่ครบกำหนดพร้อมยอดหลังหักภาษีและเงินประกันผลงาน เลือกรายการ แล้วกด สร้างชุดจ่ายเงิน ส่งไฟล์โอนเงินไปยังธนาคาร หรือพิมพ์เช็ค",
+      "latency_s": 10.79
+    },
+    {
+      "id": "h11",
+      "question": "อยากเพิ่มงบรวมของทั้งโครงการ ต้องทำยังไง",
+      "expected": {
+        "intent": "how_to",
+        "module": "BUDGET",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "how_to",
+        "module": "BUDGET",
+        "outcome": "ticket"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": true,
+      "outcome_ok": false,
+      "content_ok": false,
+      "top_score": 0.6787,
+      "searches": 1,
+      "queries": [
+        "วิธีการเพิ่มงบประมาณรวมของโครงการอย่างไร"
+      ],
+      "hits": [
+        "BUDGET-3",
+        "BUDGET-2",
+        "BUDGET-1",
+        "PR-2",
+        "BUDGET-5"
+      ],
+      "reply": "ยังไม่พบวิธีแก้ในคู่มือ จึงเปิด Ticket T-261112-222641-BD15 ให้ทีม Support งานควบคุมต้นทุนแล้ว (ความเร่งด่วน: low)\nเพื่อให้แก้ได้เร็วขึ้น กรุณาเตรียม: เอกสารที่ต้องการเพิ่มงบรวมของโครงการ, ขั้นตอนที่ผู้ใช้ได้ลองทำแล้ว, โมดูลหรือหน้าที่ผู้ใช้ได้ลองเข้าใช้งาน",
+      "latency_s": 16.63
+    },
+    {
+      "id": "h12",
+      "question": "ตั้งค่าคนรับเมลเตือนงบได้ที่ไหน",
+      "expected": {
+        "intent": "how_to",
+        "module": "BUDGET",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "how_to",
+        "module": "BUDGET",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": true,
+      "top_score": 0.7499,
+      "searches": 1,
+      "queries": [
+        "ตั้งค่าการรับแจ้งเตือนงบประมาณผ่านอีเมลทำอย่างไร"
+      ],
+      "hits": [
+        "BUDGET-5",
+        "BUDGET-2",
+        "FAQ-12",
+        "BUDGET-3"
+      ],
+      "reply": "ตั้งค่าคนรับเมลเตือนงบได้ที่ โครงการ > ตั้งค่า > การแจ้งเตือน",
+      "latency_s": 10.3
+    },
+    {
+      "id": "h13",
+      "question": "มีแอปใช้บนไอโฟนไหม",
+      "expected": {
+        "intent": "how_to",
+        "module": "GENERAL",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "how_to",
+        "module": "UNKNOWN",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": false,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": false,
+      "top_score": 0.5685,
+      "searches": 1,
+      "queries": [
+        "มีแอปใช้บนไอโฟนไหม"
+      ],
+      "hits": [
+        "FAQ-13",
+        "FAQ-6",
+        "FAQ-12",
+        "RCV-2"
+      ],
+      "reply": "มีแอป SiteERP สำหรับใช้งานบนไอโฟน",
+      "latency_s": 9.95
+    },
+    {
+      "id": "h14",
+      "question": "สร้าง PR แล้วเจอ PR-E03",
+      "expected": {
+        "intent": "problem",
+        "module": "PR",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "problem",
+        "module": "PR",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": true,
+      "top_score": 0.6961,
+      "searches": 1,
+      "queries": [
+        "สร้างใบขอซื้อแล้วเกิดข้อผิดพลาดรหัส PR-E03"
+      ],
+      "hits": [
+        "PR-5",
+        "PR-1",
+        "RCV-5",
+        "PO-6",
+        "PR-4",
+        "PR-2"
+      ],
+      "reply": "แก้ไขวันที่ต้องการใช้ของเป็นวันปัจจุบันหรือวันในอนาคต",
+      "latency_s": 10.72
+    },
+    {
+      "id": "h15",
+      "question": "ทำ PO แล้วระบบเตือนว่าราคาสูงกว่าราคากลาง",
+      "expected": {
+        "intent": "problem",
+        "module": "PO",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "problem",
+        "module": "PO",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": true,
+      "top_score": 0.6873,
+      "searches": 1,
+      "queries": [
+        "ทำ PO แล้วระบบเตือนว่าราคาสูงกว่าราคากลางเกิดข้อผิดพลาดอย่างไร"
+      ],
+      "hits": [
+        "PO-6",
+        "PO-4",
+        "PO-3",
+        "RCV-3",
+        "FAQ-5"
+      ],
+      "reply": "ต้องแนบเหตุผลประกอบ และจะมีผู้อนุมัติเพิ่มอีกหนึ่งขั้น",
+      "latency_s": 10.99
+    },
+    {
+      "id": "h16",
+      "question": "ตั้งหนี้แล้วขึ้น AP-E02",
+      "expected": {
+        "intent": "problem",
+        "module": "AP",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "problem",
+        "module": "AP",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": true,
+      "top_score": 0.6769,
+      "searches": 1,
+      "queries": [
+        "ตั้งหนี้แล้วขึ้นรหัสผิดพลาด AP-E02"
+      ],
+      "hits": [
+        "AP-6",
+        "AP-2",
+        "AP-5",
+        "PR-5",
+        "AP-1"
+      ],
+      "reply": "ตรวจสอบว่ารับของครบหรือไม่ ถ้าราคาเปลี่ยนต้องให้ฝ่ายจัดซื้อทำ Revision ของ PO ก่อน",
+      "latency_s": 10.93
+    },
+    {
+      "id": "h17",
+      "question": "แอปมือถือเด้งออกเองทุกครั้งที่กดถ่ายรูปสินค้าตอนรับของ",
+      "expected": {
+        "intent": "problem",
+        "module": "RCV",
+        "outcome": "ticket"
+      },
+      "actual": {
+        "intent": "problem",
+        "module": "RCV",
+        "outcome": "ticket"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": null,
+      "outcome_ok": true,
+      "content_ok": null,
+      "top_score": 0.497,
+      "searches": 1,
+      "queries": [
+        "แอปมือถือเด้งออกเองทุกครั้งที่กดถ่ายรูปสินค้าตอนรับของ"
+      ],
+      "hits": [
+        "FAQ-6",
+        "RCV-2",
+        "RCV-5",
+        "FAQ-1",
+        "RCV-1"
+      ],
+      "reply": "ยังไม่พบวิธีแก้ในคู่มือ จึงเปิด Ticket T-261112-222745-E386 ให้ทีม Support งานจัดซื้อแล้ว (ความเร่งด่วน: high)\nเพื่อให้แก้ได้เร็วขึ้น กรุณาเตรียม: เลขที่เอกสารที่เกี่ยวข้อง, ภาพหน้าจอแสดงข้อผิดพลาด (ถ้ามี), เวลานำมาแจ้งปัญหานี้",
+      "latency_s": 10.9
+    },
+    {
+      "id": "h18",
+      "question": "ขึ้น BUDGET-E04 ตอนนำเข้า BOQ",
+      "expected": {
+        "intent": "problem",
+        "module": "BUDGET",
+        "outcome": "ticket"
+      },
+      "actual": {
+        "intent": "problem",
+        "module": "BUDGET",
+        "outcome": "ticket"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": null,
+      "outcome_ok": true,
+      "content_ok": null,
+      "top_score": 0.6055,
+      "searches": 1,
+      "queries": [
+        "นำเข้า BOQ แล้วเกิดข้อผิดพลาดรหัส BUDGET-E04"
+      ],
+      "hits": [
+        "BUDGET-2",
+        "PR-5",
+        "BUDGET-3",
+        "BUDGET-1",
+        "FAQ-10"
+      ],
+      "reply": "ยังไม่พบวิธีแก้ในคู่มือ จึงเปิด Ticket T-261112-222756-5A33 ให้ทีม Support งานควบคุมต้นทุนแล้ว (ความเร่งด่วน: medium)\nเพื่อให้แก้ได้เร็วขึ้น กรุณาเตรียม: เลขที่เอกสาร BOQ ที่เกิดปัญหา, ข้อมูลเพิ่มเติมเกี่ยวกับข้อผิดพลาด (หากมี), ขั้นตอนการดำเนินการก่อนเกิดข้อผิดพลาด",
+      "latency_s": 10.91
+    },
+    {
+      "id": "h19",
+      "question": "รายงานเจ้าหนี้ยอดรวมไม่ตรงกับงบการเงิน ต่างกันเป็นแสน",
+      "expected": {
+        "intent": "problem",
+        "module": "AP",
+        "outcome": "ticket"
+      },
+      "actual": {
+        "intent": "problem",
+        "module": "AP",
+        "outcome": "ticket"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": null,
+      "outcome_ok": true,
+      "content_ok": null,
+      "top_score": 0.6544,
+      "searches": 1,
+      "queries": [
+        "ยอดรวมในรายงานเจ้าหนี้ไม่ตรงกับงบการเงิน มีความต่างเป็นแสนทำอย่างไร"
+      ],
+      "hits": [
+        "AP-6",
+        "AP-2",
+        "BUDGET-3",
+        "AP-5",
+        "AP-3"
+      ],
+      "reply": "ยังไม่พบวิธีแก้ในคู่มือ จึงเปิด Ticket T-261112-222809-408B ให้ทีม Support งานบัญชีการเงินแล้ว (ความเร่งด่วน: high)\nเพื่อให้แก้ได้เร็วขึ้น กรุณาเตรียม: เลขที่เอกสารที่เกี่ยวข้องในงบการเงิน, ภาพหน้าจอแสดงข้อมูลรายงานเจ้าหนี้และงบการเงิน, วันที่และเวลาที่เกิดปัญหา",
+      "latency_s": 13.07
+    },
+    {
+      "id": "h20",
+      "question": "ระบบช้ามากตั้งแต่บ่าย เปิดหน้าไหนก็หมุนค้าง",
+      "expected": {
+        "intent": "problem",
+        "module": "GENERAL",
+        "outcome": "ticket"
+      },
+      "actual": {
+        "intent": "problem",
+        "module": "UNKNOWN",
+        "outcome": "ticket"
+      },
+      "intent_ok": true,
+      "module_ok": false,
+      "retrieval_ok": null,
+      "outcome_ok": true,
+      "content_ok": null,
+      "top_score": 0.5461,
+      "searches": 1,
+      "queries": [
+        "ระบบ SiteERP ช้ามากตั้งแต่บ่าย เปิดหน้าไหนก็หมุนค้าง"
+      ],
+      "hits": [
+        "FAQ-6",
+        "FAQ-15",
+        "FAQ-13",
+        "RCV-2"
+      ],
+      "reply": "ยังไม่พบวิธีแก้ในคู่มือ จึงเปิด Ticket T-261112-222817-1B49 ให้IT Helpdesk L2แล้ว (ความเร่งด่วน: medium)\nเพื่อให้แก้ได้เร็วขึ้น กรุณาเตรียม: เวลาที่เกิดปัญหา (精确到小时和分钟), 截图或描述具体受影响的模块或功能, 其他同事是否也遇到相同问题",
+      "latency_s": 8.3
+    },
+    {
+      "id": "h21",
+      "question": "พรุ่งนี้ฝนจะตกที่ไซต์งานไหม",
+      "expected": {
+        "intent": "out_of_scope",
+        "module": "UNKNOWN",
+        "outcome": "out_of_scope"
+      },
+      "actual": {
+        "intent": "out_of_scope",
+        "module": "UNKNOWN",
+        "outcome": "out_of_scope"
+      },
+      "intent_ok": true,
+      "module_ok": null,
+      "retrieval_ok": null,
+      "outcome_ok": true,
+      "content_ok": null,
+      "top_score": null,
+      "searches": 0,
+      "queries": [],
+      "hits": [],
+      "reply": "ขออภัย ผู้ช่วยนี้ตอบเฉพาะเรื่องการใช้งานโปรแกรม SiteERP เช่น ใบขอซื้อ ใบสั่งซื้อ รับสินค้า เจ้าหนี้ และงบประมาณโครงการ",
+      "latency_s": 4.48
+    },
+    {
+      "id": "h22",
+      "question": "ขอสูตรคำนวณปริมาณคอนกรีตเสาเข็มหน่อย",
+      "expected": {
+        "intent": "out_of_scope",
+        "module": "UNKNOWN",
+        "outcome": "out_of_scope"
+      },
+      "actual": {
+        "intent": "how_to",
+        "module": "UNKNOWN",
+        "outcome": "ticket"
+      },
+      "intent_ok": false,
+      "module_ok": null,
+      "retrieval_ok": null,
+      "outcome_ok": false,
+      "content_ok": null,
+      "top_score": 0.4759,
+      "searches": 1,
+      "queries": [
+        "ขอสูตรคำนวณปริมาณคอนกรีตเสาเข็ม"
+      ],
+      "hits": [
+        "PR-3",
+        "AP-4",
+        "AP-2",
+        "BUDGET-5"
+      ],
+      "reply": "ยังไม่พบวิธีแก้ในคู่มือ จึงเปิด Ticket T-261112-222831-2514 ให้IT Helpdesk L2แล้ว (ความเร่งด่วน: low)\nเพื่อให้แก้ได้เร็วขึ้น กรุณาเตรียม: ขนาดและลักษณะของเสาเข็ม (ความสูง, รัศมี), ความหนาแน่นของคอนกรีตที่ใช้, วิธีการคำนวณที่ผู้ใช้ได้ลองใช้แล้ว",
+      "latency_s": 8.58
+    }
+  ]
+}

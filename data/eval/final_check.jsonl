@@ -1,0 +1,22 @@
+{"id": "n01", "question": "PR มีสถานะอะไรบ้าง", "intent": "how_to", "module": "PR", "outcome": "answer", "expected_sources": ["PR-1"], "must_include": ["ร่าง"]}
+{"id": "n02", "question": "PR ไม่ถึงห้าหมื่นใครเซ็นอนุมัติ", "intent": "how_to", "module": "PR", "outcome": "answer", "expected_sources": ["PR-3", "FAQ-2"], "must_include": ["วิศวกรโครงการ"]}
+{"id": "n03", "question": "PR อนุมัติแล้วแต่ยังไม่ได้ออก PO ถ้ายกเลิก งบที่จองไว้จะเป็นยังไง", "intent": "how_to", "module": "PR", "outcome": "answer", "expected_sources": ["PR-4"], "must_include": ["คืน"]}
+{"id": "n04", "question": "ถ้าไม่เลือกเจ้าที่เสนอราคาถูกสุด ต้องทำอะไรเพิ่ม", "intent": "how_to", "module": "PO", "outcome": "answer", "expected_sources": ["PO-3"], "must_include": ["เหตุผล"]}
+{"id": "n05", "question": "รับของไปแล้วบางส่วน จะแก้ลดจำนวนใน PO ได้แค่ไหน", "intent": "how_to", "module": "PO", "outcome": "answer", "expected_sources": ["PO-4"], "must_include": ["รับ"]}
+{"id": "n06", "question": "ตอนรับของต้องถ่ายรูปสินค้ากี่รูป", "intent": "how_to", "module": "RCV", "outcome": "answer", "expected_sources": ["RCV-2"], "must_include": ["1"]}
+{"id": "n07", "question": "คืนของให้ผู้ขายแล้ว ต้นทุนของโครงการเปลี่ยนไหม", "intent": "how_to", "module": "RCV", "outcome": "answer", "expected_sources": ["RCV-4"], "must_include": ["ลด"]}
+{"id": "n08", "question": "ราคาในใบแจ้งหนี้ต่างจาก PO ได้มากสุดเท่าไหร่ถึงจะตั้งหนี้ผ่าน", "intent": "how_to", "module": "AP", "outcome": "answer", "expected_sources": ["AP-2"], "must_include": ["1 บาท"]}
+{"id": "n09", "question": "อยากจ่ายเจ้าหนี้ด้วยการโอนผ่านธนาคาร ระบบช่วยอะไรได้", "intent": "how_to", "module": "AP", "outcome": "answer", "expected_sources": ["AP-5"], "must_include": ["ไฟล์โอนเงิน"]}
+{"id": "n10", "question": "งบที่นำเข้าจาก Excel แล้วใช้ได้ทันทีเลยไหม", "intent": "how_to", "module": "BUDGET", "outcome": "answer", "expected_sources": ["BUDGET-2"], "must_include": ["อนุมัติ"]}
+{"id": "n11", "question": "ใครเป็นคนอนุมัติการโอนงบ", "intent": "how_to", "module": "BUDGET", "outcome": "answer", "expected_sources": ["BUDGET-3"], "must_include": ["ผู้ควบคุมต้นทุน"]}
+{"id": "n12", "question": "ถ้างบเกินร้อยเปอร์เซ็นต์แล้ว ระบบเตือนซ้ำบ่อยแค่ไหน", "intent": "how_to", "module": "BUDGET", "outcome": "answer", "expected_sources": ["BUDGET-5"], "must_include": ["จันทร์"]}
+{"id": "n13", "question": "รับของไม่ได้ ขึ้น RCV-E02", "intent": "problem", "module": "RCV", "outcome": "answer", "expected_sources": ["RCV-5"], "must_include": ["อนุมัติ"]}
+{"id": "n14", "question": "เลือกรหัสต้นทุนใน PR แล้วระบบบอกว่าไม่พบรหัสต้นทุน", "intent": "problem", "module": "PR", "outcome": "answer", "expected_sources": ["PR-5"], "must_include": ["ผู้ควบคุมต้นทุน"]}
+{"id": "n15", "question": "ไฟล์ PDF ของ PO ที่ระบบส่งให้ผู้ขายเปิดไม่ได้ ไฟล์เสีย", "intent": "problem", "module": "PO", "outcome": "ticket", "expected_sources": [], "must_include": []}
+{"id": "n16", "question": "ขึ้น AP-E09 ตอนสร้างชุดจ่ายเงิน", "intent": "problem", "module": "AP", "outcome": "ticket", "expected_sources": [], "must_include": []}
+{"id": "n17", "question": "สแกน QR บนใบสั่งซื้อแล้วแอปนิ่ง ไม่ตอบสนองเลย", "intent": "problem", "module": "RCV", "outcome": "ticket", "expected_sources": [], "must_include": []}
+{"id": "n18", "question": "งบคงเหลือในรายงานติดลบ ทั้งที่รหัสต้นทุนนี้ยังไม่เคยมีเอกสารซื้ออะไรเลย", "intent": "problem", "module": "BUDGET", "outcome": "ticket", "expected_sources": [], "must_include": []}
+{"id": "n19", "question": "ระบบเด้งออกเองทุกสิบนาที ต้องล็อกอินใหม่ตลอด", "intent": "problem", "module": "GENERAL", "outcome": "ticket", "expected_sources": [], "must_include": []}
+{"id": "n20", "question": "ช่วยแปลอีเมลนี้เป็นภาษาอังกฤษให้หน่อย", "intent": "out_of_scope", "module": "UNKNOWN", "outcome": "out_of_scope", "expected_sources": [], "must_include": []}
+{"id": "n21", "question": "ราคาเหล็กเส้นวันนี้เท่าไหร่", "intent": "out_of_scope", "module": "UNKNOWN", "outcome": "out_of_scope", "expected_sources": [], "must_include": []}
+{"id": "n22", "question": "ขอเบอร์โทรร้านวัสดุก่อสร้างแถวลาดพร้าว", "intent": "out_of_scope", "module": "UNKNOWN", "outcome": "out_of_scope", "expected_sources": [], "must_include": []}

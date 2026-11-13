@@ -1,0 +1,35 @@
+== ขอบเขต: intent ของ Router เทียบกับคะแนนค้นด้วยคำถามดิบ (ทุกโมดูล) ==
+n15 คาด=ticket       router=problem      module=PO       raw_top=0.614 (PO-5) routed_top=0.601
+n16 คาด=ticket       router=problem      module=AP       raw_top=0.567 (AP-5) routed_top=0.573
+n17 คาด=ticket       router=problem      module=PO       raw_top=0.564 (RCV-2) routed_top=0.569
+n18 คาด=ticket       router=problem      module=BUDGET   raw_top=0.621 (PR-5) routed_top=0.621
+n19 คาด=ticket       router=problem      module=UNKNOWN  raw_top=0.542 (FAQ-6) routed_top=0.542
+n20 คาด=out_of_scope router=out_of_scope module=UNKNOWN  raw_top=0.517 (FAQ-3) routed_top=0.518
+n21 คาด=out_of_scope router=out_of_scope module=UNKNOWN  raw_top=0.398 (PO-3) routed_top=0.398
+n22 คาด=out_of_scope router=out_of_scope module=UNKNOWN  raw_top=0.464 (RCV-4) routed_top=0.464
+
+== วิธี A (53 วินาที) ==
+[final_check] ควรตอบ: ตอบได้ 12/14 เนื้อหาครบ 11/14 | ควรเปิด Ticket: ตอบมั่ว 0/5
+  ควรตอบแต่ไม่ตอบ: ['n10', 'n11']
+  ตอบแต่เนื้อหาไม่ครบ: ['n13']
+  ตอบมั่ว: []
+
+== วิธี B (53 วินาที) ==
+[final_check] ควรตอบ: ตอบได้ 12/14 เนื้อหาครบ 11/14 | ควรเปิด Ticket: ตอบมั่ว 1/5
+  ควรตอบแต่ไม่ตอบ: ['n10', 'n11']
+  ตอบแต่เนื้อหาไม่ครบ: ['n13']
+  ตอบมั่ว: ['n18']
+
+== วิธี C (67 วินาที) ==
+[final_check] ควรตอบ: ตอบได้ 13/14 เนื้อหาครบ 12/14 | ควรเปิด Ticket: ตอบมั่ว 0/5
+  ควรตอบแต่ไม่ตอบ: ['n05']
+  ตอบแต่เนื้อหาไม่ครบ: ['n13']
+  ตอบมั่ว: []
+
+== วิธี D (62 วินาที) ==
+[final_check] ควรตอบ: ตอบได้ 14/14 เนื้อหาครบ 12/14 | ควรเปิด Ticket: ตอบมั่ว 0/5
+  ควรตอบแต่ไม่ตอบ: []
+  ตอบแต่เนื้อหาไม่ครบ: ['n10', 'n11']
+  ตอบมั่ว: []
+
+DONE

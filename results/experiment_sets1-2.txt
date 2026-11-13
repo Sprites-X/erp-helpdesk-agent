@@ -1,0 +1,44 @@
+== ขอบเขต: intent ของ Router เทียบกับคะแนนค้นด้วยคำถามดิบ (ทุกโมดูล) ==
+q17 คาด=ticket       router=problem      module=UNKNOWN  raw_top=0.534 (FAQ-6) routed_top=0.523
+q18 คาด=ticket       router=problem      module=PO       raw_top=0.605 (RCV-5) routed_top=0.668
+q19 คาด=ticket       router=problem      module=BUDGET   raw_top=0.650 (BUDGET-4) routed_top=0.608
+q20 คาด=ticket       router=problem      module=UNKNOWN  raw_top=0.535 (FAQ-6) routed_top=0.559
+q21 คาด=out_of_scope router=out_of_scope module=UNKNOWN  raw_top=0.336 (RCV-2) routed_top=0.363
+q22 คาด=out_of_scope router=out_of_scope module=UNKNOWN  raw_top=0.364 (FAQ-15) routed_top=0.364
+h13 คาด=answer       router=out_of_scope module=UNKNOWN  raw_top=0.569 (FAQ-13) routed_top=0.711
+h17 คาด=ticket       router=problem      module=RCV      raw_top=0.497 (FAQ-6) routed_top=0.497
+h18 คาด=ticket       router=problem      module=BUDGET   raw_top=0.612 (BUDGET-2) routed_top=0.606
+h19 คาด=ticket       router=problem      module=AP       raw_top=0.648 (AP-6) routed_top=0.654
+h20 คาด=ticket       router=problem      module=UNKNOWN  raw_top=0.586 (FAQ-6) routed_top=0.546
+h21 คาด=out_of_scope router=out_of_scope module=UNKNOWN  raw_top=0.438 (AP-4) routed_top=0.449
+h22 คาด=out_of_scope router=how_to       module=UNKNOWN  raw_top=0.473 (PR-3) routed_top=0.476
+
+== วิธี A (114 วินาที) ==
+[heldout] ควรตอบ: ตอบได้ 15/16 เนื้อหาครบ 15/16 | ควรเปิด Ticket: ตอบมั่ว 0/4
+[questions] ควรตอบ: ตอบได้ 15/16 เนื้อหาครบ 14/16 | ควรเปิด Ticket: ตอบมั่ว 0/4
+  ควรตอบแต่ไม่ตอบ: ['q10', 'h03']
+  ตอบแต่เนื้อหาไม่ครบ: ['q13']
+  ตอบมั่ว: []
+
+== วิธี B (115 วินาที) ==
+[heldout] ควรตอบ: ตอบได้ 16/16 เนื้อหาครบ 16/16 | ควรเปิด Ticket: ตอบมั่ว 0/4
+[questions] ควรตอบ: ตอบได้ 16/16 เนื้อหาครบ 16/16 | ควรเปิด Ticket: ตอบมั่ว 0/4
+  ควรตอบแต่ไม่ตอบ: []
+  ตอบแต่เนื้อหาไม่ครบ: []
+  ตอบมั่ว: []
+
+== วิธี C (142 วินาที) ==
+[heldout] ควรตอบ: ตอบได้ 15/16 เนื้อหาครบ 14/16 | ควรเปิด Ticket: ตอบมั่ว 0/4
+[questions] ควรตอบ: ตอบได้ 15/16 เนื้อหาครบ 15/16 | ควรเปิด Ticket: ตอบมั่ว 0/4
+  ควรตอบแต่ไม่ตอบ: ['q10', 'h11']
+  ตอบแต่เนื้อหาไม่ครบ: ['h13']
+  ตอบมั่ว: []
+
+== วิธี D (141 วินาที) ==
+[heldout] ควรตอบ: ตอบได้ 16/16 เนื้อหาครบ 14/16 | ควรเปิด Ticket: ตอบมั่ว 0/4
+[questions] ควรตอบ: ตอบได้ 16/16 เนื้อหาครบ 16/16 | ควรเปิด Ticket: ตอบมั่ว 0/4
+  ควรตอบแต่ไม่ตอบ: []
+  ตอบแต่เนื้อหาไม่ครบ: ['h04', 'h13']
+  ตอบมั่ว: []
+
+DONE

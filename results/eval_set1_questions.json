@@ -1,0 +1,743 @@
+{
+  "config": {
+    "backend": "ollama",
+    "chat_model": "qwen2.5:7b",
+    "embed_model": "bge-m3",
+    "min_score": 0.55,
+    "top_k": 4
+  },
+  "summary": {
+    "intent_ok": {
+      "correct": 22,
+      "total": 22
+    },
+    "module_ok": {
+      "correct": 15,
+      "total": 20
+    },
+    "retrieval_ok": {
+      "correct": 16,
+      "total": 16
+    },
+    "outcome_ok": {
+      "correct": 21,
+      "total": 22
+    },
+    "content_ok": {
+      "correct": 15,
+      "total": 16
+    },
+    "answered_but_should_ticket": 0,
+    "ticket_but_should_answer": 1,
+    "latency_avg_s": 10.74,
+    "latency_max_s": 15.14,
+    "re_searched": 0,
+    "re_searched_then_answered_correctly": 0
+  },
+  "records": [
+    {
+      "id": "q01",
+      "question": "จะสร้างใบขอซื้อต้องเข้าเมนูไหน",
+      "expected": {
+        "intent": "how_to",
+        "module": "PR",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "how_to",
+        "module": "PR",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": true,
+      "top_score": 0.7238,
+      "searches": 1,
+      "queries": [
+        "จะสร้างใบขอซื้อต้องเข้าเมนูไหน"
+      ],
+      "hits": [
+        "PR-2",
+        "PO-2",
+        "PR-1",
+        "PO-1",
+        "PR-4",
+        "FAQ-1"
+      ],
+      "reply": "เข้าเมนู จัดซื้อ > ใบขอซื้อ > สร้างใหม่",
+      "latency_s": 13.66
+    },
+    {
+      "id": "q02",
+      "question": "PR ยอด 300,000 บาท ใครต้องอนุมัติ",
+      "expected": {
+        "intent": "how_to",
+        "module": "PR",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "how_to",
+        "module": "PR",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": true,
+      "top_score": 0.6483,
+      "searches": 1,
+      "queries": [
+        "ใครต้องอนุมัติใบขอซื้อที่มียอด 300,000 บาท"
+      ],
+      "hits": [
+        "PR-3",
+        "PO-3",
+        "FAQ-2",
+        "PR-1",
+        "PR-2"
+      ],
+      "reply": "ผู้จัดการโครงการเป็นผู้อนุมัติ เพราะยอด 300,000 บาท อยู่ในช่วง 50,001 - 500,000 บาท",
+      "latency_s": 10.75
+    },
+    {
+      "id": "q03",
+      "question": "PO อนุมัติไปแล้ว อยากเพิ่มจำนวนต้องทำยังไง",
+      "expected": {
+        "intent": "how_to",
+        "module": "PO",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "how_to",
+        "module": "PO",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": true,
+      "top_score": 0.6974,
+      "searches": 1,
+      "queries": [
+        "วิธีการเพิ่มจำนวนสินค้าในใบสั่งซื้อที่ได้รับอนุมัติแล้ว"
+      ],
+      "hits": [
+        "PO-4",
+        "PO-2",
+        "PR-2",
+        "FAQ-7",
+        "PO-1",
+        "PO-5"
+      ],
+      "reply": "ต้องสร้าง Revision ของ PO ใหม่ โดยระบบจะสร้าง PO ฉบับแก้ไขโดยใช้เลขเดิมต่อท้ายด้วย -R1, -R2 ตามลำดับ และต้องส่งอนุมัติใหม่ตามวงเงินล่าสุด",
+      "latency_s": 10.96
+    },
+    {
+      "id": "q04",
+      "question": "ซื้อของเกินแสนต้องมีใบเสนอราคากี่เจ้า",
+      "expected": {
+        "intent": "how_to",
+        "module": "PO",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "how_to",
+        "module": "PR",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": false,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": true,
+      "top_score": 0.7012,
+      "searches": 1,
+      "queries": [
+        "การซื้อของเกินแสนต้องมีใบเสนอราคาเจ้าไหนอนุมัติ"
+      ],
+      "hits": [
+        "PO-3",
+        "PR-3",
+        "FAQ-2",
+        "PO-1",
+        "PR-1",
+        "PR-2"
+      ],
+      "reply": "ต้องแนบใบเสนอราคาอย่างน้อย 3 ราย",
+      "latency_s": 10.85
+    },
+    {
+      "id": "q05",
+      "question": "ของมาส่งไม่ครบ บันทึกรับยังไง",
+      "expected": {
+        "intent": "how_to",
+        "module": "RCV",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "how_to",
+        "module": "RCV",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": true,
+      "top_score": 0.7302,
+      "searches": 1,
+      "queries": [
+        "บันทึกรับสินค้าบางส่วนเมื่อของมาส่งไม่ครบทำอย่างไร"
+      ],
+      "hits": [
+        "RCV-3",
+        "RCV-5",
+        "RCV-1",
+        "RCV-2"
+      ],
+      "reply": "กรอกเฉพาะจำนวนที่รับจริง ระบบจะเก็บยอดค้างรับไว้ใน PO และรับครั้งถัดไปได้ เมื่อรับครบ สถานะ PO จะเปลี่ยนเป็น รับครบแล้ว",
+      "latency_s": 10.65
+    },
+    {
+      "id": "q06",
+      "question": "ของที่รับมาชำรุดต้องคืนยังไง",
+      "expected": {
+        "intent": "how_to",
+        "module": "RCV",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "how_to",
+        "module": "RCV",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": true,
+      "top_score": 0.6529,
+      "searches": 1,
+      "queries": [
+        "เมื่อของที่รับมาชำรุดต้องทำอย่างไรในการบันทึกรับสินค้า"
+      ],
+      "hits": [
+        "RCV-1",
+        "RCV-4",
+        "RCV-2",
+        "RCV-3"
+      ],
+      "reply": "สร้างใบคืนสินค้าจากเมนู รับสินค้า > คืนสินค้า โดยอ้างอิงเลขที่ GR เดิม ระบุจำนวนและเหตุผล ระบบจะลดต้นทุนจริงของโครงการและแจ้งฝ่ายบัญชีให้ปรับยอดหนี้",
+      "latency_s": 10.94
+    },
+    {
+      "id": "q07",
+      "question": "3-way matching คืออะไร",
+      "expected": {
+        "intent": "how_to",
+        "module": "AP",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "how_to",
+        "module": "AP",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": true,
+      "top_score": 0.6543,
+      "searches": 1,
+      "queries": [
+        "3-way matching ในเจ้าหนี้และการจ่ายเงินคืออะไร และวิธีการใช้งานอย่างไร"
+      ],
+      "hits": [
+        "AP-2",
+        "AP-1",
+        "AP-5",
+        "AP-6"
+      ],
+      "reply": "3-way matching คือ การเทียบเอกสาร 3 ใบ คือ ใบสั่งซื้อ ใบรับสินค้า และใบแจ้งหนี้ ทั้งจำนวนและราคาต้องตรงกัน โดยยอมให้ต่างกันได้ไม่เกิน 1 บาทต่อรายการจากการปัดเศษ ถ้าผ่านการจับคู่ ระบบจะสร้างเอกสารตั้งหนี้ให้อัตโนมัติ",
+      "latency_s": 12.34
+    },
+    {
+      "id": "q08",
+      "question": "เงินประกันผลงานจะคืนผู้รับเหมาได้เมื่อไหร่",
+      "expected": {
+        "intent": "how_to",
+        "module": "AP",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "how_to",
+        "module": "AP",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": true,
+      "top_score": 0.7407,
+      "searches": 1,
+      "queries": [
+        "เงินประกันผลงานจะคืนให้ผู้รับเหมาเมื่อไหร่"
+      ],
+      "hits": [
+        "AP-4",
+        "FAQ-8",
+        "PR-3",
+        "FAQ-15",
+        "AP-5",
+        "FAQ-9"
+      ],
+      "reply": "เงินประกันผลงานจะคืนให้ผู้รับเหมาเมื่อพ้นระยะรับประกันผลงาน ผ่านเมนู เจ้าหนี้ > คืนเงินประกันผลงาน",
+      "latency_s": 11.36
+    },
+    {
+      "id": "q09",
+      "question": "งบรหัสต้นทุนนี้ไม่พอ ขอย้ายงบจากอีกรหัสได้ไหม",
+      "expected": {
+        "intent": "how_to",
+        "module": "BUDGET",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "how_to",
+        "module": "BUDGET",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": true,
+      "top_score": 0.691,
+      "searches": 1,
+      "queries": [
+        "วิธีการย้ายงบประมาณจากโครงการหนึ่งไปยังอีกโครงการหนึ่งเมื่องบประมาณต้นทุนไม่พอ"
+      ],
+      "hits": [
+        "BUDGET-3",
+        "FAQ-10",
+        "BUDGET-1",
+        "BUDGET-2"
+      ],
+      "reply": "สร้างใบโอนงบที่เมนู โครงการ > งบประมาณ > โอนงบ เลือกรหัสต้นทาง รหัสปลายทาง และจำนวนเงิน ต้องได้รับอนุมัติจากผู้ควบคุมต้นทุนโครงการ",
+      "latency_s": 12.0
+    },
+    {
+      "id": "q10",
+      "question": "รายงานงบขึ้นสีแดงแปลว่าอะไร",
+      "expected": {
+        "intent": "how_to",
+        "module": "BUDGET",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "how_to",
+        "module": "BUDGET",
+        "outcome": "ticket"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": true,
+      "outcome_ok": false,
+      "content_ok": false,
+      "top_score": 0.6613,
+      "searches": 1,
+      "queries": [
+        "รายงานงบประมาณขึ้นสีแดงแปลว่าอะไร"
+      ],
+      "hits": [
+        "FAQ-11",
+        "BUDGET-4",
+        "BUDGET-5",
+        "BUDGET-1"
+      ],
+      "reply": "ยังไม่พบวิธีแก้ในคู่มือ จึงเปิด Ticket T-261112-222240-0800 ให้ทีม Support งานควบคุมต้นทุนแล้ว (ความเร่งด่วน: low)\nเพื่อให้แก้ได้เร็วขึ้น กรุณาเตรียม: สีแดงในรายงานงบหมายถึงอะไรในบริบทของโปรแกรม SiteERP, มีข้อผิดพลาดหรือข้อความเตือนเพิ่มเติมเกี่ยวกับสีแดงหรือไม่",
+      "latency_s": 15.14
+    },
+    {
+      "id": "q11",
+      "question": "ตั้งงบโครงการใหม่จาก BOQ ทำยังไง",
+      "expected": {
+        "intent": "how_to",
+        "module": "BUDGET",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "how_to",
+        "module": "BUDGET",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": true,
+      "top_score": 0.6277,
+      "searches": 1,
+      "queries": [
+        "ตั้งงบประมาณโครงการใหม่จาก Bill of Quantities ทำอย่างไร"
+      ],
+      "hits": [
+        "BUDGET-2",
+        "BUDGET-3",
+        "FAQ-10",
+        "BUDGET-1"
+      ],
+      "reply": "ไปที่เมนู โครงการ > งบประมาณ > นำเข้า BOQ ดาวน์โหลดแม่แบบ Excel แล้วกรอกรหัสต้นทุน รายละเอียด และงบประมาณ อัปโหลดไฟล์ ระบบจะตรวจรหัสซ้ำและยอดรวมก่อนให้กดยืนยัน ส่งงบประมาณให้ผู้จัดการโครงการอนุมัติ งบจะใช้งานได้หลังอนุมัติเท่านั้น",
+      "latency_s": 12.19
+    },
+    {
+      "id": "q12",
+      "question": "ลืมรหัสผ่านเข้าระบบ",
+      "expected": {
+        "intent": "how_to",
+        "module": "GENERAL",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "how_to",
+        "module": "UNKNOWN",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": false,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": true,
+      "top_score": 0.6788,
+      "searches": 1,
+      "queries": [
+        "วิธีการลืมรหัสผ่านเข้าระบบ"
+      ],
+      "hits": [
+        "FAQ-12",
+        "FAQ-1",
+        "BUDGET-5",
+        "BUDGET-2"
+      ],
+      "reply": "กด ลืมรหัสผ่าน ที่หน้าเข้าสู่ระบบ ระบบจะส่งลิงก์ตั้งรหัสใหม่ไปที่อีเมล",
+      "latency_s": 8.3
+    },
+    {
+      "id": "q13",
+      "question": "บันทึกรับของไม่ได้ ขึ้น RCV-E01",
+      "expected": {
+        "intent": "problem",
+        "module": "RCV",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "problem",
+        "module": "RCV",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": true,
+      "top_score": 0.7351,
+      "searches": 1,
+      "queries": [
+        "บันทึกรับสินค้าแล้วเกิดข้อผิดพลาดรหัส RCV-E01"
+      ],
+      "hits": [
+        "RCV-5",
+        "RCV-3",
+        "RCV-4",
+        "RCV-1"
+      ],
+      "reply": "ตรวจสอบว่าจำนวนที่รับมามีมากกว่า 5 เปอร์เซ็นต์ของจำนวนสั่งซื้อ ถ้าใช่ ให้ฝ่ายจัดซื้อสร้าง Revision ของ PO เพื่อเพิ่มจำนวนก่อน",
+      "latency_s": 11.36
+    },
+    {
+      "id": "q14",
+      "question": "ออก PR ไม่ผ่าน ขึ้นว่างบประมาณคงเหลือไม่พอ",
+      "expected": {
+        "intent": "problem",
+        "module": "PR",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "problem",
+        "module": "BUDGET",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": false,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": true,
+      "top_score": 0.7542,
+      "searches": 1,
+      "queries": [
+        "ออกใบขอซื้อแล้วเกิดข้อผิดพลาดรหัส BUDGET-E02 ว่างบประมาณคงเหลือไม่พอ"
+      ],
+      "hits": [
+        "PR-5",
+        "PO-6",
+        "FAQ-10",
+        "RCV-5",
+        "BUDGET-3",
+        "BUDGET-1"
+      ],
+      "reply": "ติดต่อผู้ควบคุมต้นทุนโครงการเพื่อขอโอนงบ หรือแยกรายการไปใช้รหัสต้นทุนอื่นที่เหมาะสม",
+      "latency_s": 11.5
+    },
+    {
+      "id": "q15",
+      "question": "ตั้งหนี้ไม่ได้ ระบบแจ้ง AP-E01",
+      "expected": {
+        "intent": "problem",
+        "module": "AP",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "problem",
+        "module": "AP",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": true,
+      "top_score": 0.6817,
+      "searches": 1,
+      "queries": [
+        "ตั้งหนี้เจ้าหนี้ไม่สำเร็จ ระบบแจ้งข้อผิดพลาดรหัส AP-E01"
+      ],
+      "hits": [
+        "AP-6",
+        "AP-2",
+        "AP-5",
+        "AP-1"
+      ],
+      "reply": "ตรวจสอบว่าเป็นการบันทึกซ้ำหรือผู้ขายออกเลขซ้ำ",
+      "latency_s": 10.61
+    },
+    {
+      "id": "q16",
+      "question": "เลือกผู้ขายใน PO แล้วขึ้นว่าผู้ขายถูกระงับ",
+      "expected": {
+        "intent": "problem",
+        "module": "PO",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "problem",
+        "module": "PO",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": true,
+      "top_score": 0.6747,
+      "searches": 1,
+      "queries": [
+        "เลือกผู้ขายในใบสั่งซื้อแล้วขึ้นว่าผู้ขายถูกระงับ"
+      ],
+      "hits": [
+        "PO-6",
+        "PR-4",
+        "PO-1",
+        "PO-4",
+        "PO-2"
+      ],
+      "reply": "ติดต่อฝ่ายบัญชีเพื่อตรวจสอบสถานะผู้ขาย",
+      "latency_s": 10.99
+    },
+    {
+      "id": "q17",
+      "question": "กดปุ่มพิมพ์เช็คแล้วโปรแกรมค้าง หน้าจอขาว ต้องปิดทิ้งทุกครั้ง",
+      "expected": {
+        "intent": "problem",
+        "module": "AP",
+        "outcome": "ticket"
+      },
+      "actual": {
+        "intent": "problem",
+        "module": "UNKNOWN",
+        "outcome": "ticket"
+      },
+      "intent_ok": true,
+      "module_ok": false,
+      "retrieval_ok": null,
+      "outcome_ok": true,
+      "content_ok": null,
+      "top_score": 0.523,
+      "searches": 1,
+      "queries": [
+        "กดปุ่มพิมพ์เช็คแล้วโปรแกรมค้างหน้าจอขาวต้องปิดทิ้งทุกครั้งทำอย่างไร"
+      ],
+      "hits": [
+        "FAQ-6",
+        "FAQ-15",
+        "RCV-3",
+        "PO-4"
+      ],
+      "reply": "ยังไม่พบวิธีแก้ในคู่มือ จึงเปิด Ticket T-261112-222354-A8FF ให้IT Helpdesk L2แล้ว (ความเร่งด่วน: high)\nเพื่อให้แก้ได้เร็วขึ้น กรุณาเตรียม: เลขที่เอกสารที่ผู้ใช้พยายามพิมพ์เช็ค, ภาพหน้าจอที่แสดงปัญหา, เวลาที่เกิดปัญหา",
+      "latency_s": 8.63
+    },
+    {
+      "id": "q18",
+      "question": "ขึ้น error PO-E07 ตอนกดอนุมัติ",
+      "expected": {
+        "intent": "problem",
+        "module": "PO",
+        "outcome": "ticket"
+      },
+      "actual": {
+        "intent": "problem",
+        "module": "PO",
+        "outcome": "ticket"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": null,
+      "outcome_ok": true,
+      "content_ok": null,
+      "top_score": 0.6679,
+      "searches": 1,
+      "queries": [
+        "อนุมัติใบสั่งซื้อแล้วเกิดข้อผิดพลาดรหัส PO-E07"
+      ],
+      "hits": [
+        "PO-6",
+        "RCV-5",
+        "PO-4",
+        "AP-6",
+        "PO-1",
+        "FAQ-5"
+      ],
+      "reply": "ยังไม่พบวิธีแก้ในคู่มือ จึงเปิด Ticket T-261112-222404-D15A ให้ทีม Support งานจัดซื้อแล้ว (ความเร่งด่วน: high)\nเพื่อให้แก้ได้เร็วขึ้น กรุณาเตรียม: เลขที่ใบสั่งซื้อที่เกิดข้อผิดพลาด, ภาพหน้าจอที่แสดงข้อผิดพลาด, เวลาที่เกิดข้อผิดพลาด",
+      "latency_s": 10.56
+    },
+    {
+      "id": "q19",
+      "question": "Export รายงาน Budget vs Actual เป็น Excel แล้วตัวหนังสือภาษาไทยเพี้ยนอ่านไม่ออก",
+      "expected": {
+        "intent": "problem",
+        "module": "BUDGET",
+        "outcome": "ticket"
+      },
+      "actual": {
+        "intent": "problem",
+        "module": "BUDGET",
+        "outcome": "ticket"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": null,
+      "outcome_ok": true,
+      "content_ok": null,
+      "top_score": 0.6077,
+      "searches": 1,
+      "queries": [
+        ".export รายงาน Budget vs Actual เป็น Excel แล้วตัวหนังสือภาษาไทยเปลี่ยนรูปไม่สามารถอ่านได้"
+      ],
+      "hits": [
+        "BUDGET-4",
+        "BUDGET-3",
+        "FAQ-10",
+        "BUDGET-2"
+      ],
+      "reply": "ยังไม่พบวิธีแก้ในคู่มือ จึงเปิด Ticket T-261112-222418-BA2C ให้ทีม Support งานควบคุมต้นทุนแล้ว (ความเร่งด่วน: medium)\nเพื่อให้แก้ได้เร็วขึ้น กรุณาเตรียม: ภาพหน้าจอหรือไฟล์ Excel ที่เกิดปัญหา, วิธีการที่ทำก่อนเกิดปัญหา, เวอร์ชั่นของโปรแกรม SiteERP ที่ใช้งาน",
+      "latency_s": 13.25
+    },
+    {
+      "id": "q20",
+      "question": "เข้าระบบไม่ได้ทั้งออฟฟิศตั้งแต่เช้า",
+      "expected": {
+        "intent": "problem",
+        "module": "GENERAL",
+        "outcome": "ticket"
+      },
+      "actual": {
+        "intent": "problem",
+        "module": "UNKNOWN",
+        "outcome": "ticket"
+      },
+      "intent_ok": true,
+      "module_ok": false,
+      "retrieval_ok": null,
+      "outcome_ok": true,
+      "content_ok": null,
+      "top_score": 0.5595,
+      "searches": 1,
+      "queries": [
+        "เข้าระบบ SiteERP ไม่ได้ตั้งแต่เช้าทั้งออฟฟิศ"
+      ],
+      "hits": [
+        "FAQ-13",
+        "FAQ-6",
+        "RCV-2",
+        "FAQ-15"
+      ],
+      "reply": "ยังไม่พบวิธีแก้ในคู่มือ จึงเปิด Ticket T-261112-222429-0036 ให้IT Helpdesk L2แล้ว (ความเร่งด่วน: urgent)\nเพื่อให้แก้ได้เร็วขึ้น กรุณาเตรียม: เลขที่เอกสารหรือข้อมูลเพิ่มเติมที่เกี่ยวข้อง, ภาพหน้าจอแสดงข้อผิดพลาด, เวลาที่เกิดปัญหา",
+      "latency_s": 11.0
+    },
+    {
+      "id": "q21",
+      "question": "แนะนำร้านกาแฟแถวไซต์งานบางนาหน่อย",
+      "expected": {
+        "intent": "out_of_scope",
+        "module": "UNKNOWN",
+        "outcome": "out_of_scope"
+      },
+      "actual": {
+        "intent": "out_of_scope",
+        "module": "UNKNOWN",
+        "outcome": "out_of_scope"
+      },
+      "intent_ok": true,
+      "module_ok": null,
+      "retrieval_ok": null,
+      "outcome_ok": true,
+      "content_ok": null,
+      "top_score": null,
+      "searches": 0,
+      "queries": [],
+      "hits": [],
+      "reply": "ขออภัย ผู้ช่วยนี้ตอบเฉพาะเรื่องการใช้งานโปรแกรม SiteERP เช่น ใบขอซื้อ ใบสั่งซื้อ รับสินค้า เจ้าหนี้ และงบประมาณโครงการ",
+      "latency_s": 4.5
+    },
+    {
+      "id": "q22",
+      "question": "ช่วยเขียนแคปชันอวยพรวันเกิดหัวหน้าให้หน่อย",
+      "expected": {
+        "intent": "out_of_scope",
+        "module": "UNKNOWN",
+        "outcome": "out_of_scope"
+      },
+      "actual": {
+        "intent": "out_of_scope",
+        "module": "UNKNOWN",
+        "outcome": "out_of_scope"
+      },
+      "intent_ok": true,
+      "module_ok": null,
+      "retrieval_ok": null,
+      "outcome_ok": true,
+      "content_ok": null,
+      "top_score": null,
+      "searches": 0,
+      "queries": [],
+      "hits": [],
+      "reply": "ขออภัย ผู้ช่วยนี้ตอบเฉพาะเรื่องการใช้งานโปรแกรม SiteERP เช่น ใบขอซื้อ ใบสั่งซื้อ รับสินค้า เจ้าหนี้ และงบประมาณโครงการ",
+      "latency_s": 4.72
+    }
+  ]
+}

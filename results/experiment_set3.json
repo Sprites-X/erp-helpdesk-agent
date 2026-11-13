@@ -1,0 +1,1078 @@
+{
+ "A": [
+  {
+   "id": "n01",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "สถานะของ PR มี 4 แบบ ได้แก่ ร่าง, รออนุมัติ, อนุมัติแล้ว และยกเลิก",
+   "raw": {
+    "grounded": true,
+    "answer": "สถานะของ PR มี 4 แบบ ได้แก่ ร่าง, รออนุมัติ, อนุมัติแล้ว และยกเลิก",
+    "citations": [
+     "PR-1"
+    ]
+   }
+  },
+  {
+   "id": "n02",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "วิศวกรโครงการเป็นผู้อนุมัติ",
+   "raw": {
+    "grounded": true,
+    "answer": "วิศวกรโครงการเป็นผู้อนุมัติ",
+    "citations": [
+     "PR-3"
+    ]
+   }
+  },
+  {
+   "id": "n03",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "เมื่อยกเลิก PR ที่อนุมัติแล้วแต่ยังไม่ได้ออก PO ระบบจะคืนงบประมาณที่จองไว้ให้รหัสต้นทุนทันที",
+   "raw": {
+    "grounded": true,
+    "answer": "เมื่อยกเลิก PR ที่อนุมัติแล้วแต่ยังไม่ได้ออก PO ระบบจะคืนงบประมาณที่จองไว้ให้รหัสต้นทุนทันที",
+    "citations": [
+     "PR-4"
+    ]
+   }
+  },
+  {
+   "id": "n04",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ต้องระบุเหตุผล เช่น ระยะเวลาส่งของหรือคุณภาพสินค้า",
+   "raw": {
+    "grounded": true,
+    "answer": "ต้องระบุเหตุผล เช่น ระยะเวลาส่งของหรือคุณภาพสินค้า",
+    "citations": [
+     "PO-3"
+    ]
+   }
+  },
+  {
+   "id": "n05",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ไม่สามารถลดจำนวนสั่งซื้อใน PO ที่รับของไปแล้วบางส่วนได้ ต้องทำ Revision ของ PO แทน",
+   "raw": {
+    "grounded": true,
+    "answer": "ไม่สามารถลดจำนวนสั่งซื้อใน PO ที่รับของไปแล้วบางส่วนได้ ต้องทำ Revision ของ PO แทน",
+    "citations": [
+     "PO-4"
+    ]
+   }
+  },
+  {
+   "id": "n06",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ต้องถ่ายรูปสินค้าอย่างน้อย 1 รูป",
+   "raw": {
+    "grounded": true,
+    "answer": "ต้องถ่ายรูปสินค้าอย่างน้อย 1 รูป",
+    "citations": [
+     "RCV-2"
+    ]
+   }
+  },
+  {
+   "id": "n07",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ใช่ ต้นทุนของโครงการจะเปลี่ยน เมื่อคืนสินค้า ระบบจะลดต้นทุนจริงของโครงการ",
+   "raw": {
+    "grounded": true,
+    "answer": "ใช่ ต้นทุนของโครงการจะเปลี่ยน เมื่อคืนสินค้า ระบบจะลดต้นทุนจริงของโครงการ",
+    "citations": [
+     "RCV-4"
+    ]
+   }
+  },
+  {
+   "id": "n08",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ต่างกันได้ไม่เกิน 1 บาทต่อรายการจากการปัดเศษ",
+   "raw": {
+    "grounded": true,
+    "answer": "ต่างกันได้ไม่เกิน 1 บาทต่อรายการจากการปัดเศษ",
+    "citations": [
+     "AP-2"
+    ]
+   }
+  },
+  {
+   "id": "n09",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ไปที่เมนู เจ้าหนี้ > วางแผนจ่ายเงิน แล้วเลือกช่วงวันครบกำหนด ระบบจะแสดงหนี้ที่ครบกำหนด ให้เลือกรายการ แล้วกด สร้างชุดจ่ายเงิน แล้วส่งไฟล์โอนเงินไปยังธนาคาร",
+   "raw": {
+    "grounded": true,
+    "answer": "ไปที่เมนู เจ้าหนี้ > วางแผนจ่ายเงิน แล้วเลือกช่วงวันครบกำหนด ระบบจะแสดงหนี้ที่ครบกำหนด ให้เลือกรายการ แล้วกด สร้างชุดจ่ายเงิน แล้วส่งไฟล์โอนเงินไปยังธนาคาร",
+    "citations": [
+     "AP-5"
+    ]
+   }
+  },
+  {
+   "id": "n10",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "grounded": false,
+    "answer": "",
+    "citations": []
+   }
+  },
+  {
+   "id": "n11",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "grounded": false,
+    "answer": "",
+    "citations": []
+   }
+  },
+  {
+   "id": "n12",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ระบบจะแจ้งเตือนซ้ำทุกวันจันทร์สำหรับรหัสที่ใช้เกิน 100 เปอร์เซ็นต์แล้ว",
+   "raw": {
+    "grounded": true,
+    "answer": "ระบบจะแจ้งเตือนซ้ำทุกวันจันทร์สำหรับรหัสที่ใช้เกิน 100 เปอร์เซ็นต์แล้ว",
+    "citations": [
+     "BUDGET-5"
+    ]
+   }
+  },
+  {
+   "id": "n13",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": false,
+   "answer": "ตรวจสอบสถานะ PO กับฝ่ายจัดซื้อ",
+   "raw": {
+    "grounded": true,
+    "answer": "ตรวจสอบสถานะ PO กับฝ่ายจัดซื้อ",
+    "citations": [
+     "RCV-5"
+    ]
+   }
+  },
+  {
+   "id": "n14",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ให้แจ้งผู้ควบคุมต้นทุนเปิดใช้งานรหัสนั้นก่อน",
+   "raw": {
+    "grounded": true,
+    "answer": "ให้แจ้งผู้ควบคุมต้นทุนเปิดใช้งานรหัสนั้นก่อน",
+    "citations": [
+     "PR-5",
+     "BUDGET-3"
+    ]
+   }
+  },
+  {
+   "id": "n15",
+   "set": "final_check",
+   "expected": "ticket",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "grounded": false,
+    "answer": "",
+    "citations": []
+   }
+  },
+  {
+   "id": "n16",
+   "set": "final_check",
+   "expected": "ticket",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "rule": "unknown error code"
+   }
+  },
+  {
+   "id": "n17",
+   "set": "final_check",
+   "expected": "ticket",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "grounded": false,
+    "answer": "",
+    "citations": []
+   }
+  },
+  {
+   "id": "n18",
+   "set": "final_check",
+   "expected": "ticket",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "grounded": false,
+    "answer": "",
+    "citations": []
+   }
+  },
+  {
+   "id": "n19",
+   "set": "final_check",
+   "expected": "ticket",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "grounded": false,
+    "answer": "",
+    "citations": []
+   }
+  }
+ ],
+ "B": [
+  {
+   "id": "n01",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "สถานะของ PR มี 4 แบบ ได้แก่ ร่าง, รออนุมัติ, อนุมัติแล้ว และยกเลิก",
+   "raw": {
+    "grounded": true,
+    "answer": "สถานะของ PR มี 4 แบบ ได้แก่ ร่าง, รออนุมัติ, อนุมัติแล้ว และยกเลิก",
+    "citations": [
+     "PR-1"
+    ]
+   }
+  },
+  {
+   "id": "n02",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ไม่เกิน 50,000 บาท วิศวกรโครงการเป็นผู้อนุมัติ",
+   "raw": {
+    "grounded": true,
+    "answer": "ไม่เกิน 50,000 บาท วิศวกรโครงการเป็นผู้อนุมัติ",
+    "citations": [
+     "PR-3"
+    ]
+   }
+  },
+  {
+   "id": "n03",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "เมื่อยกเลิก PR ที่อนุมัติแล้วแต่ยังไม่ได้ออก PO ระบบจะคืนงบประมาณที่จองไว้ให้รหัสต้นทุนทันที",
+   "raw": {
+    "grounded": true,
+    "answer": "เมื่อยกเลิก PR ที่อนุมัติแล้วแต่ยังไม่ได้ออก PO ระบบจะคืนงบประมาณที่จองไว้ให้รหัสต้นทุนทันที",
+    "citations": [
+     "PR-4"
+    ]
+   }
+  },
+  {
+   "id": "n04",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ต้องระบุเหตุผล เช่น ระยะเวลาส่งของหรือคุณภาพสินค้า",
+   "raw": {
+    "grounded": true,
+    "answer": "ต้องระบุเหตุผล เช่น ระยะเวลาส่งของหรือคุณภาพสินค้า",
+    "citations": [
+     "PO-3"
+    ]
+   }
+  },
+  {
+   "id": "n05",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ไม่สามารถลดจำนวนสั่งซื้อให้ต่ำกว่าจำนวนที่รับไปแล้ว",
+   "raw": {
+    "grounded": true,
+    "answer": "ไม่สามารถลดจำนวนสั่งซื้อให้ต่ำกว่าจำนวนที่รับไปแล้ว",
+    "citations": [
+     "PO-4"
+    ]
+   }
+  },
+  {
+   "id": "n06",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ต้องถ่ายรูปสินค้าอย่างน้อย 1 รูป",
+   "raw": {
+    "grounded": true,
+    "answer": "ต้องถ่ายรูปสินค้าอย่างน้อย 1 รูป",
+    "citations": [
+     "RCV-2"
+    ]
+   }
+  },
+  {
+   "id": "n07",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ระบบจะลดต้นทุนจริงของโครงการ",
+   "raw": {
+    "grounded": true,
+    "answer": "ระบบจะลดต้นทุนจริงของโครงการ",
+    "citations": [
+     "RCV-4"
+    ]
+   }
+  },
+  {
+   "id": "n08",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "จำนวนหรือราคาในใบแจ้งหนี้ไม่สามารถต่างกับใบรับสินค้าหรือใบสั่งซื้อได้มากกว่า 1 บาทต่อรายการจากการปัดเศษ",
+   "raw": {
+    "grounded": true,
+    "answer": "จำนวนหรือราคาในใบแจ้งหนี้ไม่สามารถต่างกับใบรับสินค้าหรือใบสั่งซื้อได้มากกว่า 1 บาทต่อรายการจากการปัดเศษ",
+    "citations": [
+     "AP-2"
+    ]
+   }
+  },
+  {
+   "id": "n09",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "1) ไปที่เมนู เจ้าหนี้ > วางแผนจ่ายเงิน แล้วเลือกช่วงวันครบกำหนด\n2) ระบบจะแสดงหนี้ที่ครบกำหนดพร้อมยอดหลังหักภาษีและเงินประกันผลงาน\n3) เลือกรายการ แล้วกด สร้างชุดจ่ายเงิน\n4) ส่งไฟล์โอนเงินไปยังธนาคาร",
+   "raw": {
+    "grounded": true,
+    "answer": "1) ไปที่เมนู เจ้าหนี้ > วางแผนจ่ายเงิน แล้วเลือกช่วงวันครบกำหนด\n2) ระบบจะแสดงหนี้ที่ครบกำหนดพร้อมยอดหลังหักภาษีและเงินประกันผลงาน\n3) เลือกรายการ แล้วกด สร้างชุดจ่ายเงิน\n4) ส่งไฟล์โอนเงินไปยังธนาคาร",
+    "citations": [
+     "AP-5"
+    ]
+   }
+  },
+  {
+   "id": "n10",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "grounded": false,
+    "answer": "",
+    "citations": []
+   }
+  },
+  {
+   "id": "n11",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "grounded": false,
+    "answer": "",
+    "citations": []
+   }
+  },
+  {
+   "id": "n12",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ระบบจะแจ้งซ้ำทุกวันจันทร์สำหรับรหัสที่ใช้เกิน 100 เปอร์เซ็นต์แล้ว",
+   "raw": {
+    "grounded": true,
+    "answer": "ระบบจะแจ้งซ้ำทุกวันจันทร์สำหรับรหัสที่ใช้เกิน 100 เปอร์เซ็นต์แล้ว",
+    "citations": [
+     "BUDGET-5"
+    ]
+   }
+  },
+  {
+   "id": "n13",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": false,
+   "answer": "ตรวจสอบสถานะ PO กับฝ่ายจัดซื้อ",
+   "raw": {
+    "grounded": true,
+    "answer": "ตรวจสอบสถานะ PO กับฝ่ายจัดซื้อ",
+    "citations": [
+     "RCV-5"
+    ]
+   }
+  },
+  {
+   "id": "n14",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ให้แจ้งผู้ควบคุมต้นทุนเปิดใช้งานรหัสนั้นก่อน",
+   "raw": {
+    "grounded": true,
+    "answer": "ให้แจ้งผู้ควบคุมต้นทุนเปิดใช้งานรหัสนั้นก่อน",
+    "citations": [
+     "PR-5",
+     "BUDGET-3"
+    ]
+   }
+  },
+  {
+   "id": "n15",
+   "set": "final_check",
+   "expected": "ticket",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "grounded": false,
+    "answer": "",
+    "citations": []
+   }
+  },
+  {
+   "id": "n16",
+   "set": "final_check",
+   "expected": "ticket",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "rule": "unknown error code"
+   }
+  },
+  {
+   "id": "n17",
+   "set": "final_check",
+   "expected": "ticket",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "grounded": false,
+    "answer": "",
+    "citations": []
+   }
+  },
+  {
+   "id": "n18",
+   "set": "final_check",
+   "expected": "ticket",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "อาจเกิดจากงบประมาณคงเหลือไม่พอ ให้ติดต่อผู้ควบคุมต้นทุนโครงการเพื่อขอโอนงบ หรือแยกรายการไปใช้รหัสต้นทุนอื่นที่เหมาะสม",
+   "raw": {
+    "grounded": true,
+    "answer": "อาจเกิดจากงบประมาณคงเหลือไม่พอ ให้ติดต่อผู้ควบคุมต้นทุนโครงการเพื่อขอโอนงบ หรือแยกรายการไปใช้รหัสต้นทุนอื่นที่เหมาะสม",
+    "citations": [
+     "PR-5"
+    ]
+   }
+  },
+  {
+   "id": "n19",
+   "set": "final_check",
+   "expected": "ticket",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "grounded": false,
+    "answer": "",
+    "citations": []
+   }
+  }
+ ],
+ "C": [
+  {
+   "id": "n01",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "สถานะของ PR มี 4 แบบ ได้แก่ ร่าง, รออนุมัติ, อนุมัติแล้ว และยกเลิก",
+   "raw": {
+    "evidence": "สถานะของ PR มี 4 แบบ ได้แก่ ร่าง, รออนุมัติ, อนุมัติแล้ว และยกเลิก",
+    "doc_id": "PR-1",
+    "answer": "สถานะของ PR มี 4 แบบ ได้แก่ ร่าง, รออนุมัติ, อนุมัติแล้ว และยกเลิก",
+    "evidence_verified_in": "PR-1"
+   }
+  },
+  {
+   "id": "n02",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "วิศวกรโครงการเป็นผู้อนุมัติ",
+   "raw": {
+    "evidence": "ไม่เกิน 50,000 บาท วิศวกรโครงการเป็นผู้อนุมัติ",
+    "doc_id": "PR-3",
+    "answer": "วิศวกรโครงการเป็นผู้อนุมัติ",
+    "evidence_verified_in": "PR-3"
+   }
+  },
+  {
+   "id": "n03",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "เมื่อยกเลิก PR ที่อนุมัติแล้วแต่ยังไม่ได้ออก PO งบประมาณที่จองไว้จะถูกคืนกลับไปยังรหัสต้นทุนทันที",
+   "raw": {
+    "evidence": "[ใบขอซื้อ (PR) > การแก้ไขและยกเลิกใบขอซื้อ] PR ที่อนุมัติแล้วแต่ยังไม่ถูกแปลงเป็นใบสั่งซื้อ ให้กด ยกเลิก พร้อมระบุเหตุผล ระบบจะคืนงบประมาณที่จองไว้ให้รหัสต้นทุนทันที",
+    "doc_id": "PR-4",
+    "answer": "เมื่อยกเลิก PR ที่อนุมัติแล้วแต่ยังไม่ได้ออก PO งบประมาณที่จองไว้จะถูกคืนกลับไปยังรหัสต้นทุนทันที",
+    "evidence_verified_in": "PR-4"
+   }
+  },
+  {
+   "id": "n04",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ต้องระบุเหตุผล เช่น ระยะเวลาส่งของหรือคุณภาพสินค้า",
+   "raw": {
+    "evidence": "ต้องระบุเหตุผล เช่น ระยะเวลาส่งของหรือคุณภาพสินค้า",
+    "doc_id": "PO-3",
+    "answer": "ต้องระบุเหตุผล เช่น ระยะเวลาส่งของหรือคุณภาพสินค้า",
+    "evidence_verified_in": "PO-3"
+   }
+  },
+  {
+   "id": "n05",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "evidence": "[รับสินค้า (RCV) > การแก้ไขและยกเลิกใบขอซื้อ] ถ้ารับของไปแล้วบางส่วน จะลดจำนวนสั่งซื้อให้ต่ำกว่าจำนวนที่รับไปแล้วไม่ได้",
+    "doc_id": "RCV-3",
+    "answer": "ไม่สามารถลดจำนวนใน PO ที่รับของไปแล้วบางส่วนได้",
+    "evidence_verified_in": null
+   }
+  },
+  {
+   "id": "n06",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ต้องถ่ายรูปสินค้าอย่างน้อย 1 รูป",
+   "raw": {
+    "evidence": "กรอกจำนวนที่รับจริง เลขที่ใบส่งของ และถ่ายรูปสินค้าอย่างน้อย 1 รูป",
+    "doc_id": "RCV-2",
+    "answer": "ต้องถ่ายรูปสินค้าอย่างน้อย 1 รูป",
+    "evidence_verified_in": "RCV-2"
+   }
+  },
+  {
+   "id": "n07",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ใช่ ต้นทุนของโครงการจะเปลี่ยนเมื่อคืนสินค้า เนื่องจากระบบจะลดต้นทุนจริงของโครงการตามจำนวนและเหตุผลที่ระบุในใบคืนสินค้า",
+   "raw": {
+    "evidence": "สินค้าชำรุดหรือไม่ตรงสเปก ให้สร้างใบคืนสินค้าจากเมนู รับสินค้า > คืนสินค้า โดยอ้างอิงเลขที่ GR เดิม ระบุจำนวนและเหตุผล ระบบจะลดต้นทุนจริงของโครงการและแจ้งฝ่ายบัญชีให้ปรับยอดหนี้",
+    "doc_id": "RCV-4",
+    "answer": "ใช่ ต้นทุนของโครงการจะเปลี่ยนเมื่อคืนสินค้า เนื่องจากระบบจะลดต้นทุนจริงของโครงการตามจำนวนและเหตุผลที่ระบุในใบคืนสินค้า",
+    "evidence_verified_in": "RCV-4"
+   }
+  },
+  {
+   "id": "n08",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ราคาในใบแจ้งหนี้ต่างจาก PO ได้ไม่เกิน 1 บาทต่อรายการจากการปัดเศษ จึงสามารถตั้งหนี้ผ่านได้",
+   "raw": {
+    "evidence": "ทั้งจำนวนและราคาต้องตรงกัน โดยยอมให้ต่างกันได้ไม่เกิน 1 บาทต่อรายการจากการปัดเศษ",
+    "doc_id": "AP-2",
+    "answer": "ราคาในใบแจ้งหนี้ต่างจาก PO ได้ไม่เกิน 1 บาทต่อรายการจากการปัดเศษ จึงสามารถตั้งหนี้ผ่านได้",
+    "evidence_verified_in": "AP-2"
+   }
+  },
+  {
+   "id": "n09",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ระบบช่วยให้คุณไปที่เมนู เจ้าหนี้ > วางแผนจ่ายเงิน แล้วเลือกช่วงวันครบกำหนด ระบบจะแสดงหนี้ที่ครบกำหนดพร้อมยอดหลังหักภาษีและเงินประกันผลงาน แล้วคุณสามารถเลือกรายการ แล้วกด สร้างชุดจ่ายเงิน หลังจากนั้น คุณสามารถส่งไฟล์โอนเงินไปยังธนาคาร หรือพิมพ์เช็ค",
+   "raw": {
+    "evidence": "1) ไปที่เมนู เจ้าหนี้ > วางแผนจ่ายเงิน แล้วเลือกช่วงวันครบกำหนด\n2) ระบบจะแสดงหนี้ที่ครบกำหนดพร้อมยอดหลังหักภาษีและเงินประกันผลงาน\n3) เลือกรายการ แล้วกด สร้างชุดจ่ายเงิน\n4) ส่งไฟล์โอนเงินไปยังธนาคาร หรือพิมพ์เช็ค",
+    "doc_id": "AP-5",
+    "answer": "ระบบช่วยให้คุณไปที่เมนู เจ้าหนี้ > วางแผนจ่ายเงิน แล้วเลือกช่วงวันครบกำหนด ระบบจะแสดงหนี้ที่ครบกำหนดพร้อมยอดหลังหักภาษีและเงินประกันผลงาน แล้วคุณสามารถเลือกรายการ แล้วกด สร้างชุดจ่ายเงิน หลังจากนั้น คุณสามารถส่งไฟล์โอนเงินไปยังธนาคาร หรือพิมพ์เช็ค",
+    "evidence_verified_in": "AP-5"
+   }
+  },
+  {
+   "id": "n10",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "งบประมาณที่นำเข้าจาก Excel ต้องผ่านการยืนยันและอนุมัติจากผู้จัดการโครงการจึงจะใช้งานได้",
+   "raw": {
+    "evidence": "3) อัปโหลดไฟล์ ระบบจะตรวจรหัสซ้ำและยอดรวมก่อนให้กดยืนยัน\n4) ส่งงบประมาณให้ผู้จัดการโครงการอนุมัติ งบจะใช้งานได้หลังอนุมัติเท่านั้น",
+    "doc_id": "BUDGET-2",
+    "answer": "งบประมาณที่นำเข้าจาก Excel ต้องผ่านการยืนยันและอนุมัติจากผู้จัดการโครงการจึงจะใช้งานได้",
+    "evidence_verified_in": "BUDGET-2"
+   }
+  },
+  {
+   "id": "n11",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "การโอนงบต้องได้รับอนุมัติจากผู้ควบคุมต้นทุนโครงการ",
+   "raw": {
+    "evidence": "ถ้ารหัสต้นทุนใดงบไม่พอ ให้สร้างใบโอนงบที่เมนู โครงการ > งบประมาณ > โอนงบ เลือกรหัสต้นทาง รหัสปลายทาง และจำนวนเงิน ยอดรวมงบของโครงการจะไม่เปลี่ยน การโอนงบต้องได้รับอนุมัติจากผู้ควบคุมต้นทุนโครงการ",
+    "doc_id": "BUDGET-3",
+    "answer": "การโอนงบต้องได้รับอนุมัติจากผู้ควบคุมต้นทุนโครงการ",
+    "evidence_verified_in": "BUDGET-3"
+   }
+  },
+  {
+   "id": "n12",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ระบบจะแจ้งเตือนซ้ำทุกวันจันทร์สำหรับรหัสต้นทุนที่ใช้งบเกิน 100 เปอร์เซ็นต์",
+   "raw": {
+    "evidence": "[งบประมาณโครงการ (BUDGET) > การแจ้งเตือนงบประมาณ]\nระบบส่งอีเมลแจ้งผู้จัดการโครงการและผู้ควบคุมต้นทุน เมื่อรหัสต้นทุนใดใช้งบเกิน 80 เปอร์เซ็นต์ และแจ้งซ้ำทุกวันจันทร์สำหรับรหัสที่ใช้เกิน 100 เปอร์เซ็นต์แล้ว",
+    "doc_id": "BUDGET-5",
+    "answer": "ระบบจะแจ้งเตือนซ้ำทุกวันจันทร์สำหรับรหัสต้นทุนที่ใช้งบเกิน 100 เปอร์เซ็นต์",
+    "evidence_verified_in": "BUDGET-5"
+   }
+  },
+  {
+   "id": "n13",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": false,
+   "answer": "ตรวจสอบสถานะ PO กับฝ่ายจัดซื้อ",
+   "raw": {
+    "evidence": "รหัส RCV-E02 PO ยังไม่อนุมัติ รับสินค้าได้เฉพาะ PO ที่อนุมัติแล้ว ให้ตรวจสอบสถานะ PO กับฝ่ายจัดซื้อ",
+    "doc_id": "RCV-5",
+    "answer": "ตรวจสอบสถานะ PO กับฝ่ายจัดซื้อ",
+    "evidence_verified_in": "RCV-5"
+   }
+  },
+  {
+   "id": "n14",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ให้แจ้งผู้ควบคุมต้นทุนเปิดใช้งานรหัสรหัสต้นทุนที่เลือก",
+   "raw": {
+    "evidence": "รหัส PR-E02 ไม่พบรหัสต้นทุน เกิดเมื่อรหัสต้นทุนถูกปิดหรือยังไม่เปิดใช้ในโครงการ ให้แจ้งผู้ควบคุมต้นทุนเปิดใช้งานรหัสนั้นก่อน",
+    "doc_id": "PR-5",
+    "answer": "ให้แจ้งผู้ควบคุมต้นทุนเปิดใช้งานรหัสรหัสต้นทุนที่เลือก",
+    "evidence_verified_in": "PR-5"
+   }
+  },
+  {
+   "id": "n15",
+   "set": "final_check",
+   "expected": "ticket",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "evidence": "",
+    "doc_id": "",
+    "answer": "",
+    "evidence_verified_in": null
+   }
+  },
+  {
+   "id": "n16",
+   "set": "final_check",
+   "expected": "ticket",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "rule": "unknown error code"
+   }
+  },
+  {
+   "id": "n17",
+   "set": "final_check",
+   "expected": "ticket",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "evidence": "",
+    "doc_id": "",
+    "answer": "",
+    "evidence_verified_in": null
+   }
+  },
+  {
+   "id": "n18",
+   "set": "final_check",
+   "expected": "ticket",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "evidence": "",
+    "doc_id": "",
+    "answer": "",
+    "evidence_verified_in": null
+   }
+  },
+  {
+   "id": "n19",
+   "set": "final_check",
+   "expected": "ticket",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "evidence": "",
+    "doc_id": "",
+    "answer": "",
+    "evidence_verified_in": null
+   }
+  }
+ ],
+ "D": [
+  {
+   "id": "n01",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "สถานะของ PR มี 4 แบบ ได้แก่ ร่าง, รออนุมัติ, อนุมัติแล้ว และยกเลิก",
+   "raw": {
+    "evidence": "สถานะของ PR มี 4 แบบ ได้แก่ ร่าง, รออนุมัติ, อนุมัติแล้ว และยกเลิก",
+    "doc_id": "PR-1",
+    "answer": "สถานะของ PR มี 4 แบบ ได้แก่ ร่าง, รออนุมัติ, อนุมัติแล้ว และยกเลิก",
+    "evidence_verified_in": "PR-1"
+   }
+  },
+  {
+   "id": "n02",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "วิศวกรโครงการเป็นผู้อนุมัติ",
+   "raw": {
+    "evidence": "ไม่เกิน 50,000 บาท วิศวกรโครงการเป็นผู้อนุมัติ",
+    "doc_id": "PR-3",
+    "answer": "วิศวกรโครงการเป็นผู้อนุมัติ",
+    "evidence_verified_in": "PR-3"
+   }
+  },
+  {
+   "id": "n03",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "เมื่อยกเลิก PR ที่อนุมัติแล้วแต่ยังไม่ได้ออก PO ระบบจะคืนงบประมาณที่จองไว้ให้รหัสต้นทุนทันที",
+   "raw": {
+    "evidence": "PR ที่อนุมัติแล้วแต่ยังไม่ถูกแปลงเป็นใบสั่งซื้อ ให้กด ยกเลิก พร้อมระบุเหตุผล ระบบจะคืนงบประมาณที่จองไว้ให้รหัสต้นทุนทันที",
+    "doc_id": "PR-4",
+    "answer": "เมื่อยกเลิก PR ที่อนุมัติแล้วแต่ยังไม่ได้ออก PO ระบบจะคืนงบประมาณที่จองไว้ให้รหัสต้นทุนทันที",
+    "evidence_verified_in": "PR-4"
+   }
+  },
+  {
+   "id": "n04",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ต้องระบุเหตุผล เช่น ระยะเวลาส่งของหรือคุณภาพสินค้า",
+   "raw": {
+    "evidence": "หากเลือกผู้ขายที่ไม่ใช่ราคาต่ำสุด ต้องระบุเหตุผล เช่น ระยะเวลาส่งของหรือคุณภาพสินค้า",
+    "doc_id": "PO-3",
+    "answer": "ต้องระบุเหตุผล เช่น ระยะเวลาส่งของหรือคุณภาพสินค้า",
+    "evidence_verified_in": "PO-3"
+   }
+  },
+  {
+   "id": "n05",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ไม่สามารถลดจำนวนใน PO ที่รับของไปแล้วบางส่วนได้",
+   "raw": {
+    "evidence": "ถ้ารับของไปแล้วบางส่วน จะลดจำนวนสั่งซื้อให้ต่ำกว่าจำนวนที่รับไปแล้วไม่ได้",
+    "doc_id": "PO-4",
+    "answer": "ไม่สามารถลดจำนวนใน PO ที่รับของไปแล้วบางส่วนได้",
+    "evidence_verified_in": "PO-4"
+   }
+  },
+  {
+   "id": "n06",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ต้องถ่ายรูปสินค้าอย่างน้อย 1 รูป",
+   "raw": {
+    "evidence": "กรอกจำนวนที่รับจริง เลขที่ใบส่งของ และถ่ายรูปสินค้าอย่างน้อย 1 รูป",
+    "doc_id": "RCV-2",
+    "answer": "ต้องถ่ายรูปสินค้าอย่างน้อย 1 รูป",
+    "evidence_verified_in": "RCV-2"
+   }
+  },
+  {
+   "id": "n07",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "การคืนสินค้าจะทำให้ต้นทุนจริงของโครงการลดลง และฝ่ายบัญชีจะได้รับแจ้งเพื่อปรับยอดหนี้",
+   "raw": {
+    "evidence": "ระบบจะลดต้นทุนจริงของโครงการและแจ้งฝ่ายบัญชีให้ปรับยอดหนี้",
+    "doc_id": "RCV-4",
+    "answer": "การคืนสินค้าจะทำให้ต้นทุนจริงของโครงการลดลง และฝ่ายบัญชีจะได้รับแจ้งเพื่อปรับยอดหนี้",
+    "evidence_verified_in": "RCV-4"
+   }
+  },
+  {
+   "id": "n08",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ทั้งจำนวนและราคาต้องตรงกัน โดยยอมให้ต่างกันได้ไม่เกิน 1 บาทต่อรายการจากการปัดเศษ",
+   "raw": {
+    "evidence": "ทั้งจำนวนและราคาต้องตรงกัน โดยยอมให้ต่างกันได้ไม่เกิน 1 บาทต่อรายการจากการปัดเศษ",
+    "doc_id": "AP-2",
+    "answer": "ทั้งจำนวนและราคาต้องตรงกัน โดยยอมให้ต่างกันได้ไม่เกิน 1 บาทต่อรายการจากการปัดเศษ",
+    "evidence_verified_in": "AP-2"
+   }
+  },
+  {
+   "id": "n09",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ไปที่เมนู เจ้าหนี้ > วางแผนจ่ายเงิน แล้วเลือกช่วงวันครบกำหนด ระบบจะแสดงหนี้ที่ครบกำหนดพร้อมยอดหลังหักภาษีและเงินประกันผลงาน แล้วเลือกรายการ แล้วกด สร้างชุดจ่ายเงิน ส่งไฟล์โอนเงินไปยังธนาคาร หรือพิมพ์เช็ค",
+   "raw": {
+    "evidence": "1) ไปที่เมนู เจ้าหนี้ > วางแผนจ่ายเงิน แล้วเลือกช่วงวันครบกำหนด\n2) ระบบจะแสดงหนี้ที่ครบกำหนดพร้อมยอดหลังหักภาษีและเงินประกันผลงาน\n3) เลือกรายการ แล้วกด สร้างชุดจ่ายเงิน\n4) ส่งไฟล์โอนเงินไปยังธนาคาร หรือพิมพ์เช็ค",
+    "doc_id": "AP-5",
+    "answer": "ไปที่เมนู เจ้าหนี้ > วางแผนจ่ายเงิน แล้วเลือกช่วงวันครบกำหนด ระบบจะแสดงหนี้ที่ครบกำหนดพร้อมยอดหลังหักภาษีและเงินประกันผลงาน แล้วเลือกรายการ แล้วกด สร้างชุดจ่ายเงิน ส่งไฟล์โอนเงินไปยังธนาคาร หรือพิมพ์เช็ค",
+    "evidence_verified_in": "AP-5"
+   }
+  },
+  {
+   "id": "n10",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": false,
+   "answer": "ระบบจะตรวจรหัสซ้ำและยอดรวมก่อน ต้องกดยืนยันให้เสร็จสิ้นจึงจะใช้งานได้",
+   "raw": {
+    "evidence": "ระบบจะตรวจรหัสซ้ำและยอดรวมก่อนให้กดยืนยัน",
+    "doc_id": "BUDGET-2",
+    "answer": "ระบบจะตรวจรหัสซ้ำและยอดรวมก่อน ต้องกดยืนยันให้เสร็จสิ้นจึงจะใช้งานได้",
+    "evidence_verified_in": "BUDGET-2"
+   }
+  },
+  {
+   "id": "n11",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": false,
+   "answer": "ผู้บริหารต้องอนุมัติการโอนงบเพื่อเพิ่มงบรวมของโครงการ",
+   "raw": {
+    "evidence": "หากต้องการเพิ่มงบรวมของโครงการ ต้องทำใบเพิ่มงบประมาณ ซึ่งผู้บริหารต้องอนุมัติ",
+    "doc_id": "BUDGET-3",
+    "answer": "ผู้บริหารต้องอนุมัติการโอนงบเพื่อเพิ่มงบรวมของโครงการ",
+    "evidence_verified_in": "BUDGET-3"
+   }
+  },
+  {
+   "id": "n12",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ระบบจะแจ้งเตือนซ้ำทุกวันจันทร์สำหรับรหัสที่ใช้เกิน 100 เปอร์เซ็นต์",
+   "raw": {
+    "evidence": "ระบบส่งอีเมลแจ้งผู้จัดการโครงการและผู้ควบคุมต้นทุน เมื่อรหัสต้นทุนใดใช้งบเกิน 80 เปอร์เซ็นต์ และแจ้งซ้ำทุกวันจันทร์สำหรับรหัสที่ใช้เกิน 100 เปอร์เซ็นต์แล้ว",
+    "doc_id": "BUDGET-5",
+    "answer": "ระบบจะแจ้งเตือนซ้ำทุกวันจันทร์สำหรับรหัสที่ใช้เกิน 100 เปอร์เซ็นต์",
+    "evidence_verified_in": "BUDGET-5"
+   }
+  },
+  {
+   "id": "n13",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ตรวจสอบสถานะ PO กับฝ่ายจัดซื้อ ให้แน่ใจว่า PO ได้รับอนุมัติแล้ว",
+   "raw": {
+    "evidence": "PO ยังไม่อนุมัติ รับสินค้าได้เฉพาะ PO ที่อนุมัติแล้ว ให้ตรวจสอบสถานะ PO กับฝ่ายจัดซื้อ",
+    "doc_id": "RCV-5",
+    "answer": "ตรวจสอบสถานะ PO กับฝ่ายจัดซื้อ ให้แน่ใจว่า PO ได้รับอนุมัติแล้ว",
+    "evidence_verified_in": "RCV-5"
+   }
+  },
+  {
+   "id": "n14",
+   "set": "final_check",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ตรวจสอบกับผู้ควบคุมต้นทุนให้เปิดใช้งานรหัสต้นทุนนั้นในโครงการ",
+   "raw": {
+    "evidence": "ไม่พบรหัสต้นทุน เกิดเมื่อรหัสต้นทุนถูกปิดหรือยังไม่เปิดใช้ในโครงการ ให้แจ้งผู้ควบคุมต้นทุนเปิดใช้งานรหัสนั้นก่อน",
+    "doc_id": "PR-5",
+    "answer": "ตรวจสอบกับผู้ควบคุมต้นทุนให้เปิดใช้งานรหัสต้นทุนนั้นในโครงการ",
+    "evidence_verified_in": "PR-5"
+   }
+  },
+  {
+   "id": "n15",
+   "set": "final_check",
+   "expected": "ticket",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "evidence": "",
+    "doc_id": "",
+    "answer": "",
+    "evidence_verified_in": null
+   }
+  },
+  {
+   "id": "n16",
+   "set": "final_check",
+   "expected": "ticket",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "rule": "unknown error code"
+   }
+  },
+  {
+   "id": "n17",
+   "set": "final_check",
+   "expected": "ticket",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "evidence": "",
+    "doc_id": "",
+    "answer": "",
+    "evidence_verified_in": null
+   }
+  },
+  {
+   "id": "n18",
+   "set": "final_check",
+   "expected": "ticket",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "evidence": "",
+    "doc_id": "",
+    "answer": "",
+    "evidence_verified_in": null
+   }
+  },
+  {
+   "id": "n19",
+   "set": "final_check",
+   "expected": "ticket",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "evidence": "",
+    "doc_id": "",
+    "answer": "",
+    "evidence_verified_in": null
+   }
+  }
+ ]
+}

@@ -1,0 +1,2275 @@
+{
+ "A": [
+  {
+   "id": "q01",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "เข้าที่เมนู จัดซื้อ > ใบขอซื้อ > สร้างใหม่",
+   "raw": {
+    "grounded": true,
+    "answer": "เข้าที่เมนู จัดซื้อ > ใบขอซื้อ > สร้างใหม่",
+    "citations": [
+     "PR-2"
+    ]
+   }
+  },
+  {
+   "id": "q02",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ผู้จัดการโครงการเป็นผู้อนุมัติ",
+   "raw": {
+    "grounded": true,
+    "answer": "ผู้จัดการโครงการเป็นผู้อนุมัติ",
+    "citations": [
+     "PR-3"
+    ]
+   }
+  },
+  {
+   "id": "q03",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "กด สร้าง Revision ระบบจะสร้าง PO ฉบับแก้ไขโดยใช้เลขเดิมต่อท้ายด้วย -R1, -R2 ตามลำดับ และต้องส่งอนุมัติใหม่ตามวงเงินล่าสุด",
+   "raw": {
+    "grounded": true,
+    "answer": "กด สร้าง Revision ระบบจะสร้าง PO ฉบับแก้ไขโดยใช้เลขเดิมต่อท้ายด้วย -R1, -R2 ตามลำดับ และต้องส่งอนุมัติใหม่ตามวงเงินล่าสุด",
+    "citations": [
+     "PO-4"
+    ]
+   }
+  },
+  {
+   "id": "q04",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ต้องแนบใบเสนอราคาอย่างน้อย 3 ราย",
+   "raw": {
+    "grounded": true,
+    "answer": "ต้องแนบใบเสนอราคาอย่างน้อย 3 ราย",
+    "citations": [
+     "PO-3"
+    ]
+   }
+  },
+  {
+   "id": "q05",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "กรอกเฉพาะจำนวนที่รับจริง ระบบจะเก็บยอดค้างรับไว้ใน PO และรับครั้งถัดไปได้ เมื่อรับครบ สถานะ PO จะเปลี่ยนเป็น รับครบแล้ว",
+   "raw": {
+    "grounded": true,
+    "answer": "กรอกเฉพาะจำนวนที่รับจริง ระบบจะเก็บยอดค้างรับไว้ใน PO และรับครั้งถัดไปได้ เมื่อรับครบ สถานะ PO จะเปลี่ยนเป็น รับครบแล้ว",
+    "citations": [
+     "RCV-3"
+    ]
+   }
+  },
+  {
+   "id": "q06",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "สร้างใบคืนสินค้าจากเมนู รับสินค้า > คืนสินค้า โดยอ้างอิงเลขที่ GR เดิม ระบุจำนวนและเหตุผล",
+   "raw": {
+    "grounded": true,
+    "answer": "สร้างใบคืนสินค้าจากเมนู รับสินค้า > คืนสินค้า โดยอ้างอิงเลขที่ GR เดิม ระบุจำนวนและเหตุผล",
+    "citations": [
+     "RCV-4"
+    ]
+   }
+  },
+  {
+   "id": "q07",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "3-way matching คือ การเทียบเอกสาร 3 ใบ คือ ใบสั่งซื้อ ใบรับสินค้าและใบแจ้งหนี้ ทั้งจำนวนและราคาต้องตรงกัน",
+   "raw": {
+    "grounded": true,
+    "answer": "3-way matching คือ การเทียบเอกสาร 3 ใบ คือ ใบสั่งซื้อ ใบรับสินค้าและใบแจ้งหนี้ ทั้งจำนวนและราคาต้องตรงกัน",
+    "citations": [
+     "AP-2"
+    ]
+   }
+  },
+  {
+   "id": "q08",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "เงินประกันผลงานจะคืนให้ผู้รับเหมาได้เมื่อพ้นระยะรับประกันผลงาน",
+   "raw": {
+    "grounded": true,
+    "answer": "เงินประกันผลงานจะคืนให้ผู้รับเหมาได้เมื่อพ้นระยะรับประกันผลงาน",
+    "citations": [
+     "AP-4"
+    ]
+   }
+  },
+  {
+   "id": "q09",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ขอโอนงบจากรหัสต้นทุนอื่นที่ยังเหลือ ผ่านเมนู โครงการ > งบประมาณ > โอนงบ",
+   "raw": {
+    "grounded": true,
+    "answer": "ขอโอนงบจากรหัสต้นทุนอื่นที่ยังเหลือ ผ่านเมนู โครงการ > งบประมาณ > โอนงบ",
+    "citations": [
+     "FAQ-10"
+    ]
+   }
+  },
+  {
+   "id": "q10",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "grounded": false,
+    "answer": "",
+    "citations": []
+   }
+  },
+  {
+   "id": "q11",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "1. ไปที่เมนู โครงการ > งบประมาณ > นำเข้า BOQ\n2. ดาวน์โหลดแม่แบบ Excel แล้วกรอกรหัสต้นทุน รายละเอียด และงบประมาณ\n3. อัปโหลดไฟล์ ระบบจะตรวจรหัสซ้ำและยอดรวมก่อนให้กดยืนยัน\n4. ส่งงบประมาณให้ผู้จัดการโครงการอนุมัติ งบจะใช้งานได้หลังอนุมัติเท่านั้น",
+   "raw": {
+    "grounded": true,
+    "answer": "1. ไปที่เมนู โครงการ > งบประมาณ > นำเข้า BOQ\n2. ดาวน์โหลดแม่แบบ Excel แล้วกรอกรหัสต้นทุน รายละเอียด และงบประมาณ\n3. อัปโหลดไฟล์ ระบบจะตรวจรหัสซ้ำและยอดรวมก่อนให้กดยืนยัน\n4. ส่งงบประมาณให้ผู้จัดการโครงการอนุมัติ งบจะใช้งานได้หลังอนุมัติเท่านั้น",
+    "citations": [
+     "BUDGET-2"
+    ]
+   }
+  },
+  {
+   "id": "q12",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "กด ลืมรหัสผ่าน ที่หน้าเข้าสู่ระบบ ระบบจะส่งลิงก์ตั้งรหัสใหม่ไปที่อีเมล",
+   "raw": {
+    "grounded": true,
+    "answer": "กด ลืมรหัสผ่าน ที่หน้าเข้าสู่ระบบ ระบบจะส่งลิงก์ตั้งรหัสใหม่ไปที่อีเมล",
+    "citations": [
+     "FAQ-12"
+    ]
+   }
+  },
+  {
+   "id": "q13",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": false,
+   "answer": "ให้ฝ่ายจัดซื้อสร้าง Revision ของ PO เพื่อเพิ่มจำนวนก่อน",
+   "raw": {
+    "grounded": true,
+    "answer": "ให้ฝ่ายจัดซื้อสร้าง Revision ของ PO เพื่อเพิ่มจำนวนก่อน",
+    "citations": [
+     "RCV-5"
+    ]
+   }
+  },
+  {
+   "id": "q14",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ติดต่อผู้ควบคุมต้นทุนโครงการเพื่อขอโอนงบ หรือแยกรายการไปใช้รหัสต้นทุนอื่นที่เหมาะสม",
+   "raw": {
+    "grounded": true,
+    "answer": "ติดต่อผู้ควบคุมต้นทุนโครงการเพื่อขอโอนงบ หรือแยกรายการไปใช้รหัสต้นทุนอื่นที่เหมาะสม",
+    "citations": [
+     "PR-5"
+    ]
+   }
+  },
+  {
+   "id": "q15",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ตรวจสอบว่าเป็นการบันทึกซ้ำหรือผู้ขายออกเลขซ้ำ",
+   "raw": {
+    "grounded": true,
+    "answer": "ตรวจสอบว่าเป็นการบันทึกซ้ำหรือผู้ขายออกเลขซ้ำ",
+    "citations": [
+     "AP-6"
+    ]
+   }
+  },
+  {
+   "id": "q16",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ติดต่อฝ่ายบัญชีเพื่อตรวจสอบสถานะผู้ขาย",
+   "raw": {
+    "grounded": true,
+    "answer": "ติดต่อฝ่ายบัญชีเพื่อตรวจสอบสถานะผู้ขาย",
+    "citations": [
+     "PO-6"
+    ]
+   }
+  },
+  {
+   "id": "q17",
+   "set": "questions",
+   "expected": "ticket",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "grounded": false,
+    "answer": "",
+    "citations": []
+   }
+  },
+  {
+   "id": "q18",
+   "set": "questions",
+   "expected": "ticket",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "rule": "unknown error code"
+   }
+  },
+  {
+   "id": "q19",
+   "set": "questions",
+   "expected": "ticket",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "grounded": false,
+    "answer": "",
+    "citations": []
+   }
+  },
+  {
+   "id": "q20",
+   "set": "questions",
+   "expected": "ticket",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "grounded": false,
+    "answer": "",
+    "citations": []
+   }
+  },
+  {
+   "id": "h01",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ขนาดไม่เกิน 10 MB ต่อไฟล์",
+   "raw": {
+    "grounded": true,
+    "answer": "ขนาดไม่เกิน 10 MB ต่อไฟล์",
+    "citations": [
+     "PR-2"
+    ]
+   }
+  },
+  {
+   "id": "h02",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ต้องผ่านผู้อำนวยการฝ่ายก่อสร้างอนุมัติเพิ่มอีกหนึ่งขั้น",
+   "raw": {
+    "grounded": true,
+    "answer": "ต้องผ่านผู้อำนวยการฝ่ายก่อสร้างอนุมัติเพิ่มอีกหนึ่งขั้น",
+    "citations": [
+     "PR-3"
+    ]
+   }
+  },
+  {
+   "id": "h03",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "grounded": false,
+    "answer": "",
+    "citations": []
+   }
+  },
+  {
+   "id": "h04",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ได้ ใบสั่งซื้อหนึ่งใบสามารถรวมรายการจากหลายใบขอซื้อ (PR) ได้ ถ้าเป็นโครงการเดียวกันและผู้ขายรายเดียวกัน",
+   "raw": {
+    "grounded": true,
+    "answer": "ได้ ใบสั่งซื้อหนึ่งใบสามารถรวมรายการจากหลายใบขอซื้อ (PR) ได้ ถ้าเป็นโครงการเดียวกันและผู้ขายรายเดียวกัน",
+    "citations": [
+     "PO-1"
+    ]
+   }
+  },
+  {
+   "id": "h05",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "เลขที่ PO ฉบับแก้ไขจะต่อท้ายด้วย -R1, -R2 ตามลำดับ",
+   "raw": {
+    "grounded": true,
+    "answer": "เลขที่ PO ฉบับแก้ไขจะต่อท้ายด้วย -R1, -R2 ตามลำดับ",
+    "citations": [
+     "PO-4"
+    ]
+   }
+  },
+  {
+   "id": "h06",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "กด ส่งอีเมล ระบบจะแนบไฟล์ PDF ของ PO ไปยังอีเมลซัพพลายเออร์ที่บันทึกไว้ หรือกด พิมพ์ เพื่อพิมพ์ฉบับที่มีลายเซ็นผู้อนุมัติ",
+   "raw": {
+    "grounded": true,
+    "answer": "กด ส่งอีเมล ระบบจะแนบไฟล์ PDF ของ PO ไปยังอีเมลซัพพลายเออร์ที่บันทึกไว้ หรือกด พิมพ์ เพื่อพิมพ์ฉบับที่มีลายเซ็นผู้อนุมัติ",
+    "citations": [
+     "PO-5"
+    ]
+   }
+  },
+  {
+   "id": "h07",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ได้ แอปจะเก็บข้อมูลไว้และส่งอัตโนมัติเมื่อกลับมาออนไลน์",
+   "raw": {
+    "grounded": true,
+    "answer": "ได้ แอปจะเก็บข้อมูลไว้และส่งอัตโนมัติเมื่อกลับมาออนไลน์",
+    "citations": [
+     "RCV-2"
+    ]
+   }
+  },
+  {
+   "id": "h08",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "กด ปิดยอดค้างรับ ใน PO",
+   "raw": {
+    "grounded": true,
+    "answer": "กด ปิดยอดค้างรับ ใน PO",
+    "citations": [
+     "RCV-3"
+    ]
+   }
+  },
+  {
+   "id": "h09",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "แก้ไขอัตราหัก ณ ที่จ่ายที่ข้อมูลผู้ขาย",
+   "raw": {
+    "grounded": true,
+    "answer": "แก้ไขอัตราหัก ณ ที่จ่ายที่ข้อมูลผู้ขาย",
+    "citations": [
+     "AP-3"
+    ]
+   }
+  },
+  {
+   "id": "h10",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "1. ไปที่เมนู เจ้าหนี้ > วางแผนจ่ายเงิน แล้วเลือกช่วงวันครบกำหนด\n2. ระบบจะแสดงหนี้ที่ครบกำหนดพร้อมยอดหลังหักภาษีและเงินประกันผลงาน\n3. เลือกรายการ แล้วกด สร้างชุดจ่ายเงิน\n4. ส่งไฟล์โอนเงินไปยังธนาคาร หรือพิมพ์เช็ค",
+   "raw": {
+    "grounded": true,
+    "answer": "1. ไปที่เมนู เจ้าหนี้ > วางแผนจ่ายเงิน แล้วเลือกช่วงวันครบกำหนด\n2. ระบบจะแสดงหนี้ที่ครบกำหนดพร้อมยอดหลังหักภาษีและเงินประกันผลงาน\n3. เลือกรายการ แล้วกด สร้างชุดจ่ายเงิน\n4. ส่งไฟล์โอนเงินไปยังธนาคาร หรือพิมพ์เช็ค",
+    "citations": [
+     "AP-5"
+    ]
+   }
+  },
+  {
+   "id": "h11",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ต้องทำใบเพิ่มงบประมาณ ซึ่งผู้บริหารต้องอนุมัติ",
+   "raw": {
+    "grounded": true,
+    "answer": "ต้องทำใบเพิ่มงบประมาณ ซึ่งผู้บริหารต้องอนุมัติ",
+    "citations": [
+     "BUDGET-3"
+    ]
+   }
+  },
+  {
+   "id": "h12",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ตั้งค่าผู้รับแจ้งเตือนได้ที่ โครงการ > ตั้งค่า > การแจ้งเตือน",
+   "raw": {
+    "grounded": true,
+    "answer": "ตั้งค่าผู้รับแจ้งเตือนได้ที่ โครงการ > ตั้งค่า > การแจ้งเตือน",
+    "citations": [
+     "BUDGET-5"
+    ]
+   }
+  },
+  {
+   "id": "h13",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ใช่ สามารถใช้แอป SiteERP Site บนไอโฟนได้",
+   "raw": {
+    "grounded": true,
+    "answer": "ใช่ สามารถใช้แอป SiteERP Site บนไอโฟนได้",
+    "citations": [
+     "FAQ-13"
+    ]
+   }
+  },
+  {
+   "id": "h14",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "แก้ไขโดยเปลี่ยนวันที่ต้องการใช้ของให้เป็นวันปัจจุบันหรือวันในอนาคต",
+   "raw": {
+    "grounded": true,
+    "answer": "แก้ไขโดยเปลี่ยนวันที่ต้องการใช้ของให้เป็นวันปัจจุบันหรือวันในอนาคต",
+    "citations": [
+     "PR-5"
+    ]
+   }
+  },
+  {
+   "id": "h15",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ต้องแนบเหตุผลประกอบ และจะมีผู้อนุมัติเพิ่มอีกหนึ่งขั้น",
+   "raw": {
+    "grounded": true,
+    "answer": "ต้องแนบเหตุผลประกอบ และจะมีผู้อนุมัติเพิ่มอีกหนึ่งขั้น",
+    "citations": [
+     "PO-6"
+    ]
+   }
+  },
+  {
+   "id": "h16",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ตรวจสอบว่ารับของครบหรือไม่ ถ้าราคาเปลี่ยนต้องให้ฝ่ายจัดซื้อทำ Revision ของ PO ก่อน",
+   "raw": {
+    "grounded": true,
+    "answer": "ตรวจสอบว่ารับของครบหรือไม่ ถ้าราคาเปลี่ยนต้องให้ฝ่ายจัดซื้อทำ Revision ของ PO ก่อน",
+    "citations": [
+     "AP-6"
+    ]
+   }
+  },
+  {
+   "id": "h17",
+   "set": "heldout",
+   "expected": "ticket",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "grounded": false,
+    "answer": "",
+    "citations": []
+   }
+  },
+  {
+   "id": "h18",
+   "set": "heldout",
+   "expected": "ticket",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "rule": "unknown error code"
+   }
+  },
+  {
+   "id": "h19",
+   "set": "heldout",
+   "expected": "ticket",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "grounded": false,
+    "answer": "",
+    "citations": []
+   }
+  },
+  {
+   "id": "h20",
+   "set": "heldout",
+   "expected": "ticket",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "grounded": false,
+    "answer": "",
+    "citations": []
+   }
+  }
+ ],
+ "B": [
+  {
+   "id": "q01",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ไปที่เมนู จัดซื้อ > ใบขอซื้อ > สร้างใหม่",
+   "raw": {
+    "grounded": true,
+    "answer": "ไปที่เมนู จัดซื้อ > ใบขอซื้อ > สร้างใหม่",
+    "citations": [
+     "PR-2"
+    ]
+   }
+  },
+  {
+   "id": "q02",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ผู้จัดการโครงการเป็นผู้อนุมัติ",
+   "raw": {
+    "grounded": true,
+    "answer": "ผู้จัดการโครงการเป็นผู้อนุมัติ",
+    "citations": [
+     "PR-3"
+    ]
+   }
+  },
+  {
+   "id": "q03",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "กด สร้าง Revision ระบบจะสร้าง PO ฉบับแก้ไขโดยใช้เลขเดิมต่อท้ายด้วย -R1, -R2 ตามลำดับ และต้องส่งอนุมัติใหม่ตามวงเงินล่าสุด",
+   "raw": {
+    "grounded": true,
+    "answer": "กด สร้าง Revision ระบบจะสร้าง PO ฉบับแก้ไขโดยใช้เลขเดิมต่อท้ายด้วย -R1, -R2 ตามลำดับ และต้องส่งอนุมัติใหม่ตามวงเงินล่าสุด",
+    "citations": [
+     "PO-4"
+    ]
+   }
+  },
+  {
+   "id": "q04",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ต้องแนบใบเสนอราคาอย่างน้อย 3 ราย",
+   "raw": {
+    "grounded": true,
+    "answer": "ต้องแนบใบเสนอราคาอย่างน้อย 3 ราย",
+    "citations": [
+     "PO-3"
+    ]
+   }
+  },
+  {
+   "id": "q05",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "กรอกเฉพาะจำนวนที่รับจริง ระบบจะเก็บยอดค้างรับไว้ใน PO และรับครั้งถัดไปได้ เมื่อรับครบ สถานะ PO จะเปลี่ยนเป็น รับครบแล้ว",
+   "raw": {
+    "grounded": true,
+    "answer": "กรอกเฉพาะจำนวนที่รับจริง ระบบจะเก็บยอดค้างรับไว้ใน PO และรับครั้งถัดไปได้ เมื่อรับครบ สถานะ PO จะเปลี่ยนเป็น รับครบแล้ว",
+    "citations": [
+     "RCV-3"
+    ]
+   }
+  },
+  {
+   "id": "q06",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "สร้างใบคืนสินค้าจากเมนู รับสินค้า > คืนสินค้า โดยอ้างอิงเลขที่ GR เดิม ระบุจำนวนและเหตุผล",
+   "raw": {
+    "grounded": true,
+    "answer": "สร้างใบคืนสินค้าจากเมนู รับสินค้า > คืนสินค้า โดยอ้างอิงเลขที่ GR เดิม ระบุจำนวนและเหตุผล",
+    "citations": [
+     "RCV-4"
+    ]
+   }
+  },
+  {
+   "id": "q07",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "3-way matching คือ การเทียบเอกสาร 3 ใบ คือ ใบสั่งซื้อ ใบรับสินค้าและใบแจ้งหนี้ ทั้งจำนวนและราคาต้องตรงกัน โดยยอมให้ต่างกันได้ไม่เกิน 1 บาทต่อรายการจากการปัดเศษ",
+   "raw": {
+    "grounded": true,
+    "answer": "3-way matching คือ การเทียบเอกสาร 3 ใบ คือ ใบสั่งซื้อ ใบรับสินค้าและใบแจ้งหนี้ ทั้งจำนวนและราคาต้องตรงกัน โดยยอมให้ต่างกันได้ไม่เกิน 1 บาทต่อรายการจากการปัดเศษ",
+    "citations": [
+     "AP-2"
+    ]
+   }
+  },
+  {
+   "id": "q08",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "เงินประกันผลงานจะคืนให้ผู้รับเหมาได้เมื่อพ้นระยะรับประกันผลงาน",
+   "raw": {
+    "grounded": true,
+    "answer": "เงินประกันผลงานจะคืนให้ผู้รับเหมาได้เมื่อพ้นระยะรับประกันผลงาน",
+    "citations": [
+     "AP-4"
+    ]
+   }
+  },
+  {
+   "id": "q09",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ขอโอนงบจากรหัสต้นทุนอื่นที่ยังเหลือ ผ่านเมนู โครงการ > งบประมาณ > โอนงบ",
+   "raw": {
+    "grounded": true,
+    "answer": "ขอโอนงบจากรหัสต้นทุนอื่นที่ยังเหลือ ผ่านเมนู โครงการ > งบประมาณ > โอนงบ",
+    "citations": [
+     "BUDGET-3",
+     "FAQ-10"
+    ]
+   }
+  },
+  {
+   "id": "q10",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "รายงานงบขึ้นสีแดงหมายถึงใช้งบเกิน 100 เปอร์เซ็นต์ของรหัสต้นทุนนั้นแล้ว",
+   "raw": {
+    "grounded": true,
+    "answer": "รายงานงบขึ้นสีแดงหมายถึงใช้งบเกิน 100 เปอร์เซ็นต์ของรหัสต้นทุนนั้นแล้ว",
+    "citations": [
+     "BUDGET-4"
+    ]
+   }
+  },
+  {
+   "id": "q11",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "1) ไปที่เมนู โครงการ > งบประมาณ > นำเข้า BOQ\n2) ดาวน์โหลดแม่แบบ Excel แล้วกรอกรหัสต้นทุน รายละเอียด และงบประมาณ\n3) อัปโหลดไฟล์ ระบบจะตรวจรหัสซ้ำและยอดรวมก่อนให้กดยืนยัน\n4) ส่งงบประมาณให้ผู้จัดการโครงการอนุมัติ งบจะใช้งานได้หลังอนุมัติเท่านั้น",
+   "raw": {
+    "grounded": true,
+    "answer": "1) ไปที่เมนู โครงการ > งบประมาณ > นำเข้า BOQ\n2) ดาวน์โหลดแม่แบบ Excel แล้วกรอกรหัสต้นทุน รายละเอียด และงบประมาณ\n3) อัปโหลดไฟล์ ระบบจะตรวจรหัสซ้ำและยอดรวมก่อนให้กดยืนยัน\n4) ส่งงบประมาณให้ผู้จัดการโครงการอนุมัติ งบจะใช้งานได้หลังอนุมัติเท่านั้น",
+    "citations": [
+     "BUDGET-2"
+    ]
+   }
+  },
+  {
+   "id": "q12",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "กด ลืมรหัสผ่าน ที่หน้าเข้าสู่ระบบ ระบบจะส่งลิงก์ตั้งรหัสใหม่ไปที่อีเมล",
+   "raw": {
+    "grounded": true,
+    "answer": "กด ลืมรหัสผ่าน ที่หน้าเข้าสู่ระบบ ระบบจะส่งลิงก์ตั้งรหัสใหม่ไปที่อีเมล",
+    "citations": [
+     "FAQ-12"
+    ]
+   }
+  },
+  {
+   "id": "q13",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ระบบยอมให้รับเกินจำนวนสั่งซื้อได้ไม่เกิน 5 เปอร์เซ็นต์ของจำนวนสั่งซื้อ ถ้าเกินกว่านั้นให้ฝ่ายจัดซื้อสร้าง Revision ของ PO เพื่อเพิ่มจำนวนก่อน",
+   "raw": {
+    "grounded": true,
+    "answer": "ระบบยอมให้รับเกินจำนวนสั่งซื้อได้ไม่เกิน 5 เปอร์เซ็นต์ของจำนวนสั่งซื้อ ถ้าเกินกว่านั้นให้ฝ่ายจัดซื้อสร้าง Revision ของ PO เพื่อเพิ่มจำนวนก่อน",
+    "citations": [
+     "RCV-5"
+    ]
+   }
+  },
+  {
+   "id": "q14",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ให้ติดต่อผู้ควบคุมต้นทุนโครงการเพื่อขอโอนงบ หรือแยกรายการไปใช้รหัสต้นทุนอื่นที่เหมาะสม",
+   "raw": {
+    "grounded": true,
+    "answer": "ให้ติดต่อผู้ควบคุมต้นทุนโครงการเพื่อขอโอนงบ หรือแยกรายการไปใช้รหัสต้นทุนอื่นที่เหมาะสม",
+    "citations": [
+     "PR-5"
+    ]
+   }
+  },
+  {
+   "id": "q15",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "รหัส AP-E01 ใบแจ้งหนี้ซ้ำ เลขที่ใบแจ้งหนี้นี้ของผู้ขายรายเดียวกันถูกบันทึกไปแล้ว ให้ตรวจสอบว่าเป็นการบันทึกซ้ำหรือผู้ขายออกเลขซ้ำ",
+   "raw": {
+    "grounded": true,
+    "answer": "รหัส AP-E01 ใบแจ้งหนี้ซ้ำ เลขที่ใบแจ้งหนี้นี้ของผู้ขายรายเดียวกันถูกบันทึกไปแล้ว ให้ตรวจสอบว่าเป็นการบันทึกซ้ำหรือผู้ขายออกเลขซ้ำ",
+    "citations": [
+     "AP-6"
+    ]
+   }
+  },
+  {
+   "id": "q16",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ติดต่อฝ่ายบัญชีเพื่อตรวจสอบสถานะผู้ขาย",
+   "raw": {
+    "grounded": true,
+    "answer": "ติดต่อฝ่ายบัญชีเพื่อตรวจสอบสถานะผู้ขาย",
+    "citations": [
+     "PO-6"
+    ]
+   }
+  },
+  {
+   "id": "q17",
+   "set": "questions",
+   "expected": "ticket",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "grounded": false,
+    "answer": "",
+    "citations": []
+   }
+  },
+  {
+   "id": "q18",
+   "set": "questions",
+   "expected": "ticket",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "rule": "unknown error code"
+   }
+  },
+  {
+   "id": "q19",
+   "set": "questions",
+   "expected": "ticket",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "grounded": false,
+    "answer": "",
+    "citations": []
+   }
+  },
+  {
+   "id": "q20",
+   "set": "questions",
+   "expected": "ticket",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "grounded": false,
+    "answer": "",
+    "citations": []
+   }
+  },
+  {
+   "id": "h01",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "แนบไฟล์ได้ขนาดไม่เกิน 10 MB ต่อไฟล์",
+   "raw": {
+    "grounded": true,
+    "answer": "แนบไฟล์ได้ขนาดไม่เกิน 10 MB ต่อไฟล์",
+    "citations": [
+     "PR-2"
+    ]
+   }
+  },
+  {
+   "id": "h02",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ต้องผ่านผู้อำนวยการฝ่ายก่อสร้างอนุมัติเพิ่มอีกหนึ่งขั้น",
+   "raw": {
+    "grounded": true,
+    "answer": "ต้องผ่านผู้อำนวยการฝ่ายก่อสร้างอนุมัติเพิ่มอีกหนึ่งขั้น",
+    "citations": [
+     "PR-3"
+    ]
+   }
+  },
+  {
+   "id": "h03",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ไม่สามารถยกเลิก PO ที่อนุมัติแล้วได้ ต้องไปยกเลิกที่ใบสั่งซื้อแทน",
+   "raw": {
+    "grounded": true,
+    "answer": "ไม่สามารถยกเลิก PO ที่อนุมัติแล้วได้ ต้องไปยกเลิกที่ใบสั่งซื้อแทน",
+    "citations": [
+     "PR-4"
+    ]
+   }
+  },
+  {
+   "id": "h04",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ได้ ใบสั่งซื้อหนึ่งใบสามารถรวมรายการจากหลาย PR ได้ ถ้าเป็นโครงการเดียวกันและผู้ขายรายเดียวกัน",
+   "raw": {
+    "grounded": true,
+    "answer": "ได้ ใบสั่งซื้อหนึ่งใบสามารถรวมรายการจากหลาย PR ได้ ถ้าเป็นโครงการเดียวกันและผู้ขายรายเดียวกัน",
+    "citations": [
+     "PO-1"
+    ]
+   }
+  },
+  {
+   "id": "h05",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "เลขที่ PO ฉบับแก้ไขจะต่อท้ายด้วย -R1, -R2 ตามลำดับ",
+   "raw": {
+    "grounded": true,
+    "answer": "เลขที่ PO ฉบับแก้ไขจะต่อท้ายด้วย -R1, -R2 ตามลำดับ",
+    "citations": [
+     "PO-4"
+    ]
+   }
+  },
+  {
+   "id": "h06",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "กด ส่งอีเมล ระบบจะแนบไฟล์ PDF ของ PO ไปยังอีเมลผู้ขายที่บันทึกไว้",
+   "raw": {
+    "grounded": true,
+    "answer": "กด ส่งอีเมล ระบบจะแนบไฟล์ PDF ของ PO ไปยังอีเมลผู้ขายที่บันทึกไว้",
+    "citations": [
+     "PO-5"
+    ]
+   }
+  },
+  {
+   "id": "h07",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ได้ ระบบจะเก็บข้อมูลไว้และส่งอัตโนมัติเมื่อกลับมาออนไลน์",
+   "raw": {
+    "grounded": true,
+    "answer": "ได้ ระบบจะเก็บข้อมูลไว้และส่งอัตโนมัติเมื่อกลับมาออนไลน์",
+    "citations": [
+     "RCV-2"
+    ]
+   }
+  },
+  {
+   "id": "h08",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "กด ปิดยอดค้างรับ ใน PO",
+   "raw": {
+    "grounded": true,
+    "answer": "กด ปิดยอดค้างรับ ใน PO",
+    "citations": [
+     "RCV-3"
+    ]
+   }
+  },
+  {
+   "id": "h09",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ควรแก้ไขที่ข้อมูลผู้ขาย ไม่ควรแก้ในเอกสารจ่ายเงินทีละใบ",
+   "raw": {
+    "grounded": true,
+    "answer": "ควรแก้ไขที่ข้อมูลผู้ขาย ไม่ควรแก้ในเอกสารจ่ายเงินทีละใบ",
+    "citations": [
+     "AP-3"
+    ]
+   }
+  },
+  {
+   "id": "h10",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "1) ไปที่เมนู เจ้าหนี้ > วางแผนจ่ายเงิน แล้วเลือกช่วงวันครบกำหนด\n2) ระบบจะแสดงหนี้ที่ครบกำหนดพร้อมยอดหลังหักภาษีและเงินประกันผลงาน\n3) เลือกรายการ แล้วกด สร้างชุดจ่ายเงิน\n4) ส่งไฟล์โอนเงินไปยังธนาคาร หรือพิมพ์เช็ค",
+   "raw": {
+    "grounded": true,
+    "answer": "1) ไปที่เมนู เจ้าหนี้ > วางแผนจ่ายเงิน แล้วเลือกช่วงวันครบกำหนด\n2) ระบบจะแสดงหนี้ที่ครบกำหนดพร้อมยอดหลังหักภาษีและเงินประกันผลงาน\n3) เลือกรายการ แล้วกด สร้างชุดจ่ายเงิน\n4) ส่งไฟล์โอนเงินไปยังธนาคาร หรือพิมพ์เช็ค",
+    "citations": [
+     "AP-5"
+    ]
+   }
+  },
+  {
+   "id": "h11",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ต้องทำใบเพิ่มงบประมาณ ซึ่งผู้บริหารต้องอนุมัติ",
+   "raw": {
+    "grounded": true,
+    "answer": "ต้องทำใบเพิ่มงบประมาณ ซึ่งผู้บริหารต้องอนุมัติ",
+    "citations": [
+     "BUDGET-3"
+    ]
+   }
+  },
+  {
+   "id": "h12",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ตั้งค่าผู้รับแจ้งเตือนได้ที่ โครงการ > ตั้งค่า > การแจ้งเตือน",
+   "raw": {
+    "grounded": true,
+    "answer": "ตั้งค่าผู้รับแจ้งเตือนได้ที่ โครงการ > ตั้งค่า > การแจ้งเตือน",
+    "citations": [
+     "BUDGET-5"
+    ]
+   }
+  },
+  {
+   "id": "h13",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ใช้ SiteERP บนมือถือได้ ผ่านแอป SiteERP Site สำหรับ iOS",
+   "raw": {
+    "grounded": true,
+    "answer": "ใช้ SiteERP บนมือถือได้ ผ่านแอป SiteERP Site สำหรับ iOS",
+    "citations": [
+     "FAQ-13"
+    ]
+   }
+  },
+  {
+   "id": "h14",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "แก้ไขวันที่ต้องการใช้ของให้เป็นวันปัจจุบันหรือวันในอนาคต",
+   "raw": {
+    "grounded": true,
+    "answer": "แก้ไขวันที่ต้องการใช้ของให้เป็นวันปัจจุบันหรือวันในอนาคต",
+    "citations": [
+     "PR-5"
+    ]
+   }
+  },
+  {
+   "id": "h15",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ต้องแนบเหตุผลประกอบ และจะมีผู้อนุมัติเพิ่มอีกหนึ่งขั้น",
+   "raw": {
+    "grounded": true,
+    "answer": "ต้องแนบเหตุผลประกอบ และจะมีผู้อนุมัติเพิ่มอีกหนึ่งขั้น",
+    "citations": [
+     "PO-6"
+    ]
+   }
+  },
+  {
+   "id": "h16",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ตรวจสอบว่ารับของครบหรือไม่ ถ้าราคาเปลี่ยนต้องให้ฝ่ายจัดซื้อทำ Revision ของ PO ก่อน",
+   "raw": {
+    "grounded": true,
+    "answer": "ตรวจสอบว่ารับของครบหรือไม่ ถ้าราคาเปลี่ยนต้องให้ฝ่ายจัดซื้อทำ Revision ของ PO ก่อน",
+    "citations": [
+     "AP-6"
+    ]
+   }
+  },
+  {
+   "id": "h17",
+   "set": "heldout",
+   "expected": "ticket",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "grounded": false,
+    "answer": "",
+    "citations": []
+   }
+  },
+  {
+   "id": "h18",
+   "set": "heldout",
+   "expected": "ticket",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "rule": "unknown error code"
+   }
+  },
+  {
+   "id": "h19",
+   "set": "heldout",
+   "expected": "ticket",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "grounded": false,
+    "answer": "",
+    "citations": []
+   }
+  },
+  {
+   "id": "h20",
+   "set": "heldout",
+   "expected": "ticket",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "grounded": false,
+    "answer": "",
+    "citations": []
+   }
+  }
+ ],
+ "C": [
+  {
+   "id": "q01",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "เข้าเมนู จัดซื้อ > ใบขอซื้อ > สร้างใหม่",
+   "raw": {
+    "evidence": "[ใบขอซื้อ (PR) > การสร้างใบขอซื้อ] 1) ไปที่เมนู จัดซื้อ > ใบขอซื้อ > สร้างใหม่",
+    "doc_id": "PR-2",
+    "answer": "เข้าเมนู จัดซื้อ > ใบขอซื้อ > สร้างใหม่",
+    "evidence_verified_in": "PR-2"
+   }
+  },
+  {
+   "id": "q02",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ผู้จัดการโครงการเป็นผู้อนุมัติ เพราะยอด 300,000 บาท อยู่ในช่วง 50,001 - 500,000 บาท",
+   "raw": {
+    "evidence": "50,001 ถึง 500,000 บาท ผู้จัดการโครงการเป็นผู้อนุมัติ",
+    "doc_id": "PR-3",
+    "answer": "ผู้จัดการโครงการเป็นผู้อนุมัติ เพราะยอด 300,000 บาท อยู่ในช่วง 50,001 - 500,000 บาท",
+    "evidence_verified_in": "PR-3"
+   }
+  },
+  {
+   "id": "q03",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ต้องสร้าง Revision ของ PO ใหม่ โดยระบบจะสร้าง PO ฉบับแก้ไขโดยใช้เลขเดิมต่อท้ายด้วย -R1, -R2 ตามลำดับ และต้องส่งอนุมัติใหม่ตามวงเงินล่าสุด",
+   "raw": {
+    "evidence": "[ใบสั่งซื้อ (PO) > การแก้ไขใบสั่งซื้อหลังอนุมัติ (Revision)]",
+    "doc_id": "PO-4",
+    "answer": "ต้องสร้าง Revision ของ PO ใหม่ โดยระบบจะสร้าง PO ฉบับแก้ไขโดยใช้เลขเดิมต่อท้ายด้วย -R1, -R2 ตามลำดับ และต้องส่งอนุมัติใหม่ตามวงเงินล่าสุด",
+    "evidence_verified_in": "PO-4"
+   }
+  },
+  {
+   "id": "q04",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ต้องแนบใบเสนอราคาอย่างน้อย 3 ราย",
+   "raw": {
+    "evidence": "[ใบสั่งซื้อ (PO) > การเปรียบเทียบราคา] การซื้อมูลค่าเกิน 100,000 บาท ต้องแนบใบเสนอราคาอย่างน้อย 3 รายในแท็บ เปรียบเทียบราคา ระบบจะไฮไลต์ผู้ขายที่เสนอราคาต่ำสุด",
+    "doc_id": "PO-3",
+    "answer": "ต้องแนบใบเสนอราคาอย่างน้อย 3 ราย",
+    "evidence_verified_in": "PO-3"
+   }
+  },
+  {
+   "id": "q05",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "กรอกเฉพาะจำนวนที่รับจริง ระบบจะเก็บยอดค้างรับไว้ใน PO และรับครั้งถัดไปได้ เมื่อรับครบ สถานะ PO จะเปลี่ยนเป็น รับครบแล้ว",
+   "raw": {
+    "evidence": "[รับสินค้า (RCV) > การรับสินค้าบางส่วน]",
+    "doc_id": "RCV-3",
+    "answer": "กรอกเฉพาะจำนวนที่รับจริง ระบบจะเก็บยอดค้างรับไว้ใน PO และรับครั้งถัดไปได้ เมื่อรับครบ สถานะ PO จะเปลี่ยนเป็น รับครบแล้ว",
+    "evidence_verified_in": "RCV-3"
+   }
+  },
+  {
+   "id": "q06",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "สร้างใบคืนสินค้าจากเมนู รับสินค้า > คืนสินค้า โดยอ้างอิงเลขที่ GR เดิม ระบุจำนวนและเหตุผล ระบบจะลดต้นทุนจริงของโครงการและแจ้งฝ่ายบัญชีให้ปรับยอดหนี้",
+   "raw": {
+    "evidence": "[รับสินค้า (RCV) > การคืนสินค้า]",
+    "doc_id": "RCV-4",
+    "answer": "สร้างใบคืนสินค้าจากเมนู รับสินค้า > คืนสินค้า โดยอ้างอิงเลขที่ GR เดิม ระบุจำนวนและเหตุผล ระบบจะลดต้นทุนจริงของโครงการและแจ้งฝ่ายบัญชีให้ปรับยอดหนี้",
+    "evidence_verified_in": "RCV-4"
+   }
+  },
+  {
+   "id": "q07",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "3-way matching คือ การเทียบเอกสาร 3 ใบ คือ ใบสั่งซื้อ ใบรับสินค้า และใบแจ้งหนี้ ทั้งจำนวนและราคาต้องตรงกัน โดยยอมให้ต่างกันได้ไม่เกิน 1 บาทต่อรายการจากการปัดเศษ ถ้าผ่านการจับคู่ ระบบจะสร้างเอกสารตั้งหนี้ให้อัตโนมัติ",
+   "raw": {
+    "evidence": "ก่อนตั้งหนี้ ระบบจะเทียบเอกสาร 3 ใบ คือ ใบสั่งซื้อ ใบรับสินค้าและใบแจ้งหนี้ ทั้งจำนวนและราคาต้องตรงกัน โดยยอมให้ต่างกันได้ไม่เกิน 1 บาทต่อรายการจากการปัดเศษ ถ้าผ่านการจับคู่ ระบบจะสร้างเอกสารตั้งหนี้ให้อัตโนมัติ",
+    "doc_id": "AP-2",
+    "answer": "3-way matching คือ การเทียบเอกสาร 3 ใบ คือ ใบสั่งซื้อ ใบรับสินค้า และใบแจ้งหนี้ ทั้งจำนวนและราคาต้องตรงกัน โดยยอมให้ต่างกันได้ไม่เกิน 1 บาทต่อรายการจากการปัดเศษ ถ้าผ่านการจับคู่ ระบบจะสร้างเอกสารตั้งหนี้ให้อัตโนมัติ",
+    "evidence_verified_in": "AP-2"
+   }
+  },
+  {
+   "id": "q08",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "เงินประกันผลงานจะคืนให้ผู้รับเหมาเมื่อพ้นระยะรับประกันผลงาน ผ่านเมนู เจ้าหนี้ > คืนเงินประกันผลงาน",
+   "raw": {
+    "evidence": "สำหรับผู้รับเหมาช่วง ระบบจะหักเงินประกันผลงานตามอัตราในสัญญา โดยทั่วไปคือ 5 เปอร์เซ็นต์ของแต่ละงวด ยอดที่หักจะสะสมไว้ในบัญชีเงินประกันผลงานของโครงการ และคืนให้ผู้รับเหมาได้เมื่อพ้นระยะรับประกันผลงาน ผ่านเมนู เจ้าหนี้ > คืนเงินประกันผลงาน",
+    "doc_id": "AP-4",
+    "answer": "เงินประกันผลงานจะคืนให้ผู้รับเหมาเมื่อพ้นระยะรับประกันผลงาน ผ่านเมนู เจ้าหนี้ > คืนเงินประกันผลงาน",
+    "evidence_verified_in": "AP-4"
+   }
+  },
+  {
+   "id": "q09",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "สามารถย้ายงบจากอีกรหัสต้นทุนได้ โดยสร้างใบโอนงบที่เมนู โครงการ > งบประมาณ > โอนงบ ระบุรหัสต้นทาง รหัสปลายทาง และจำนวนเงิน ต้องได้รับอนุมัติจากผู้ควบคุมต้นทุนโครงการ",
+   "raw": {
+    "evidence": "[งบประมาณโครงการ (BUDGET) > การโอนงบระหว่างรหัสต้นทุน] ถ้ารหัสต้นทุนใดงบไม่พอ ให้สร้างใบโอนงบที่เมนู โครงการ > งบประมาณ > โอนงบ เลือกรหัสต้นทาง รหัสปลายทาง และจำนวนเงิน ยอดรวมงบของโครงการจะไม่เปลี่ยน การโอนงบต้องได้รับอนุมัติจากผู้ควบคุมต้นทุนโครงการ",
+    "doc_id": "BUDGET-3",
+    "answer": "สามารถย้ายงบจากอีกรหัสต้นทุนได้ โดยสร้างใบโอนงบที่เมนู โครงการ > งบประมาณ > โอนงบ ระบุรหัสต้นทาง รหัสปลายทาง และจำนวนเงิน ต้องได้รับอนุมัติจากผู้ควบคุมต้นทุนโครงการ",
+    "evidence_verified_in": "BUDGET-3"
+   }
+  },
+  {
+   "id": "q10",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "evidence": "",
+    "doc_id": "",
+    "answer": "",
+    "evidence_verified_in": null
+   }
+  },
+  {
+   "id": "q11",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ไปที่เมนู โครงการ > งบประมาณ > นำเข้า BOQ ดาวน์โหลดแม่แบบ Excel แล้วกรอกรหัสต้นทุน รายละเอียด และงบประมาณ อัปโหลดไฟล์ ระบบจะตรวจรหัสซ้ำและยอดรวมก่อนให้กดยืนยัน ส่งงบประมาณให้ผู้จัดการโครงการอนุมัติ งบจะใช้งานได้หลังอนุมัติเท่านั้น",
+   "raw": {
+    "evidence": "1) ไปที่เมนู โครงการ > งบประมาณ > นำเข้า BOQ\n2) ดาวน์โหลดแม่แบบ Excel แล้วกรอกรหัสต้นทุน รายละเอียด และงบประมาณ\n3) อัปโหลดไฟล์ ระบบจะตรวจรหัสซ้ำและยอดรวมก่อนให้กดยืนยัน\n4) ส่งงบประมาณให้ผู้จัดการโครงการอนุมัติ งบจะใช้งานได้หลังอนุมัติเท่านั้น",
+    "doc_id": "BUDGET-2",
+    "answer": "ไปที่เมนู โครงการ > งบประมาณ > นำเข้า BOQ ดาวน์โหลดแม่แบบ Excel แล้วกรอกรหัสต้นทุน รายละเอียด และงบประมาณ อัปโหลดไฟล์ ระบบจะตรวจรหัสซ้ำและยอดรวมก่อนให้กดยืนยัน ส่งงบประมาณให้ผู้จัดการโครงการอนุมัติ งบจะใช้งานได้หลังอนุมัติเท่านั้น",
+    "evidence_verified_in": "BUDGET-2"
+   }
+  },
+  {
+   "id": "q12",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "กด ลืมรหัสผ่าน ที่หน้าเข้าสู่ระบบ ระบบจะส่งลิงก์ตั้งรหัสใหม่ไปที่อีเมล",
+   "raw": {
+    "evidence": "กด ลืมรหัสผ่าน ที่หน้าเข้าสู่ระบบ ระบบจะส่งลิงก์ตั้งรหัสใหม่ไปที่อีเมล",
+    "doc_id": "FAQ-12",
+    "answer": "กด ลืมรหัสผ่าน ที่หน้าเข้าสู่ระบบ ระบบจะส่งลิงก์ตั้งรหัสใหม่ไปที่อีเมล",
+    "evidence_verified_in": "FAQ-12"
+   }
+  },
+  {
+   "id": "q13",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ระบบไม่สามารถบันทึกรับของได้หากจำนวนรับเกิน 5 เปอร์เซ็นต์ของจำนวนสั่งซื้อ ให้ฝ่ายจัดซื้อสร้าง Revision ของ PO เพื่อเพิ่มจำนวนก่อน",
+   "raw": {
+    "evidence": "รหัส RCV-E01 จำนวนรับเกินจำนวนสั่งซื้อ ระบบยอมให้รับเกินได้ไม่เกิน 5 เปอร์เซ็นต์ของจำนวนสั่งซื้อ ถ้าเกินกว่านั้นให้ฝ่ายจัดซื้อสร้าง Revision ของ PO เพื่อเพิ่มจำนวนก่อน",
+    "doc_id": "RCV-5",
+    "answer": "ระบบไม่สามารถบันทึกรับของได้หากจำนวนรับเกิน 5 เปอร์เซ็นต์ของจำนวนสั่งซื้อ ให้ฝ่ายจัดซื้อสร้าง Revision ของ PO เพื่อเพิ่มจำนวนก่อน",
+    "evidence_verified_in": "RCV-5"
+   }
+  },
+  {
+   "id": "q14",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ติดต่อผู้ควบคุมต้นทุนโครงการเพื่อขอโอนงบ หรือแยกรายการไปใช้รหัสต้นทุนอื่นที่เหมาะสม",
+   "raw": {
+    "evidence": "รหัส PR-E01 งบประมาณคงเหลือไม่พอ เกิดเมื่อมูลค่า PR เกินงบคงเหลือของรหัสต้นทุน ให้ติดต่อผู้ควบคุมต้นทุนโครงการเพื่อขอโอนงบ หรือแยกรายการไปใช้รหัสต้นทุนอื่นที่เหมาะสม",
+    "doc_id": "PR-5",
+    "answer": "ติดต่อผู้ควบคุมต้นทุนโครงการเพื่อขอโอนงบ หรือแยกรายการไปใช้รหัสต้นทุนอื่นที่เหมาะสม",
+    "evidence_verified_in": "PR-5"
+   }
+  },
+  {
+   "id": "q15",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ตรวจสอบว่าเป็นการบันทึกซ้ำหรือผู้ขายออกเลขซ้ำ",
+   "raw": {
+    "evidence": "รหัส AP-E01 ใบแจ้งหนี้ซ้ำ เลขที่ใบแจ้งหนี้นี้ของผู้ขายรายเดียวกันถูกบันทึกไปแล้ว ให้ตรวจสอบว่าเป็นการบันทึกซ้ำหรือผู้ขายออกเลขซ้ำ",
+    "doc_id": "AP-6",
+    "answer": "ตรวจสอบว่าเป็นการบันทึกซ้ำหรือผู้ขายออกเลขซ้ำ",
+    "evidence_verified_in": "AP-6"
+   }
+  },
+  {
+   "id": "q16",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ติดต่อฝ่ายบัญชีเพื่อตรวจสอบสถานะผู้ขาย",
+   "raw": {
+    "evidence": "[ใบสั่งซื้อ (PO) > ข้อผิดพลาดที่พบบ่อยในใบสั่งซื้อ] รหัส PO-E01 ผู้ขายถูกระงับการใช้งาน ผู้ขายรายนี้ถูกระงับโดยฝ่ายบัญชี เช่น เอกสารภาษีไม่ครบ ให้ติดต่อฝ่ายบัญชีเพื่อตรวจสอบสถานะผู้ขาย",
+    "doc_id": "PO-6",
+    "answer": "ติดต่อฝ่ายบัญชีเพื่อตรวจสอบสถานะผู้ขาย",
+    "evidence_verified_in": "PO-6"
+   }
+  },
+  {
+   "id": "q17",
+   "set": "questions",
+   "expected": "ticket",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "evidence": "",
+    "doc_id": "",
+    "answer": "",
+    "evidence_verified_in": null
+   }
+  },
+  {
+   "id": "q18",
+   "set": "questions",
+   "expected": "ticket",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "rule": "unknown error code"
+   }
+  },
+  {
+   "id": "q19",
+   "set": "questions",
+   "expected": "ticket",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "evidence": "",
+    "doc_id": "",
+    "answer": "",
+    "evidence_verified_in": null
+   }
+  },
+  {
+   "id": "q20",
+   "set": "questions",
+   "expected": "ticket",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "evidence": "",
+    "doc_id": "",
+    "answer": "",
+    "evidence_verified_in": null
+   }
+  },
+  {
+   "id": "h01",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ขนาดไฟล์ที่สามารถแนบได้สูงสุดคือ 10 MB ต่อไฟล์",
+   "raw": {
+    "evidence": "แนบไฟล์ประกอบได้ เช่น รูปหน้างานหรือแบบก่อสร้าง ขนาดไม่เกิน 10 MB ต่อไฟล์",
+    "doc_id": "PR-2",
+    "answer": "ขนาดไฟล์ที่สามารถแนบได้สูงสุดคือ 10 MB ต่อไฟล์",
+    "evidence_verified_in": "PR-2"
+   }
+  },
+  {
+   "id": "h02",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ใบขอซื้อเกิน 500,000 บาทต้องผ่านผู้อำนวยการฝ่ายก่อสร้างอนุมัติเพิ่มอีกหนึ่งขั้น",
+   "raw": {
+    "evidence": "[ใบขอซื้อ (PR) > ลำดับการอนุมัติใบขอซื้อ]",
+    "doc_id": "PR-3",
+    "answer": "ใบขอซื้อเกิน 500,000 บาทต้องผ่านผู้อำนวยการฝ่ายก่อสร้างอนุมัติเพิ่มอีกหนึ่งขั้น",
+    "evidence_verified_in": "PR-3"
+   }
+  },
+  {
+   "id": "h03",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ไม่สามารถยกเลิก PR ที่กลายเป็น PO ได้ ต้องไปยกเลิกที่ใบสั่งซื้อแทน",
+   "raw": {
+    "evidence": "PR ที่ถูกแปลงเป็นใบสั่งซื้อแล้วยกเลิกไม่ได้ ต้องไปยกเลิกที่ใบสั่งซื้อแทน",
+    "doc_id": "PR-4",
+    "answer": "ไม่สามารถยกเลิก PR ที่กลายเป็น PO ได้ ต้องไปยกเลิกที่ใบสั่งซื้อแทน",
+    "evidence_verified_in": "PR-4"
+   }
+  },
+  {
+   "id": "h04",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ได้ แต่ต้องเป็นโครงการเดียวกันและผู้ขายรายเดียวกัน",
+   "raw": {
+    "evidence": "PO หนึ่งใบรวมรายการจากหลาย PR ได้ ถ้าเป็นโครงการเดียวกันและผู้ขายรายเดียวกัน",
+    "doc_id": "PO-1",
+    "answer": "ได้ แต่ต้องเป็นโครงการเดียวกันและผู้ขายรายเดียวกัน",
+    "evidence_verified_in": "PO-1"
+   }
+  },
+  {
+   "id": "h05",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "เลขที่ PO ฉบับแก้ไขจะออกมาเป็นเลขเดิมต่อท้ายด้วย -R1 หรือ -R2 ตามลำดับ",
+   "raw": {
+    "evidence": "ระบบจะสร้าง PO ฉบับแก้ไขโดยใช้เลขเดิมต่อท้ายด้วย -R1, -R2 ตามลำดับ",
+    "doc_id": "PO-4",
+    "answer": "เลขที่ PO ฉบับแก้ไขจะออกมาเป็นเลขเดิมต่อท้ายด้วย -R1 หรือ -R2 ตามลำดับ",
+    "evidence_verified_in": "PO-4"
+   }
+  },
+  {
+   "id": "h06",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "หลังจากอนุมัติ PO ให้กด 'ส่งอีเมล' ระบบจะแนบไฟล์ PDF ของ PO ไปยังอีเมลผู้ขายที่บันทึกไว้ หรือกด 'พิมพ์' เพื่อพิมพ์ฉบับที่มีลายเซ็นผู้อนุมัติ",
+   "raw": {
+    "evidence": "[ใบสั่งซื้อ (PO) > การส่งใบสั่งซื้อให้ผู้ขาย]\nหลังอนุมัติ กด ส่งอีเมล ระบบจะแนบไฟล์ PDF ของ PO ไปยังอีเมลผู้ขายที่บันทึกไว้ หรือกด พิมพ์ เพื่อพิมพ์ฉบับที่มีลายเซ็นผู้อนุมัติ",
+    "doc_id": "PO-5",
+    "answer": "หลังจากอนุมัติ PO ให้กด 'ส่งอีเมล' ระบบจะแนบไฟล์ PDF ของ PO ไปยังอีเมลผู้ขายที่บันทึกไว้ หรือกด 'พิมพ์' เพื่อพิมพ์ฉบับที่มีลายเซ็นผู้อนุมัติ",
+    "evidence_verified_in": "PO-5"
+   }
+  },
+  {
+   "id": "h07",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ได้ แอปจะเก็บข้อมูลไว้และส่งอัตโนมัติเมื่อกลับมาออนไลน์",
+   "raw": {
+    "evidence": "ถ้าไม่มีอินเทอร์เน็ต แอปจะเก็บข้อมูลไว้และส่งอัตโนมัติเมื่อกลับมาออนไลน์",
+    "doc_id": "RCV-2",
+    "answer": "ได้ แอปจะเก็บข้อมูลไว้และส่งอัตโนมัติเมื่อกลับมาออนไลน์",
+    "evidence_verified_in": "RCV-2"
+   }
+  },
+  {
+   "id": "h08",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "กดปิดยอดค้างรับใน PO",
+   "raw": {
+    "evidence": "[รับสินค้า (RCV) > การรับสินค้าบางส่วน]",
+    "doc_id": "RCV-3",
+    "answer": "กดปิดยอดค้างรับใน PO",
+    "evidence_verified_in": "RCV-3"
+   }
+  },
+  {
+   "id": "h09",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ให้แก้ไขอัตราหัก ณ ที่จ่ายที่ข้อมูลผู้ขาย",
+   "raw": {
+    "evidence": "[เจ้าหนี้และการจ่ายเงิน (AP) > ภาษีหัก ณ ที่จ่าย]",
+    "doc_id": "AP-3",
+    "answer": "ให้แก้ไขอัตราหัก ณ ที่จ่ายที่ข้อมูลผู้ขาย",
+    "evidence_verified_in": "AP-3"
+   }
+  },
+  {
+   "id": "h10",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ไปที่เมนู เจ้าหนี้ > วางแผนจ่ายเงิน แล้วเลือกช่วงวันครบกำหนด ระบบจะแสดงหนี้ที่ครบกำหนดพร้อมยอดหลังหักภาษีและเงินประกันผลงาน เลือกรายการ แล้วกด สร้างชุดจ่ายเงิน ส่งไฟล์โอนเงินไปยังธนาคาร หรือพิมพ์เช็ค",
+   "raw": {
+    "evidence": "[เจ้าหนี้และการจ่ายเงิน (AP) > การทำรายการจ่ายเงิน]",
+    "doc_id": "AP-5",
+    "answer": "ไปที่เมนู เจ้าหนี้ > วางแผนจ่ายเงิน แล้วเลือกช่วงวันครบกำหนด ระบบจะแสดงหนี้ที่ครบกำหนดพร้อมยอดหลังหักภาษีและเงินประกันผลงาน เลือกรายการ แล้วกด สร้างชุดจ่ายเงิน ส่งไฟล์โอนเงินไปยังธนาคาร หรือพิมพ์เช็ค",
+    "evidence_verified_in": "AP-5"
+   }
+  },
+  {
+   "id": "h11",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "evidence": "[งบประมาณโครงการ (BUDGET) > การโอนงบระหว่างรหัสต้นทุน] ถ้าต้องการเพิ่มงบรวมของโครงการ ต้องทำใบเพิ่มงบประมาณ ซึ่่งผู้บริหารต้องอนุมัติ",
+    "doc_id": "BUDGET-3",
+    "answer": "ต้องทำใบเพิ่มงบประมาณ และผู้บริหารต้องอนุมัติ",
+    "evidence_verified_in": null
+   }
+  },
+  {
+   "id": "h12",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ตั้งค่าคนรับเมลเตือนงบได้ที่ โครงการ > ตั้งค่า > การแจ้งเตือน",
+   "raw": {
+    "evidence": "ตั้งค่าผู้รับแจ้งเตือนได้ที่ โครงการ > ตั้งค่า > การแจ้งเตือน",
+    "doc_id": "BUDGET-5",
+    "answer": "ตั้งค่าคนรับเมลเตือนงบได้ที่ โครงการ > ตั้งค่า > การแจ้งเตือน",
+    "evidence_verified_in": "BUDGET-5"
+   }
+  },
+  {
+   "id": "h13",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": false,
+   "answer": "ใช่ มีแอป SiteERP สำหรับ iPhone ให้ใช้งาน",
+   "raw": {
+    "evidence": "ได้ ผ่านแอป SiteERP Site ทั้ง Android และ iOS สำหรับงานหน้างาน",
+    "doc_id": "FAQ-13",
+    "answer": "ใช่ มีแอป SiteERP สำหรับ iPhone ให้ใช้งาน",
+    "evidence_verified_in": "FAQ-13"
+   }
+  },
+  {
+   "id": "h14",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "แก้ไขวันที่ต้องการใช้ของเป็นวันปัจจุบันหรือวันในอนาคต",
+   "raw": {
+    "evidence": "รหัส PR-E03 วันที่ต้องการใช้ของย้อนหลัง ระบบไม่อนุญาตให้ระบุวันที่ต้องการก่อนวันที่สร้าง PR ให้แก้เป็นวันปัจจุบันหรือวันในอนาคต",
+    "doc_id": "PR-5",
+    "answer": "แก้ไขวันที่ต้องการใช้ของเป็นวันปัจจุบันหรือวันในอนาคต",
+    "evidence_verified_in": "PR-5"
+   }
+  },
+  {
+   "id": "h15",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ต้องแนบเหตุผลประกอบ และจะมีผู้อนุมัติเพิ่มอีกหนึ่งขั้น",
+   "raw": {
+    "evidence": "รหัส PO-E02 ราคาสูงกว่าราคากลาง เกิดเมื่อราคาต่อหน่วยสูงกว่าราคากลางในระบบเกิน 10 เปอร์เซ็นต์ ต้องแนบเหตุผลประกอบ และจะมีผู้อนุมัติเพิ่มอีกหนึ่งขั้น",
+    "doc_id": "PO-6",
+    "answer": "ต้องแนบเหตุผลประกอบ และจะมีผู้อนุมัติเพิ่มอีกหนึ่งขั้น",
+    "evidence_verified_in": "PO-6"
+   }
+  },
+  {
+   "id": "h16",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ตรวจสอบว่ารับของครบหรือไม่ ถ้าราคาเปลี่ยนต้องให้ฝ่ายจัดซื้อทำ Revision ของ PO ก่อน",
+   "raw": {
+    "evidence": "รหัส AP-E02 ยอดไม่ตรงกับใบรับสินค้า จำนวนหรือราคาในใบแจ้งหนี้ไม่ตรงกับใบรับสินค้าหรือใบสั่งซื้อ ให้ตรวจสอบว่ารับของครบหรือไม่ ถ้าราคาเปลี่ยนต้องให้ฝ่ายจัดซื้อทำ Revision ของ PO ก่อน",
+    "doc_id": "AP-6",
+    "answer": "ตรวจสอบว่ารับของครบหรือไม่ ถ้าราคาเปลี่ยนต้องให้ฝ่ายจัดซื้อทำ Revision ของ PO ก่อน",
+    "evidence_verified_in": "AP-6"
+   }
+  },
+  {
+   "id": "h17",
+   "set": "heldout",
+   "expected": "ticket",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "evidence": "",
+    "doc_id": "",
+    "answer": "",
+    "evidence_verified_in": null
+   }
+  },
+  {
+   "id": "h18",
+   "set": "heldout",
+   "expected": "ticket",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "rule": "unknown error code"
+   }
+  },
+  {
+   "id": "h19",
+   "set": "heldout",
+   "expected": "ticket",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "evidence": "",
+    "doc_id": "",
+    "answer": "",
+    "evidence_verified_in": null
+   }
+  },
+  {
+   "id": "h20",
+   "set": "heldout",
+   "expected": "ticket",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "evidence": "",
+    "doc_id": "",
+    "answer": "",
+    "evidence_verified_in": null
+   }
+  }
+ ],
+ "D": [
+  {
+   "id": "q01",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "เข้าเมนู จัดซื้อ > ใบขอซื้อ > สร้างใหม่",
+   "raw": {
+    "evidence": "1) ไปที่เมนู จัดซื้อ > ใบขอซื้อ > สร้างใหม่",
+    "doc_id": "PR-2",
+    "answer": "เข้าเมนู จัดซื้อ > ใบขอซื้อ > สร้างใหม่",
+    "evidence_verified_in": "PR-2"
+   }
+  },
+  {
+   "id": "q02",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ผู้จัดการโครงการเป็นผู้อนุมัติ เพราะยอด PR 300,000 บาท อยู่ในช่วง 50,001 ถึง 500,000 บาท",
+   "raw": {
+    "evidence": "50,001 ถึง 500,000 บาท ผู้จัดการโครงการเป็นผู้อนุมัติ",
+    "doc_id": "PR-3",
+    "answer": "ผู้จัดการโครงการเป็นผู้อนุมัติ เพราะยอด PR 300,000 บาท อยู่ในช่วง 50,001 ถึง 500,000 บาท",
+    "evidence_verified_in": "PR-3"
+   }
+  },
+  {
+   "id": "q03",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ต้องสร้าง PO ฉบับแก้ไข (Revision) และส่งอนุมัติใหม่ตามวงเงินล่าสุด",
+   "raw": {
+    "evidence": "PO ที่อนุมัติแล้วแก้ไขโดยตรงไม่ได้ ให้กด สร้าง Revision ระบบจะสร้าง PO ฉบับแก้ไขโดยใช้เลขเดิมต่อท้ายด้วย -R1, -R2 ตามลำดับ และต้องส่งอนุมัติใหม่ตามวงเงินล่าสุด",
+    "doc_id": "PO-4",
+    "answer": "ต้องสร้าง PO ฉบับแก้ไข (Revision) และส่งอนุมัติใหม่ตามวงเงินล่าสุด",
+    "evidence_verified_in": "PO-4"
+   }
+  },
+  {
+   "id": "q04",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "การซื้อของมูลค่าเกิน 100,000 บาท ต้องแนบใบเสนอราคาอย่างน้อย 3 ราย",
+   "raw": {
+    "evidence": "การซื้อมูลค่าเกิน 100,000 บาท ต้องแนบใบเสนอราคาอย่างน้อย 3 รายในแท็บ เปรียบเทียบราคา",
+    "doc_id": "PO-3",
+    "answer": "การซื้อของมูลค่าเกิน 100,000 บาท ต้องแนบใบเสนอราคาอย่างน้อย 3 ราย",
+    "evidence_verified_in": "PO-3"
+   }
+  },
+  {
+   "id": "q05",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "กรอกเฉพาะจำนวนที่รับจริง ระบบจะเก็บยอดค้างรับไว้ใน PO และรับครั้งถัดไปได้ เมื่อรับครบ สถานะ PO จะเปลี่ยนเป็น รับครบแล้ว",
+   "raw": {
+    "evidence": "ถ้าของมาส่งไม่ครบ ให้กรอกเฉพาะจำนวนที่รับจริง ระบบจะเก็บยอดค้างรับไว้ใน PO และรับครั้งถัดไปได้ เมื่อรับครบ สถานะ PO จะเปลี่ยนเป็น รับครบแล้ว",
+    "doc_id": "RCV-3",
+    "answer": "กรอกเฉพาะจำนวนที่รับจริง ระบบจะเก็บยอดค้างรับไว้ใน PO และรับครั้งถัดไปได้ เมื่อรับครบ สถานะ PO จะเปลี่ยนเป็น รับครบแล้ว",
+    "evidence_verified_in": "RCV-3"
+   }
+  },
+  {
+   "id": "q06",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "สร้างใบคืนสินค้าจากเมนู รับสินค้า > คืนสินค้า โดยอ้างอิงเลขที่ GR เดิม ระบุจำนวนและเหตุผล",
+   "raw": {
+    "evidence": "สินค้าชำรุดหรือไม่ตรงสเปก ให้สร้างใบคืนสินค้าจากเมนู รับสินค้า > คืนสินค้า โดยอ้างอิงเลขที่ GR เดิม ระบุจำนวนและเหตุผล ระบบจะลดต้นทุนจริงของโครงการและแจ้งฝ่ายบัญชีให้ปรับยอดหนี้",
+    "doc_id": "RCV-4",
+    "answer": "สร้างใบคืนสินค้าจากเมนู รับสินค้า > คืนสินค้า โดยอ้างอิงเลขที่ GR เดิม ระบุจำนวนและเหตุผล",
+    "evidence_verified_in": "RCV-4"
+   }
+  },
+  {
+   "id": "q07",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "3-way matching คือ การเทียบเอกสาร 3 ใบ คือ ใบสั่งซื้อ ใบรับสินค้า และใบแจ้งหนี้ ทั้งจำนวนและราคาต้องตรงกัน โดยยอมให้ต่างกันได้ไม่เกิน 1 บาทต่อรายการจากการปัดเศษ ถ้าผ่านการจับคู่ ระบบจะสร้างเอกสารตั้งหนี้ให้อัตโนมัติ",
+   "raw": {
+    "evidence": "ก่อนตั้งหนี้ ระบบจะเทียบเอกสาร 3 ใบ คือ ใบสั่งซื้อ ใบรับสินค้าและใบแจ้งหนี้ ทั้งจำนวนและราคาต้องตรงกัน โดยยอมให้ต่างกันได้ไม่เกิน 1 บาทต่อรายการจากการปัดเศษ ถ้าผ่านการจับคู่ ระบบจะสร้างเอกสารตั้งหนี้ให้อัตโนมัติ",
+    "doc_id": "AP-2",
+    "answer": "3-way matching คือ การเทียบเอกสาร 3 ใบ คือ ใบสั่งซื้อ ใบรับสินค้า และใบแจ้งหนี้ ทั้งจำนวนและราคาต้องตรงกัน โดยยอมให้ต่างกันได้ไม่เกิน 1 บาทต่อรายการจากการปัดเศษ ถ้าผ่านการจับคู่ ระบบจะสร้างเอกสารตั้งหนี้ให้อัตโนมัติ",
+    "evidence_verified_in": "AP-2"
+   }
+  },
+  {
+   "id": "q08",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "เงินประกันผลงานจะคืนให้ผู้รับเหมาเมื่อพ้นระยะรับประกันผลงาน",
+   "raw": {
+    "evidence": "ยอดที่หักจะสะสมไว้ในบัญชีเงินประกันผลงานของโครงการ และคืนให้ผู้รับเหมาได้เมื่อพ้นระยะรับประกันผลงาน",
+    "doc_id": "AP-4",
+    "answer": "เงินประกันผลงานจะคืนให้ผู้รับเหมาเมื่อพ้นระยะรับประกันผลงาน",
+    "evidence_verified_in": "AP-4"
+   }
+  },
+  {
+   "id": "q09",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "สร้างใบโอนงบที่เมนู โครงการ > งบประมาณ > โอนงบ เลือกรหัสต้นทาง รหัสปลายทาง และจำนวนเงิน ต้องได้รับอนุมัติจากผู้ควบคุมต้นทุนโครงการ",
+   "raw": {
+    "evidence": "ถ้ารหัสต้นทุนใดงบไม่พอ ให้สร้างใบโอนงบที่เมนู โครงการ > งบประมาณ > โอนงบ เลือกรหัสต้นทาง รหัสปลายทาง และจำนวนเงิน ยอดรวมงบของโครงการจะไม่เปลี่ยน การโอนงบต้องได้รับอนุมัติจากผู้ควบคุมต้นทุนโครงการ",
+    "doc_id": "BUDGET-3",
+    "answer": "สร้างใบโอนงบที่เมนู โครงการ > งบประมาณ > โอนงบ เลือกรหัสต้นทาง รหัสปลายทาง และจำนวนเงิน ต้องได้รับอนุมัติจากผู้ควบคุมต้นทุนโครงการ",
+    "evidence_verified_in": "BUDGET-3"
+   }
+  },
+  {
+   "id": "q10",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "รายงานงบขึ้นสีแดงหมายถึงใช้งบเกิน 100 เปอร์เซ็นต์ของรหัสต้นทุนนั้นแล้ว",
+   "raw": {
+    "evidence": "ระบบแสดงสีเหลืองเมื่อใช้งบเกิน 80 เปอร์เซ็นต์และสีแดงเมื่อเกิน 100 เปอร์เซ็นต์",
+    "doc_id": "BUDGET-4",
+    "answer": "รายงานงบขึ้นสีแดงหมายถึงใช้งบเกิน 100 เปอร์เซ็นต์ของรหัสต้นทุนนั้นแล้ว",
+    "evidence_verified_in": "BUDGET-4"
+   }
+  },
+  {
+   "id": "q11",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ตั้งงบโครงการใหม่จาก BOQ ตามขั้นตอนดังนี้:\n1. ไปที่เมนู โครงการ > งบประมาณ > นำเข้า BOQ\n2. ดาวน์โหลดแม่แบบ Excel แล้วกรอกรหัสต้นทุน รายละเอียด และงบประมาณ\n3. อัปโหลดไฟล์ ระบบจะตรวจรหัสซ้ำและยอดรวมก่อนให้กดยืนยัน\n4. ส่งงบประมาณให้ผู้จัดการโครงการอนุมัติ งบจะใช้งานได้หลังอนุมัติเท่านั้น",
+   "raw": {
+    "evidence": "1) ไปที่เมนู โครงการ > งบประมาณ > นำเข้า BOQ\n2) ดาวน์โหลดแม่แบบ Excel แล้วกรอกรหัสต้นทุน รายละเอียด และงบประมาณ\n3) อัปโหลดไฟล์ ระบบจะตรวจรหัสซ้ำและยอดรวมก่อนให้กดยืนยัน\n4) ส่งงบประมาณให้ผู้จัดการโครงการอนุมัติ งบจะใช้งานได้หลังอนุมัติเท่านั้น",
+    "doc_id": "BUDGET-2",
+    "answer": "ตั้งงบโครงการใหม่จาก BOQ ตามขั้นตอนดังนี้:\n1. ไปที่เมนู โครงการ > งบประมาณ > นำเข้า BOQ\n2. ดาวน์โหลดแม่แบบ Excel แล้วกรอกรหัสต้นทุน รายละเอียด และงบประมาณ\n3. อัปโหลดไฟล์ ระบบจะตรวจรหัสซ้ำและยอดรวมก่อนให้กดยืนยัน\n4. ส่งงบประมาณให้ผู้จัดการโครงการอนุมัติ งบจะใช้งานได้หลังอนุมัติเท่านั้น",
+    "evidence_verified_in": "BUDGET-2"
+   }
+  },
+  {
+   "id": "q12",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "กด ลืมรหัสผ่าน ที่หน้าเข้าสู่ระบบ ระบบจะส่งลิงก์ตั้งรหัสใหม่ไปที่อีเมล",
+   "raw": {
+    "evidence": "กด ลืมรหัสผ่าน ที่หน้าเข้าสู่ระบบ ระบบจะส่งลิงก์ตั้งรหัสใหม่ไปที่อีเมล",
+    "doc_id": "FAQ-12",
+    "answer": "กด ลืมรหัสผ่าน ที่หน้าเข้าสู่ระบบ ระบบจะส่งลิงก์ตั้งรหัสใหม่ไปที่อีเมล",
+    "evidence_verified_in": "FAQ-12"
+   }
+  },
+  {
+   "id": "q13",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ตรวจสอบว่าจำนวนที่รับมามีมากกว่า 5 เปอร์เซ็นต์ของจำนวนสั่งซื้อ ถ้าใช่ ให้ฝ่ายจัดซื้อสร้าง Revision ของ PO เพื่อเพิ่มจำนวนก่อน",
+   "raw": {
+    "evidence": "รหัส RCV-E01 จำนวนรับเกินจำนวนสั่งซื้อ ระบบยอมให้รับเกินได้ไม่เกิน 5 เปอร์เซ็นต์ของจำนวนสั่งซื้อ ถ้าเกินกว่านั้นให้ฝ่ายจัดซื้อสร้าง Revision ของ PO เพื่อเพิ่มจำนวนก่อน",
+    "doc_id": "RCV-5",
+    "answer": "ตรวจสอบว่าจำนวนที่รับมามีมากกว่า 5 เปอร์เซ็นต์ของจำนวนสั่งซื้อ ถ้าใช่ ให้ฝ่ายจัดซื้อสร้าง Revision ของ PO เพื่อเพิ่มจำนวนก่อน",
+    "evidence_verified_in": "RCV-5"
+   }
+  },
+  {
+   "id": "q14",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ติดต่อผู้ควบคุมต้นทุนโครงการเพื่อขอโอนงบ หรือแยกรายการไปใช้รหัสต้นทุนอื่นที่เหมาะสม",
+   "raw": {
+    "evidence": "รหัส PR-E01 งบประมาณคงเหลือไม่พอ เกิดเมื่อมูลค่า PR เกินงบคงเหลือของรหัสต้นทุน ให้ติดต่อผู้ควบคุมต้นทุนโครงการเพื่อขอโอนงบ หรือแยกรายการไปใช้รหัสต้นทุนอื่นที่เหมาะสม",
+    "doc_id": "PR-5",
+    "answer": "ติดต่อผู้ควบคุมต้นทุนโครงการเพื่อขอโอนงบ หรือแยกรายการไปใช้รหัสต้นทุนอื่นที่เหมาะสม",
+    "evidence_verified_in": "PR-5"
+   }
+  },
+  {
+   "id": "q15",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ตรวจสอบว่าเป็นการบันทึกซ้ำหรือผู้ขายออกเลขซ้ำ",
+   "raw": {
+    "evidence": "รหัส AP-E01 ใบแจ้งหนี้ซ้ำ เลขที่ใบแจ้งหนี้นี้ของผู้ขายรายเดียวกันถูกบันทึกไปแล้ว ให้ตรวจสอบว่าเป็นการบันทึกซ้ำหรือผู้ขายออกเลขซ้ำ",
+    "doc_id": "AP-6",
+    "answer": "ตรวจสอบว่าเป็นการบันทึกซ้ำหรือผู้ขายออกเลขซ้ำ",
+    "evidence_verified_in": "AP-6"
+   }
+  },
+  {
+   "id": "q16",
+   "set": "questions",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ผู้ขายที่เลือกถูกระงับการใช้งาน ติดต่อฝ่ายบัญชีเพื่อตรวจสอบสถานะผู้ขาย",
+   "raw": {
+    "evidence": "รหัส PO-E01 ผู้ขายถูกระงับการใช้งาน ผู้ขายรายนี้ถูกระงับโดยฝ่ายบัญชี เช่น เอกสารภาษีไม่ครบ ให้ติดต่อฝ่ายบัญชีเพื่อตรวจสอบสถานะผู้ขาย",
+    "doc_id": "PO-6",
+    "answer": "ผู้ขายที่เลือกถูกระงับการใช้งาน ติดต่อฝ่ายบัญชีเพื่อตรวจสอบสถานะผู้ขาย",
+    "evidence_verified_in": "PO-6"
+   }
+  },
+  {
+   "id": "q17",
+   "set": "questions",
+   "expected": "ticket",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "evidence": "",
+    "doc_id": "",
+    "answer": "",
+    "evidence_verified_in": null
+   }
+  },
+  {
+   "id": "q18",
+   "set": "questions",
+   "expected": "ticket",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "rule": "unknown error code"
+   }
+  },
+  {
+   "id": "q19",
+   "set": "questions",
+   "expected": "ticket",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "evidence": "",
+    "doc_id": "",
+    "answer": "",
+    "evidence_verified_in": null
+   }
+  },
+  {
+   "id": "q20",
+   "set": "questions",
+   "expected": "ticket",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "evidence": "",
+    "doc_id": "",
+    "answer": "",
+    "evidence_verified_in": null
+   }
+  },
+  {
+   "id": "h01",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "สามารถแนบไฟล์ได้ ขนาดไม่เกิน 10 MB ต่อไฟล์",
+   "raw": {
+    "evidence": "แนบไฟล์ประกอบได้ เช่น รูปหน้างานหรือแบบก่อสร้าง ขนาดไม่เกิน 10 MB ต่อไฟล์",
+    "doc_id": "PR-2",
+    "answer": "สามารถแนบไฟล์ได้ ขนาดไม่เกิน 10 MB ต่อไฟล์",
+    "evidence_verified_in": "PR-2"
+   }
+  },
+  {
+   "id": "h02",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "PR เกิน 500,000 บาท ต้องผ่านผู้อำนวยการฝ่ายก่อสร้างอนุมัติเพิ่มอีกหนึ่งขั้น",
+   "raw": {
+    "evidence": "เกิน 500,000 บาท ต้องให้ผู้อำนวยการฝ่ายก่อสร้างอนุมัติเพิ่มอีกหนึ่งขั้น",
+    "doc_id": "PR-3",
+    "answer": "PR เกิน 500,000 บาท ต้องผ่านผู้อำนวยการฝ่ายก่อสร้างอนุมัติเพิ่มอีกหนึ่งขั้น",
+    "evidence_verified_in": "PR-3"
+   }
+  },
+  {
+   "id": "h03",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ไม่สามารถยกเลิก PR ที่กลายเป็น PO ได้ ต้องไปยกเลิกที่ใบสั่งซื้อแทน",
+   "raw": {
+    "evidence": "PR ที่ถูกแปลงเป็นใบสั่งซื้อแล้วยกเลิกไม่ได้ ต้องไปยกเลิกที่ใบสั่งซื้อแทน",
+    "doc_id": "PR-4",
+    "answer": "ไม่สามารถยกเลิก PR ที่กลายเป็น PO ได้ ต้องไปยกเลิกที่ใบสั่งซื้อแทน",
+    "evidence_verified_in": "PR-4"
+   }
+  },
+  {
+   "id": "h04",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": false,
+   "answer": "PO ใบเดียวสามารถรวมรายการจากหลาย PR ได้ 前提是PO可以包含多个PR中的项目，前提是这些项目属于同一个项目并且由同一个供应商提供。",
+   "raw": {
+    "evidence": "PO หนึ่งใบรวมรายการจากหลาย PR ได้ ถ้าเป็นโครงการเดียวกันและผู้ขายรายเดียวกัน",
+    "doc_id": "PO-1",
+    "answer": "PO ใบเดียวสามารถรวมรายการจากหลาย PR ได้ 前提是PO可以包含多个PR中的项目，前提是这些项目属于同一个项目并且由同一个供应商提供。",
+    "evidence_verified_in": "PO-1"
+   }
+  },
+  {
+   "id": "h05",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "เลขที่ PO ฉบับแก้ไขจะเป็นเลขเดิมต่อท้ายด้วย -R1 หรือ -R2 ตามลำดับ",
+   "raw": {
+    "evidence": "ระบบจะสร้าง PO ฉบับแก้ไขโดยใช้เลขเดิมต่อท้ายด้วย -R1, -R2 ตามลำดับ",
+    "doc_id": "PO-4",
+    "answer": "เลขที่ PO ฉบับแก้ไขจะเป็นเลขเดิมต่อท้ายด้วย -R1 หรือ -R2 ตามลำดับ",
+    "evidence_verified_in": "PO-4"
+   }
+  },
+  {
+   "id": "h06",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "หลังจากอนุมัติ PO ให้กด 'ส่งอีเมล' ระบบจะแนบไฟล์ PDF ของ PO ไปยังอีเมลผู้ขายที่บันทึกไว้",
+   "raw": {
+    "evidence": "หลังอนุมัติ กด ส่งอีเมล ระบบจะแนบไฟล์ PDF ของ PO ไปยังอีเมลผู้ขายที่บันทึกไว้",
+    "doc_id": "PO-5",
+    "answer": "หลังจากอนุมัติ PO ให้กด 'ส่งอีเมล' ระบบจะแนบไฟล์ PDF ของ PO ไปยังอีเมลผู้ขายที่บันทึกไว้",
+    "evidence_verified_in": "PO-5"
+   }
+  },
+  {
+   "id": "h07",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ได้ แอปจะเก็บข้อมูลไว้และส่งอัตโนมัติเมื่อกลับมาออนไลน์",
+   "raw": {
+    "evidence": "ถ้าไม่มีอินเทอร์เน็ต แอปจะเก็บข้อมูลไว้และส่งอัตโนมัติเมื่อกลับมาออนไลน์",
+    "doc_id": "RCV-2",
+    "answer": "ได้ แอปจะเก็บข้อมูลไว้และส่งอัตโนมัติเมื่อกลับมาออนไลน์",
+    "evidence_verified_in": "RCV-2"
+   }
+  },
+  {
+   "id": "h08",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "กดปิดยอดค้างรับในPO",
+   "raw": {
+    "evidence": "หากผู้ขายแจ้งว่าจะไม่ส่งส่วนที่เหลือ ให้ฝ่ายจัดซื้อกด ปิดยอดค้างรับ ใน PO",
+    "doc_id": "RCV-3",
+    "answer": "กดปิดยอดค้างรับในPO",
+    "evidence_verified_in": "RCV-3"
+   }
+  },
+  {
+   "id": "h09",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ต้องแก้ไขอัตราหัก ณ ที่จ่ายที่ข้อมูลผู้ขาย ไม่ควรแก้ในเอกสารจ่ายเงินทีละใบ",
+   "raw": {
+    "evidence": "ถ้าอัตราไม่ถูกต้อง ให้ฝ่ายบัญชีแก้ที่ข้อมูลผู้ขาย ไม่ควรแก้ในเอกสารจ่ายเงินทีละใบ",
+    "doc_id": "AP-3",
+    "answer": "ต้องแก้ไขอัตราหัก ณ ที่จ่ายที่ข้อมูลผู้ขาย ไม่ควรแก้ในเอกสารจ่ายเงินทีละใบ",
+    "evidence_verified_in": "AP-3"
+   }
+  },
+  {
+   "id": "h10",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ไปที่เมนู เจ้าหนี้ > วางแผนจ่ายเงิน แล้วเลือกช่วงวันครบกำหนด ระบบจะแสดงหนี้ที่ครบกำหนดพร้อมยอดหลังหักภาษีและเงินประกันผลงาน เลือกรายการ แล้วกด สร้างชุดจ่ายเงิน ส่งไฟล์โอนเงินไปยังธนาคาร หรือพิมพ์เช็ค",
+   "raw": {
+    "evidence": "1) ไปที่เมนู เจ้าหนี้ > วางแผนจ่ายเงิน แล้วเลือกช่วงวันครบกำหนด\n2) ระบบจะแสดงหนี้ที่ครบกำหนดพร้อมยอดหลังหักภาษีและเงินประกันผลงาน\n3) เลือกรายการ แล้วกด สร้างชุดจ่ายเงิน\n4) ส่งไฟล์โอนเงินไปยังธนาคาร หรือพิมพ์เช็ค",
+    "doc_id": "AP-5",
+    "answer": "ไปที่เมนู เจ้าหนี้ > วางแผนจ่ายเงิน แล้วเลือกช่วงวันครบกำหนด ระบบจะแสดงหนี้ที่ครบกำหนดพร้อมยอดหลังหักภาษีและเงินประกันผลงาน เลือกรายการ แล้วกด สร้างชุดจ่ายเงิน ส่งไฟล์โอนเงินไปยังธนาคาร หรือพิมพ์เช็ค",
+    "evidence_verified_in": "AP-5"
+   }
+  },
+  {
+   "id": "h11",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ต้องทำใบเพิ่มงบประมาณ ซึ่งผู้บริหารต้องอนุมัติ",
+   "raw": {
+    "evidence": "หากต้องการเพิ่มงบรวมของโครงการ ต้องทำใบเพิ่มงบประมาณ ซึ่งผู้บริหารต้องอนุมัติ",
+    "doc_id": "BUDGET-3",
+    "answer": "ต้องทำใบเพิ่มงบประมาณ ซึ่งผู้บริหารต้องอนุมัติ",
+    "evidence_verified_in": "BUDGET-3"
+   }
+  },
+  {
+   "id": "h12",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ตั้งค่าผู้รับเมลเตือนงบได้ที่ โครงการ > ตั้งค่า > การแจ้งเตือน",
+   "raw": {
+    "evidence": "ตั้งค่าผู้รับแจ้งเตือนได้ที่ โครงการ > ตั้งค่า > การแจ้งเตือน",
+    "doc_id": "BUDGET-5",
+    "answer": "ตั้งค่าผู้รับเมลเตือนงบได้ที่ โครงการ > ตั้งค่า > การแจ้งเตือน",
+    "evidence_verified_in": "BUDGET-5"
+   }
+  },
+  {
+   "id": "h13",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": false,
+   "answer": "มีแอป SiteERP สำหรับใช้งานบนไอโฟน (iOS)",
+   "raw": {
+    "evidence": "ได้ ผ่านแอป SiteERP Site ทั้ง Android และ iOS สำหรับงานหน้างาน",
+    "doc_id": "FAQ-13",
+    "answer": "มีแอป SiteERP สำหรับใช้งานบนไอโฟน (iOS)",
+    "evidence_verified_in": "FAQ-13"
+   }
+  },
+  {
+   "id": "h14",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ให้แก้ไขวันที่ต้องการใช้ของเป็นวันปัจจุบันหรือวันในอนาคต",
+   "raw": {
+    "evidence": "วันที่ต้องการใช้ของย้อนหลัง ระบบไม่อนุญาตให้ระบุวันที่ต้องการก่อนวันที่สร้าง PR ให้แก้เป็นวันปัจจุบันหรือวันในอนาคต",
+    "doc_id": "PR-5",
+    "answer": "ให้แก้ไขวันที่ต้องการใช้ของเป็นวันปัจจุบันหรือวันในอนาคต",
+    "evidence_verified_in": "PR-5"
+   }
+  },
+  {
+   "id": "h15",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ต้องแนบเหตุผลประกอบ และจะมีผู้อนุมัติเพิ่มอีกหนึ่งขั้น",
+   "raw": {
+    "evidence": "ราคาสูงกว่าราคากลาง เกิดเมื่อราคาต่อหน่วยสูงกว่าราคากลางในระบบเกิน 10 เปอร์เซ็นต์ ต้องแนบเหตุผลประกอบ และจะมีผู้อนุมัติเพิ่มอีกหนึ่งขั้น",
+    "doc_id": "PO-6",
+    "answer": "ต้องแนบเหตุผลประกอบ และจะมีผู้อนุมัติเพิ่มอีกหนึ่งขั้น",
+    "evidence_verified_in": "PO-6"
+   }
+  },
+  {
+   "id": "h16",
+   "set": "heldout",
+   "expected": "answer",
+   "grounded": true,
+   "content_ok": true,
+   "answer": "ตรวจสอบว่ารับของครบหรือไม่ ถ้าราคาเปลี่ยนต้องให้ฝ่ายจัดซื้อทำ Revision ของ PO ก่อน",
+   "raw": {
+    "evidence": "ยอดไม่ตรงกับใบรับสินค้า จำนวนหรือราคาในใบแจ้งหนี้ไม่ตรงกับใบรับสินค้าหรือใบสั่งซื้อ ให้ตรวจสอบว่ารับของครบหรือไม่ ถ้าราคาเปลี่ยนต้องให้ฝ่ายจัดซื้อทำ Revision ของ PO ก่อน",
+    "doc_id": "AP-6",
+    "answer": "ตรวจสอบว่ารับของครบหรือไม่ ถ้าราคาเปลี่ยนต้องให้ฝ่ายจัดซื้อทำ Revision ของ PO ก่อน",
+    "evidence_verified_in": "AP-6"
+   }
+  },
+  {
+   "id": "h17",
+   "set": "heldout",
+   "expected": "ticket",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "evidence": "",
+    "doc_id": "",
+    "answer": "",
+    "evidence_verified_in": null
+   }
+  },
+  {
+   "id": "h18",
+   "set": "heldout",
+   "expected": "ticket",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "rule": "unknown error code"
+   }
+  },
+  {
+   "id": "h19",
+   "set": "heldout",
+   "expected": "ticket",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "evidence": "",
+    "doc_id": "",
+    "answer": "",
+    "evidence_verified_in": null
+   }
+  },
+  {
+   "id": "h20",
+   "set": "heldout",
+   "expected": "ticket",
+   "grounded": false,
+   "content_ok": false,
+   "answer": "",
+   "raw": {
+    "evidence": "",
+    "doc_id": "",
+    "answer": "",
+    "evidence_verified_in": null
+   }
+  }
+ ]
+}

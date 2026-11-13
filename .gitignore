@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+storage/
+outputs/
+data/processed/
+_scratch/
+# ผลที่สคริปต์ .bat เขียนไว้ที่โฟลเดอร์หลัก (ย้ายไป results/ เมื่อจะเก็บ)
+/*_log.txt
+/*.log
+/experiment_stdout.txt

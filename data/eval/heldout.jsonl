@@ -1,0 +1,22 @@
+{"id": "h01", "question": "แนบไฟล์ใน PR ได้ขนาดสูงสุดเท่าไหร่", "intent": "how_to", "module": "PR", "outcome": "answer", "expected_sources": ["PR-2"], "must_include": ["10"]}
+{"id": "h02", "question": "PR เกินห้าแสนต้องผ่านใครเพิ่ม", "intent": "how_to", "module": "PR", "outcome": "answer", "expected_sources": ["PR-3"], "must_include": ["ผู้อำนวยการ"]}
+{"id": "h03", "question": "PR ที่กลายเป็น PO ไปแล้วยกเลิกได้ไหม", "intent": "how_to", "module": "PR", "outcome": "answer", "expected_sources": ["PR-4"], "must_include": ["ใบสั่งซื้อ"]}
+{"id": "h04", "question": "PO ใบเดียวรวมของจากหลาย PR ได้หรือเปล่า", "intent": "how_to", "module": "PO", "outcome": "answer", "expected_sources": ["PO-1"], "must_include": ["ผู้ขาย"]}
+{"id": "h05", "question": "เลขที่ PO ฉบับแก้ไขจะออกมาเป็นแบบไหน", "intent": "how_to", "module": "PO", "outcome": "answer", "expected_sources": ["PO-4"], "must_include": ["R1"]}
+{"id": "h06", "question": "อยากส่ง PO ให้ซัพพลายเออร์ทางเมล ทำยังไง", "intent": "how_to", "module": "PO", "outcome": "answer", "expected_sources": ["PO-5", "FAQ-3"], "must_include": ["ส่งอีเมล"]}
+{"id": "h07", "question": "หน้างานไม่มีเน็ต บันทึกรับของได้ไหม", "intent": "how_to", "module": "RCV", "outcome": "answer", "expected_sources": ["RCV-2"], "must_include": ["อัตโนมัติ"]}
+{"id": "h08", "question": "ซัพพลายเออร์บอกว่าจะไม่ส่งของที่เหลือแล้ว ต้องทำอะไรกับ PO", "intent": "how_to", "module": "RCV", "outcome": "answer", "expected_sources": ["RCV-3"], "must_include": ["ปิดยอดค้างรับ"]}
+{"id": "h09", "question": "อัตราหัก ณ ที่จ่ายของผู้ขายรายนี้ผิด ต้องแก้ตรงไหน", "intent": "how_to", "module": "AP", "outcome": "answer", "expected_sources": ["AP-3"], "must_include": ["ข้อมูลผู้ขาย"]}
+{"id": "h10", "question": "ทำชุดจ่ายเงินให้เจ้าหนี้ยังไง", "intent": "how_to", "module": "AP", "outcome": "answer", "expected_sources": ["AP-5"], "must_include": ["วางแผนจ่ายเงิน"]}
+{"id": "h11", "question": "อยากเพิ่มงบรวมของทั้งโครงการ ต้องทำยังไง", "intent": "how_to", "module": "BUDGET", "outcome": "answer", "expected_sources": ["BUDGET-3"], "must_include": ["ใบเพิ่มงบประมาณ"]}
+{"id": "h12", "question": "ตั้งค่าคนรับเมลเตือนงบได้ที่ไหน", "intent": "how_to", "module": "BUDGET", "outcome": "answer", "expected_sources": ["BUDGET-5"], "must_include": ["การแจ้งเตือน"]}
+{"id": "h13", "question": "มีแอปใช้บนไอโฟนไหม", "intent": "how_to", "module": "GENERAL", "outcome": "answer", "expected_sources": ["FAQ-13"], "must_include": ["SiteERP Site"]}
+{"id": "h14", "question": "สร้าง PR แล้วเจอ PR-E03", "intent": "problem", "module": "PR", "outcome": "answer", "expected_sources": ["PR-5"], "must_include": ["วันที่"]}
+{"id": "h15", "question": "ทำ PO แล้วระบบเตือนว่าราคาสูงกว่าราคากลาง", "intent": "problem", "module": "PO", "outcome": "answer", "expected_sources": ["PO-6"], "must_include": ["เหตุผล"]}
+{"id": "h16", "question": "ตั้งหนี้แล้วขึ้น AP-E02", "intent": "problem", "module": "AP", "outcome": "answer", "expected_sources": ["AP-6"], "must_include": ["รับ"]}
+{"id": "h17", "question": "แอปมือถือเด้งออกเองทุกครั้งที่กดถ่ายรูปสินค้าตอนรับของ", "intent": "problem", "module": "RCV", "outcome": "ticket", "expected_sources": [], "must_include": []}
+{"id": "h18", "question": "ขึ้น BUDGET-E04 ตอนนำเข้า BOQ", "intent": "problem", "module": "BUDGET", "outcome": "ticket", "expected_sources": [], "must_include": []}
+{"id": "h19", "question": "รายงานเจ้าหนี้ยอดรวมไม่ตรงกับงบการเงิน ต่างกันเป็นแสน", "intent": "problem", "module": "AP", "outcome": "ticket", "expected_sources": [], "must_include": []}
+{"id": "h20", "question": "ระบบช้ามากตั้งแต่บ่าย เปิดหน้าไหนก็หมุนค้าง", "intent": "problem", "module": "GENERAL", "outcome": "ticket", "expected_sources": [], "must_include": []}
+{"id": "h21", "question": "พรุ่งนี้ฝนจะตกที่ไซต์งานไหม", "intent": "out_of_scope", "module": "UNKNOWN", "outcome": "out_of_scope", "expected_sources": [], "must_include": []}
+{"id": "h22", "question": "ขอสูตรคำนวณปริมาณคอนกรีตเสาเข็มหน่อย", "intent": "out_of_scope", "module": "UNKNOWN", "outcome": "out_of_scope", "expected_sources": [], "must_include": []}
