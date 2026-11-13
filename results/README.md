@@ -12,6 +12,7 @@
 | `latency_localhost/` | 13 พ.ย.: เวลาแยกขั้นของ 7B และ 3B ตอนยังต่อ Ollama ผ่าน `localhost` (ช้ากว่าที่ควรราว 2 วินาทีต่อการเรียก) |
 | `latency/` | รอบเดียวกันหลังเปลี่ยนเป็น `127.0.0.1` พร้อมผลของ `tools/probe_ollama.py` และ `tools/compare_reports.py` |
 | `evidence/` | 13 พ.ย.: กฎหลักฐานแบบเดิม (`_ev0`) เทียบกับแบบไม่นับหัวเรื่อง (`_ev1`, ค่าตั้งปัจจุบัน) มีประโยคหลักฐานของทุกข้อ |
+| `external/` | 13 พ.ย.: ผลรันครั้งเดียวบนชุดคำถาม 20 ข้อที่ Gemini เขียน (`data/eval/external_gemini.jsonl`) ระบบไม่เคยเห็นคำถามชุดนี้มาก่อน |
 
 ลำดับใน `history/`: `heldout_log_before` (ชุด 2 ครั้งแรก 18/22) → `both_log_router_prompt_attempt` → `seeds_log` →
 `both_log_before_agentic` → `both_log_agentic_v1_failed` → `both_log` → `all3_log_fewshot_version` (ชุด 3 ครั้งแรก 19/22)
