@@ -1,0 +1,1402 @@
+{
+  "config": {
+    "backend": "ollama",
+    "chat_model": "qwen2.5:7b",
+    "embed_model": "bge-m3",
+    "min_score": 0.55,
+    "top_k": 4
+  },
+  "summary": {
+    "intent_ok": {
+      "correct": 19,
+      "total": 20
+    },
+    "module_ok": {
+      "correct": 11,
+      "total": 15
+    },
+    "retrieval_ok": {
+      "correct": 10,
+      "total": 10
+    },
+    "outcome_ok": {
+      "correct": 19,
+      "total": 20
+    },
+    "content_ok": {
+      "correct": 6,
+      "total": 10
+    },
+    "answered_but_should_ticket": 0,
+    "ticket_but_should_answer": 0,
+    "latency_avg_s": 2.89,
+    "latency_max_s": 4.13,
+    "re_searched": 1,
+    "re_searched_then_answered_correctly": 1,
+    "stages": {
+      "Router": {
+        "questions": 20,
+        "ms": 932.9,
+        "chat_calls": 1.0,
+        "prompt_tokens": 731.7,
+        "output_tokens": 70.8,
+        "prefill_ms": 27.1,
+        "decode_ms": 857.5,
+        "load_ms": 4.6,
+        "embed_ms": 6.5
+      },
+      "Retriever": {
+        "questions": 16,
+        "ms": 62.6,
+        "chat_calls": 0.0,
+        "prompt_tokens": 0.0,
+        "output_tokens": 0.0,
+        "prefill_ms": 0.0,
+        "decode_ms": 0.0,
+        "load_ms": 5.5,
+        "embed_ms": 60.5
+      },
+      "Knowledge": {
+        "questions": 15,
+        "ms": 1317.5,
+        "chat_calls": 0.8,
+        "prompt_tokens": 1208.8,
+        "output_tokens": 82.8,
+        "prefill_ms": 230.9,
+        "decode_ms": 1044.0,
+        "load_ms": 3.2,
+        "embed_ms": 0.0
+      },
+      "Ticket": {
+        "questions": 6,
+        "ms": 571.4,
+        "chat_calls": 0.3,
+        "prompt_tokens": 124.0,
+        "output_tokens": 44.8,
+        "prefill_ms": 20.1,
+        "decode_ms": 541.3,
+        "load_ms": 1.1,
+        "embed_ms": 0.0
+      },
+      "รวม": {
+        "questions": 20,
+        "ms": 2884.3,
+        "chat_calls": 2.1,
+        "prompt_tokens": 2064.4,
+        "output_tokens": 198.4,
+        "prefill_ms": 278.1,
+        "decode_ms": 2442.8,
+        "load_ms": 14.3,
+        "embed_ms": 67.0
+      }
+    }
+  },
+  "records": [
+    {
+      "id": "g01",
+      "question": "ใบขอซื้อที่ ผจก. อนุมัตไปแล้ว แต่หน้างานเปลี่ยนแบบไม่ใช้ของแล้ว ยกเลิกได้มั้ยครับ",
+      "expected": {
+        "intent": "how_to",
+        "module": "PR",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "how_to",
+        "module": "PR",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": false,
+      "top_score": 0.6693,
+      "searches": 1,
+      "queries": [
+        "วิธียกเลิกใบขอซื้อที่ผจก. อนุมัตไปแล้วเมื่อหน้างานเปลี่ยนแบบไม่ใช้ของแล้ว"
+      ],
+      "hits": [
+        "PR-4",
+        "PO-4",
+        "PR-1",
+        "PO-2",
+        "PR-2",
+        "FAQ-1"
+      ],
+      "reply": "ยกเลิกได้ แต่ต้องระบุเหตุผล ระบบจะคืนงบประมาณที่จองไว้ให้รหัสต้นทุนทันที",
+      "evidence": "PR ที่อนุมัติแล้วแต่ยังไม่ถูกแปลงเป็นใบสั่งซื้อ ให้กด ยกเลิก พร้อมระบุเหตุผล ระบบจะคืนงบประมาณที่จองไว้ให้รหัสต้นทุนทันที PR ที่ถูกแปลงเป็นใบสั่งซื้อแล้วยกเลิกไม่ได้ ต้องไปยกเลิกที่ใบสั่งซื้อแทน",
+      "latency_s": 3.93,
+      "stages": {
+        "Router": {
+          "ms": 881,
+          "chat_calls": 1,
+          "prompt_tokens": 732,
+          "output_tokens": 66,
+          "prefill_ms": 30,
+          "decode_ms": 806,
+          "load_ms": 4,
+          "embed_ms": 0
+        },
+        "Retriever": {
+          "ms": 247,
+          "chat_calls": 0,
+          "prompt_tokens": 0,
+          "output_tokens": 0,
+          "prefill_ms": 0,
+          "decode_ms": 0,
+          "load_ms": 7,
+          "embed_ms": 244
+        },
+        "Knowledge": {
+          "ms": 2794,
+          "chat_calls": 1,
+          "prompt_tokens": 1709,
+          "output_tokens": 191,
+          "prefill_ms": 328,
+          "decode_ms": 2409,
+          "load_ms": 4,
+          "embed_ms": 0
+        }
+      }
+    },
+    {
+      "id": "g02",
+      "question": "แนบไฟล์แบบ PDF แค่ 3 MB ตอนสร้าง PR แล้วหน้าเว็บหมุนค้างขึ้น Error 500 ตลอดเลยครับ ลองเปลี่ยนเบราว์เซอร์ก็ยังเป็น",
+      "expected": {
+        "intent": "problem",
+        "module": "PR",
+        "outcome": "ticket"
+      },
+      "actual": {
+        "intent": "problem",
+        "module": "PR",
+        "outcome": "ticket"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": null,
+      "outcome_ok": true,
+      "content_ok": null,
+      "top_score": 0.5868,
+      "searches": 1,
+      "queries": [
+        "สร้างใบขอซื้อแล้วแนบไฟล์ PDF ขนาด 3 MB แต่หน้าเว็บหมุนค้างและขึ้น Error 500 ตลอดเวลา ลองเปลี่ยนเบราว์เซอร์แล้วยังคงปัญหา"
+      ],
+      "hits": [
+        "PR-2",
+        "FAQ-1",
+        "PR-1",
+        "PR-4"
+      ],
+      "reply": "ยังไม่พบวิธีแก้ในคู่มือ จึงเปิด Ticket T-261113-200646-5025 ให้ทีม Support งานจัดซื้อแล้ว (ความเร่งด่วน: high)\nเพื่อให้แก้ได้เร็วขึ้น กรุณาเตรียม: เลขที่เอกสาร PR ที่ผู้ใช้พยายามสร้าง, ภาพหน้าจอที่แสดง Error 500, เวลาที่เกิดปัญหา",
+      "evidence": "",
+      "latency_s": 3.49,
+      "stages": {
+        "Router": {
+          "ms": 1128,
+          "chat_calls": 1,
+          "prompt_tokens": 744,
+          "output_tokens": 86,
+          "prefill_ms": 32,
+          "decode_ms": 1040,
+          "load_ms": 3,
+          "embed_ms": 0
+        },
+        "Retriever": {
+          "ms": 140,
+          "chat_calls": 0,
+          "prompt_tokens": 0,
+          "output_tokens": 0,
+          "prefill_ms": 0,
+          "decode_ms": 0,
+          "load_ms": 7,
+          "embed_ms": 137
+        },
+        "Knowledge": {
+          "ms": 564,
+          "chat_calls": 1,
+          "prompt_tokens": 1345,
+          "output_tokens": 20,
+          "prefill_ms": 232,
+          "decode_ms": 275,
+          "load_ms": 4,
+          "embed_ms": 0
+        },
+        "Ticket": {
+          "ms": 1657,
+          "chat_calls": 1,
+          "prompt_tokens": 413,
+          "output_tokens": 123,
+          "prefill_ms": 126,
+          "decode_ms": 1487,
+          "load_ms": 4,
+          "embed_ms": 0
+        }
+      }
+    },
+    {
+      "id": "g03",
+      "question": "บิลซัพพลายเออร์ยอดปัดเศษต่างจากใบสั่งซื้ออยู่ 50 สตางค์ ระบบจะยอมให้ตั้งหนี้ผ่านมั้ยคะ",
+      "expected": {
+        "intent": "how_to",
+        "module": "AP",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "how_to",
+        "module": "AP",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": true,
+      "top_score": 0.6468,
+      "searches": 1,
+      "queries": [
+        "เมื่อยอดบิลซัพพลายเออร์ปัดเศษต่างจากใบสั่งซื้อ 50 สตางค์ ระบบจะอนุญาตให้ตั้งหนี้ผ่านมั้ย"
+      ],
+      "hits": [
+        "AP-2",
+        "PR-3",
+        "PO-3",
+        "RCV-5",
+        "AP-1",
+        "AP-6"
+      ],
+      "reply": "ระบบยอมให้ต่างกันได้ไม่เกิน 1 บาทต่อรายการจากการปัดเศษ ดังนั้นยอดปัดเศษต่างกัน 50 สตางค์ยังสามารถตั้งหนี้ผ่านระบบได้",
+      "evidence": "ก่อนตั้งหนี้ ระบบจะเทียบเอกสาร 3 ใบ คือ ใบสั่งซื้อ ใบรับสินค้าและใบแจ้งหนี้ ทั้งจำนวนและราคาต้องตรงกัน โดยยอมให้ต่างกันได้ไม่เกิน 1 บาทต่อรายการจากการปัดเศษ",
+      "latency_s": 3.74,
+      "stages": {
+        "Router": {
+          "ms": 1052,
+          "chat_calls": 1,
+          "prompt_tokens": 739,
+          "output_tokens": 81,
+          "prefill_ms": 28,
+          "decode_ms": 985,
+          "load_ms": 3,
+          "embed_ms": 0
+        },
+        "Retriever": {
+          "ms": 81,
+          "chat_calls": 0,
+          "prompt_tokens": 0,
+          "output_tokens": 0,
+          "prefill_ms": 0,
+          "decode_ms": 0,
+          "load_ms": 6,
+          "embed_ms": 76
+        },
+        "Knowledge": {
+          "ms": 2599,
+          "chat_calls": 1,
+          "prompt_tokens": 1816,
+          "output_tokens": 173,
+          "prefill_ms": 358,
+          "decode_ms": 2183,
+          "load_ms": 4,
+          "embed_ms": 0
+        }
+      }
+    },
+    {
+      "id": "g04",
+      "question": "ค่าจ้างเหมาแรงงานพร้อมของของ ผรม. รายย่อย ตามกฎหมายสรรพากรต้องหัก ณ ที่จ่ายกี่เปอร์เซ็นต์คะ",
+      "expected": {
+        "intent": "out_of_scope",
+        "module": "UNKNOWN",
+        "outcome": "out_of_scope"
+      },
+      "actual": {
+        "intent": "out_of_scope",
+        "module": "UNKNOWN",
+        "outcome": "out_of_scope"
+      },
+      "intent_ok": true,
+      "module_ok": null,
+      "retrieval_ok": null,
+      "outcome_ok": true,
+      "content_ok": null,
+      "top_score": null,
+      "searches": 0,
+      "queries": [],
+      "hits": [],
+      "reply": "ขออภัย ผู้ช่วยนี้ตอบเฉพาะเรื่องการใช้งานโปรแกรม SiteERP เช่น ใบขอซื้อ ใบสั่งซื้อ รับสินค้า เจ้าหนี้ และงบประมาณโครงการ",
+      "evidence": "",
+      "latency_s": 0.97,
+      "stages": {
+        "Router": {
+          "ms": 971,
+          "chat_calls": 1,
+          "prompt_tokens": 729,
+          "output_tokens": 69,
+          "prefill_ms": 26,
+          "decode_ms": 835,
+          "load_ms": 7,
+          "embed_ms": 44
+        },
+        "Guard": {
+          "ms": 0,
+          "chat_calls": 0,
+          "prompt_tokens": 0,
+          "output_tokens": 0,
+          "prefill_ms": 0,
+          "decode_ms": 0,
+          "load_ms": 0,
+          "embed_ms": 0
+        }
+      }
+    },
+    {
+      "id": "g05",
+      "question": "จัดซื้อเหล็กยอดแสนสอง ต้องแนบใบเสนอราคากี่เจ้าครับ แล้วถ้าไม่เอาเจ้าที่ถูกสุดทำได้ป่าว",
+      "expected": {
+        "intent": "how_to",
+        "module": "PO",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "how_to",
+        "module": "PR",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": false,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": true,
+      "top_score": 0.6249,
+      "searches": 1,
+      "queries": [
+        "จัดซื้อเหล็กยอดแสนสองต้องแนบใบเสนอราคากี่เจ้า แล้วถ้าไม่เอาเจ้าที่ถูกสุดทำได้ไหม"
+      ],
+      "hits": [
+        "PO-3",
+        "PR-3",
+        "PO-1",
+        "AP-2",
+        "PR-1",
+        "PR-2"
+      ],
+      "reply": "ต้องแนบใบเสนอราคาอย่างน้อย 3 ราย และถ้าเลือกผู้ขายที่ไม่ใช่ราคาต่ำสุด ต้องระบุเหตุผล เช่น ระยะเวลาส่งของหรือคุณภาพสินค้า",
+      "evidence": "การซื้อมูลค่าเกิน 100,000 บาท ต้องแนบใบเสนอราคาอย่างน้อย 3 รายในแท็บ เปรียบเทียบราคา ระบบจะไฮไลต์ผู้ขายที่เสนอราคาต่ำสุด หากเลือกผู้ขายที่ไม่ใช่ราคาต่ำสุด ต้องระบุเหตุผล เช่น ระยะเวลาส่งของหรือคุณภาพสินค้า",
+      "latency_s": 3.79,
+      "stages": {
+        "Router": {
+          "ms": 827,
+          "chat_calls": 1,
+          "prompt_tokens": 729,
+          "output_tokens": 64,
+          "prefill_ms": 27,
+          "decode_ms": 770,
+          "load_ms": 4,
+          "embed_ms": 0
+        },
+        "Retriever": {
+          "ms": 72,
+          "chat_calls": 0,
+          "prompt_tokens": 0,
+          "output_tokens": 0,
+          "prefill_ms": 0,
+          "decode_ms": 0,
+          "load_ms": 8,
+          "embed_ms": 70
+        },
+        "Knowledge": {
+          "ms": 2889,
+          "chat_calls": 1,
+          "prompt_tokens": 1722,
+          "output_tokens": 198,
+          "prefill_ms": 331,
+          "decode_ms": 2499,
+          "load_ms": 4,
+          "embed_ms": 0
+        }
+      }
+    },
+    {
+      "id": "g06",
+      "question": "ใช้แอป SiteERP Site สแกน QR ใบสั่งซื้อหน้างานแล้วแอปเด้งปิดตัวเองทันทีเลยครับ รีสตาร์ทเครื่องก็ไม่หาย",
+      "expected": {
+        "intent": "problem",
+        "module": "RCV",
+        "outcome": "ticket"
+      },
+      "actual": {
+        "intent": "problem",
+        "module": "PO",
+        "outcome": "ticket"
+      },
+      "intent_ok": true,
+      "module_ok": false,
+      "retrieval_ok": null,
+      "outcome_ok": true,
+      "content_ok": null,
+      "top_score": 0.61,
+      "searches": 1,
+      "queries": [
+        "สแกน QR ใบสั่งซื้อหน้างานผ่านแอป SiteERP แล้วแอปปิดตัวเองทันที รีสตาร์ทเครื่องแล้วยังไม่หาย"
+      ],
+      "hits": [
+        "RCV-2",
+        "FAQ-13",
+        "FAQ-6",
+        "PR-5",
+        "PO-4",
+        "PO-2"
+      ],
+      "reply": "ยังไม่พบวิธีแก้ในคู่มือ จึงเปิด Ticket T-261113-200659-BCB7 ให้ทีม Support งานจัดซื้อแล้ว (ความเร่งด่วน: high)\nเพื่อให้แก้ได้เร็วขึ้น กรุณาเตรียม: เลขที่ใบสั่งซื้อที่ผู้ใช้พยายามสแกน, ภาพหน้าจอที่แสดงปัญหา, เวลานำมาแจ้งปัญหามาเมื่อไหร่",
+      "evidence": "",
+      "latency_s": 3.74,
+      "stages": {
+        "Router": {
+          "ms": 965,
+          "chat_calls": 1,
+          "prompt_tokens": 739,
+          "output_tokens": 74,
+          "prefill_ms": 28,
+          "decode_ms": 897,
+          "load_ms": 4,
+          "embed_ms": 0
+        },
+        "Retriever": {
+          "ms": 46,
+          "chat_calls": 0,
+          "prompt_tokens": 0,
+          "output_tokens": 0,
+          "prefill_ms": 0,
+          "decode_ms": 0,
+          "load_ms": 6,
+          "embed_ms": 43
+        },
+        "Knowledge": {
+          "ms": 655,
+          "chat_calls": 1,
+          "prompt_tokens": 1665,
+          "output_tokens": 20,
+          "prefill_ms": 331,
+          "decode_ms": 267,
+          "load_ms": 4,
+          "embed_ms": 0
+        },
+        "Ticket": {
+          "ms": 2071,
+          "chat_calls": 1,
+          "prompt_tokens": 412,
+          "output_tokens": 164,
+          "prefill_ms": 53,
+          "decode_ms": 1986,
+          "load_ms": 3,
+          "embed_ms": 0
+        }
+      }
+    },
+    {
+      "id": "g07",
+      "question": "ปูนมาส่งหน้างานแล้วถุงแตกชำรุดหลายลูก กดส่งคืนในระบบตรงไหนครับ",
+      "expected": {
+        "intent": "how_to",
+        "module": "RCV",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "how_to",
+        "module": "RCV",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": false,
+      "top_score": 0.5645,
+      "searches": 1,
+      "queries": [
+        "应该如何在系统中处理现场收到的水泥包装破损的情况并进行退货"
+      ],
+      "hits": [
+        "RCV-4",
+        "FAQ-3",
+        "RCV-3",
+        "RCV-2",
+        "RCV-5"
+      ],
+      "reply": "กดเมนู รับสินค้า > คืนสินค้า ระบุจำนวนถุงปูนที่ชำรุดและเหตุผล ระบบจะลดต้นทุนจริงของโครงการและแจ้งฝ่ายบัญชีให้ปรับยอดหนี้",
+      "evidence": "สินค้าชำรุดหรือไม่ตรงสเปก ให้สร้างใบคืนสินค้าจากเมนู รับสินค้า > คืนสินค้า โดยอ้างอิงเลขที่ GR เดิม ระบุจำนวนและเหตุผล ระบบจะลดต้นทุนจริงของโครงการและแจ้งฝ่ายบัญชีให้ปรับยอดหนี้",
+      "latency_s": 3.24,
+      "stages": {
+        "Router": {
+          "ms": 492,
+          "chat_calls": 1,
+          "prompt_tokens": 714,
+          "output_tokens": 37,
+          "prefill_ms": 27,
+          "decode_ms": 441,
+          "load_ms": 3,
+          "embed_ms": 0
+        },
+        "Retriever": {
+          "ms": 50,
+          "chat_calls": 0,
+          "prompt_tokens": 0,
+          "output_tokens": 0,
+          "prefill_ms": 0,
+          "decode_ms": 0,
+          "load_ms": 6,
+          "embed_ms": 48
+        },
+        "Knowledge": {
+          "ms": 2698,
+          "chat_calls": 1,
+          "prompt_tokens": 1488,
+          "output_tokens": 189,
+          "prefill_ms": 285,
+          "decode_ms": 2356,
+          "load_ms": 4,
+          "embed_ms": 0
+        }
+      }
+    },
+    {
+      "id": "g08",
+      "question": "ออก PO ให้ซัพพลายเออร์เจ้าประจำไม่ได้ ระบบเด้ง PO-E01 ต้องทำไงต่อคะ",
+      "expected": {
+        "intent": "problem",
+        "module": "PO",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "problem",
+        "module": "PO",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": false,
+      "top_score": 0.6351,
+      "searches": 1,
+      "queries": [
+        "ออกใบสั่งซื้อให้ซัพพลายเออร์เจ้าประจำไม่ได้ ระบบเด้งข้อผิดพลาดรหัส PO-E01 ต้องทำอย่างไรต่อ"
+      ],
+      "hits": [
+        "PO-4",
+        "PO-6",
+        "RCV-5",
+        "AP-6",
+        "PO-1",
+        "PO-2"
+      ],
+      "reply": "ติดต่อฝ่ายบัญชีเพื่อตรวจสอบสถานะผู้ขาย",
+      "evidence": "รหัส PO-E01 ผู้ขายถูกระงับการใช้งาน ผู้ขายรายนี้ถูกระงับโดยฝ่ายบัญชี เช่น เอกสารภาษีไม่ครบ ให้ติดต่อฝ่ายบัญชีเพื่อตรวจสอบสถานะผู้ขาย",
+      "latency_s": 2.84,
+      "stages": {
+        "Router": {
+          "ms": 919,
+          "chat_calls": 1,
+          "prompt_tokens": 719,
+          "output_tokens": 71,
+          "prefill_ms": 24,
+          "decode_ms": 857,
+          "load_ms": 5,
+          "embed_ms": 0
+        },
+        "Retriever": {
+          "ms": 46,
+          "chat_calls": 0,
+          "prompt_tokens": 0,
+          "output_tokens": 0,
+          "prefill_ms": 0,
+          "decode_ms": 0,
+          "load_ms": 6,
+          "embed_ms": 43
+        },
+        "Knowledge": {
+          "ms": 1876,
+          "chat_calls": 1,
+          "prompt_tokens": 1851,
+          "output_tokens": 115,
+          "prefill_ms": 367,
+          "decode_ms": 1456,
+          "load_ms": 4,
+          "embed_ms": 0
+        }
+      }
+    },
+    {
+      "id": "g09",
+      "question": "เทคอนกรีตเสาตอม่อไปเมื่อเช้า ต้องบ่มน้ำกี่วันถึงจะถอดแบบข้างออกได้ครับ",
+      "expected": {
+        "intent": "out_of_scope",
+        "module": "UNKNOWN",
+        "outcome": "out_of_scope"
+      },
+      "actual": {
+        "intent": "out_of_scope",
+        "module": "UNKNOWN",
+        "outcome": "out_of_scope"
+      },
+      "intent_ok": true,
+      "module_ok": null,
+      "retrieval_ok": null,
+      "outcome_ok": true,
+      "content_ok": null,
+      "top_score": null,
+      "searches": 0,
+      "queries": [],
+      "hits": [],
+      "reply": "ขออภัย ผู้ช่วยนี้ตอบเฉพาะเรื่องการใช้งานโปรแกรม SiteERP เช่น ใบขอซื้อ ใบสั่งซื้อ รับสินค้า เจ้าหนี้ และงบประมาณโครงการ",
+      "evidence": "",
+      "latency_s": 0.85,
+      "stages": {
+        "Router": {
+          "ms": 852,
+          "chat_calls": 1,
+          "prompt_tokens": 721,
+          "output_tokens": 61,
+          "prefill_ms": 23,
+          "decode_ms": 738,
+          "load_ms": 8,
+          "embed_ms": 34
+        },
+        "Guard": {
+          "ms": 0,
+          "chat_calls": 0,
+          "prompt_tokens": 0,
+          "output_tokens": 0,
+          "prefill_ms": 0,
+          "decode_ms": 0,
+          "load_ms": 0,
+          "embed_ms": 0
+        }
+      }
+    },
+    {
+      "id": "g10",
+      "question": "cost code งานฐานรากงบเต็มแล้ว แต่อยากโยกเงินจากหมวดอื่นที่เหลือมาใช้แทน ต้องเข้าเมนูไหนและใครอนุมัตครับ",
+      "expected": {
+        "intent": "how_to",
+        "module": "BUDGET",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "how_to",
+        "module": "BUDGET",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": true,
+      "top_score": 0.6719,
+      "searches": 1,
+      "queries": [
+        "วิธีการโยกย้ายงบประมาณจากหมวดที่เหลือเข้าสู่หมวดงานฐานรากที่ใช้งบเต็มแล้ว ต้องเข้าเมนูไหนและต้องการอนุมัติจากใคร"
+      ],
+      "hits": [
+        "BUDGET-3",
+        "FAQ-10",
+        "BUDGET-2",
+        "PR-3",
+        "BUDGET-1"
+      ],
+      "reply": "ต้องเข้าเมนู โครงการ > งบประมาณ > โอนงบ แล้วเลือกรหัสต้นทาง รหัสปลายทาง และจำนวนเงิน ต้องได้รับอนุมัติจากผู้ควบคุมต้นทุนโครงการ",
+      "evidence": "ถ้ารหัสต้นทุนใดงบไม่พอ ให้สร้างใบโอนงบที่เมนู โครงการ > งบประมาณ > โอนงบ เลือกรหัสต้นทาง รหัสปลายทาง และจำนวนเงิน ยอดรวมงบของโครงการจะไม่เปลี่ยน การโอนงบต้องได้รับอนุมัติจากผู้ควบคุมต้นทุนโครงการ",
+      "latency_s": 3.82,
+      "stages": {
+        "Router": {
+          "ms": 1032,
+          "chat_calls": 1,
+          "prompt_tokens": 733,
+          "output_tokens": 79,
+          "prefill_ms": 26,
+          "decode_ms": 974,
+          "load_ms": 4,
+          "embed_ms": 0
+        },
+        "Retriever": {
+          "ms": 54,
+          "chat_calls": 0,
+          "prompt_tokens": 0,
+          "output_tokens": 0,
+          "prefill_ms": 0,
+          "decode_ms": 0,
+          "load_ms": 8,
+          "embed_ms": 52
+        },
+        "Knowledge": {
+          "ms": 2729,
+          "chat_calls": 1,
+          "prompt_tokens": 1438,
+          "output_tokens": 192,
+          "prefill_ms": 266,
+          "decode_ms": 2395,
+          "load_ms": 4,
+          "embed_ms": 0
+        }
+      }
+    },
+    {
+      "id": "g11",
+      "question": "เจนไฟล์โอนเงินจ่าย ผรม. จากชุดจ่ายเงินไม่ได้ครับ ระบบขึ้นรหัส AP-E05 บอกรูปแบบบัญชีธนาคารไม่ถูกต้อง ทั้งที่เช็กเลขบัญชีแล้วถูกหมด",
+      "expected": {
+        "intent": "problem",
+        "module": "AP",
+        "outcome": "ticket"
+      },
+      "actual": {
+        "intent": "problem",
+        "module": "AP",
+        "outcome": "ticket"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": null,
+      "outcome_ok": true,
+      "content_ok": null,
+      "top_score": 0.6277,
+      "searches": 1,
+      "queries": [
+        "เจนไฟล์โอนเงินจ่ายผู้รับเหมาจากชุดจ่ายเงินไม่ได้ ระบบขึ้นรหัส AP-E05 บอกว่ารูปแบบบัญชีธนาคารไม่ถูกต้อง แม้จะเช็กเลขบัญชีแล้วถูกต้อง"
+      ],
+      "hits": [
+        "AP-6",
+        "AP-5",
+        "PR-5",
+        "PO-6",
+        "AP-3",
+        "AP-2"
+      ],
+      "reply": "ยังไม่พบวิธีแก้ในคู่มือ จึงเปิด Ticket T-261113-200713-DFFD ให้ทีม Support งานบัญชีการเงินแล้ว (ความเร่งด่วน: high)\nเพื่อให้แก้ได้เร็วขึ้น กรุณาเตรียม: เลขที่เอกสารที่ผู้ใช้พยายามเจนไฟล์, ภาพหน้าจอที่แสดงข้อผิดพลาด, ข้อมูลบัญชีธนาคารที่ใช้ในรายการนี้",
+      "evidence": "",
+      "latency_s": 3.4,
+      "stages": {
+        "Router": {
+          "ms": 1236,
+          "chat_calls": 1,
+          "prompt_tokens": 759,
+          "output_tokens": 96,
+          "prefill_ms": 35,
+          "decode_ms": 1165,
+          "load_ms": 3,
+          "embed_ms": 0
+        },
+        "Retriever": {
+          "ms": 59,
+          "chat_calls": 0,
+          "prompt_tokens": 0,
+          "output_tokens": 0,
+          "prefill_ms": 0,
+          "decode_ms": 0,
+          "load_ms": 7,
+          "embed_ms": 57
+        },
+        "Knowledge": {
+          "ms": 0,
+          "chat_calls": 0,
+          "prompt_tokens": 0,
+          "output_tokens": 0,
+          "prefill_ms": 0,
+          "decode_ms": 0,
+          "load_ms": 0,
+          "embed_ms": 0
+        },
+        "Ticket": {
+          "ms": 2103,
+          "chat_calls": 1,
+          "prompt_tokens": 420,
+          "output_tokens": 166,
+          "prefill_ms": 60,
+          "decode_ms": 2003,
+          "load_ms": 5,
+          "embed_ms": 0
+        }
+      }
+    },
+    {
+      "id": "g12",
+      "question": "กดส่งเบิกของไม่ได้ครับ มันขึ้นโค้ด PR-E03 แก้ตรงไหน",
+      "expected": {
+        "intent": "problem",
+        "module": "PR",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "problem",
+        "module": "PR",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": true,
+      "top_score": 0.6988,
+      "searches": 1,
+      "queries": [
+        "กดส่งเบิกของในใบขอซื้อไม่ได้และขึ้นโค้ด PR-E03 ต้องทำอย่างไร"
+      ],
+      "hits": [
+        "PR-5",
+        "PR-4",
+        "RCV-5",
+        "PO-2",
+        "PR-1",
+        "PR-2"
+      ],
+      "reply": "ให้แก้ไขวันที่ต้องการใช้ของเป็นวันปัจจุบันหรือวันในอนาคต",
+      "evidence": "รหัส PR-E03 วันที่ต้องการใช้ของย้อนหลัง ระบบไม่อนุญาตให้ระบุวันที่ต้องการก่อนวันที่สร้าง PR ให้แก้เป็นวันปัจจุบันหรือวันในอนาคต",
+      "latency_s": 2.92,
+      "stages": {
+        "Router": {
+          "ms": 720,
+          "chat_calls": 1,
+          "prompt_tokens": 712,
+          "output_tokens": 56,
+          "prefill_ms": 23,
+          "decode_ms": 670,
+          "load_ms": 4,
+          "embed_ms": 0
+        },
+        "Retriever": {
+          "ms": 69,
+          "chat_calls": 0,
+          "prompt_tokens": 0,
+          "output_tokens": 0,
+          "prefill_ms": 0,
+          "decode_ms": 0,
+          "load_ms": 6,
+          "embed_ms": 66
+        },
+        "Knowledge": {
+          "ms": 2125,
+          "chat_calls": 1,
+          "prompt_tokens": 1987,
+          "output_tokens": 128,
+          "prefill_ms": 437,
+          "decode_ms": 1629,
+          "load_ms": 4,
+          "embed_ms": 0
+        }
+      }
+    },
+    {
+      "id": "g13",
+      "question": "ไวไฟที่ตู้คอนเทนเนอร์ออฟฟิศไซท์บางนาหลุดบ่อยมาก ฝากดูเร้าเตอร์ให้หน่อยได้มั้ยครับ",
+      "expected": {
+        "intent": "out_of_scope",
+        "module": "UNKNOWN",
+        "outcome": "out_of_scope"
+      },
+      "actual": {
+        "intent": "out_of_scope",
+        "module": "UNKNOWN",
+        "outcome": "out_of_scope"
+      },
+      "intent_ok": true,
+      "module_ok": null,
+      "retrieval_ok": null,
+      "outcome_ok": true,
+      "content_ok": null,
+      "top_score": null,
+      "searches": 0,
+      "queries": [],
+      "hits": [],
+      "reply": "ขออภัย ผู้ช่วยนี้ตอบเฉพาะเรื่องการใช้งานโปรแกรม SiteERP เช่น ใบขอซื้อ ใบสั่งซื้อ รับสินค้า เจ้าหนี้ และงบประมาณโครงการ",
+      "evidence": "",
+      "latency_s": 0.93,
+      "stages": {
+        "Router": {
+          "ms": 927,
+          "chat_calls": 1,
+          "prompt_tokens": 729,
+          "output_tokens": 69,
+          "prefill_ms": 26,
+          "decode_ms": 836,
+          "load_ms": 7,
+          "embed_ms": 16
+        },
+        "Guard": {
+          "ms": 0,
+          "chat_calls": 0,
+          "prompt_tokens": 0,
+          "output_tokens": 0,
+          "prefill_ms": 0,
+          "decode_ms": 0,
+          "load_ms": 0,
+          "embed_ms": 0
+        }
+      }
+    },
+    {
+      "id": "g14",
+      "question": "ร้านส่งของมาแค่ครึ่งเดียวแล้วแจ้งว่าของหมดสต็อกไม่ส่งส่วนที่เหลือแล้ว ต้องทำไงให้ PO ไม่ค้างรับคะ",
+      "expected": {
+        "intent": "how_to",
+        "module": "RCV",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "how_to",
+        "module": "PO",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": false,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": false,
+      "top_score": 0.6548,
+      "searches": 2,
+      "queries": [
+        "เมื่อร้านส่งของมาครึ่งเดียวแล้วแจ้งว่าของหมดสต็อก ต้องทำอย่างไรให้ใบสั่งซื้อไม่ค้างรับ",
+        "การแก้ไขใบสั่งซื้อเมื่อร้านส่งของไม่ครบ"
+      ],
+      "hits": [
+        "RCV-3",
+        "PO-4",
+        "RCV-4",
+        "PR-4",
+        "RCV-5",
+        "FAQ-7"
+      ],
+      "reply": "กดปิดยอดค้างรับใน PO",
+      "evidence": "ถ้าผู้ขายแจ้งว่าจะไม่ส่งส่วนที่เหลือ ให้ฝ่ายจัดซื้อกด ปิดยอดค้างรับ ใน PO",
+      "latency_s": 4.13,
+      "stages": {
+        "Router": {
+          "ms": 913,
+          "chat_calls": 1,
+          "prompt_tokens": 737,
+          "output_tokens": 71,
+          "prefill_ms": 27,
+          "decode_ms": 859,
+          "load_ms": 6,
+          "embed_ms": 0
+        },
+        "Retriever": {
+          "ms": 141,
+          "chat_calls": 0,
+          "prompt_tokens": 0,
+          "output_tokens": 0,
+          "prefill_ms": 0,
+          "decode_ms": 0,
+          "load_ms": 14,
+          "embed_ms": 137
+        },
+        "Knowledge": {
+          "ms": 3069,
+          "chat_calls": 3,
+          "prompt_tokens": 3761,
+          "output_tokens": 176,
+          "prefill_ms": 743,
+          "decode_ms": 2190,
+          "load_ms": 13,
+          "embed_ms": 0
+        }
+      }
+    },
+    {
+      "id": "g15",
+      "question": "กดพิมพ์ PO ที่อนุมัติแล้วออกมาเป็นไฟล์ PDF แล้วตัวหนังสือภาษาไทยสระลอยทับกันอ่านไม่ออกเลยค่ะ",
+      "expected": {
+        "intent": "problem",
+        "module": "PO",
+        "outcome": "ticket"
+      },
+      "actual": {
+        "intent": "problem",
+        "module": "PO",
+        "outcome": "ticket"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": null,
+      "outcome_ok": true,
+      "content_ok": null,
+      "top_score": 0.5735,
+      "searches": 1,
+      "queries": [
+        "กดพิมพ์ใบสั่งซื้อที่อนุมัติแล้วออกมาเป็นไฟล์ PDF ตัวหนังสือภาษาไทยสระลอยทับกันอ่านไม่ออก"
+      ],
+      "hits": [
+        "PO-5",
+        "PO-4",
+        "PO-1",
+        "PR-4",
+        "PO-2"
+      ],
+      "reply": "ยังไม่พบวิธีแก้ในคู่มือ จึงเปิด Ticket T-261113-200724-35CE ให้ทีม Support งานจัดซื้อแล้ว (ความเร่งด่วน: medium)\nเพื่อให้แก้ได้เร็วขึ้น กรุณาเตรียม: เลขที่เอกสาร PO ที่มีปัญหา, ภาพหน้าจอที่แสดงปัญหา, ระบบ SiteERP ที่ใช้ (เวอร์ชั่น)",
+      "evidence": "",
+      "latency_s": 3.33,
+      "stages": {
+        "Router": {
+          "ms": 948,
+          "chat_calls": 1,
+          "prompt_tokens": 732,
+          "output_tokens": 72,
+          "prefill_ms": 27,
+          "decode_ms": 869,
+          "load_ms": 4,
+          "embed_ms": 0
+        },
+        "Retriever": {
+          "ms": 54,
+          "chat_calls": 0,
+          "prompt_tokens": 0,
+          "output_tokens": 0,
+          "prefill_ms": 0,
+          "decode_ms": 0,
+          "load_ms": 6,
+          "embed_ms": 51
+        },
+        "Knowledge": {
+          "ms": 587,
+          "chat_calls": 1,
+          "prompt_tokens": 1497,
+          "output_tokens": 20,
+          "prefill_ms": 285,
+          "decode_ms": 264,
+          "load_ms": 4,
+          "embed_ms": 0
+        },
+        "Ticket": {
+          "ms": 1736,
+          "chat_calls": 1,
+          "prompt_tokens": 404,
+          "output_tokens": 137,
+          "prefill_ms": 52,
+          "decode_ms": 1654,
+          "load_ms": 3,
+          "embed_ms": 0
+        }
+      }
+    },
+    {
+      "id": "g16",
+      "question": "เปิดดูรีพอร์ตเทียบงบโครงการแล้วบางบรรทัดขึ้นแถบสีเหลือง มันเตือนเรื่องอะไรคะ",
+      "expected": {
+        "intent": "how_to",
+        "module": "BUDGET",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "how_to",
+        "module": "BUDGET",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": true,
+      "top_score": 0.6541,
+      "searches": 1,
+      "queries": [
+        "วิธีอ่านหมายความของแถบสีเหลืองในรีพอร์ตเทียบงบโครงการ"
+      ],
+      "hits": [
+        "FAQ-11",
+        "BUDGET-4",
+        "BUDGET-1",
+        "BUDGET-5"
+      ],
+      "reply": "ระบบแสดงสีเหลืองเมื่อใช้งบเกิน 80 เปอร์เซ็นต์",
+      "evidence": "ใช้งบเกิน 80% ของรหัสต้นทุนนั้นแล้ว",
+      "latency_s": 1.93,
+      "stages": {
+        "Router": {
+          "ms": 679,
+          "chat_calls": 1,
+          "prompt_tokens": 723,
+          "output_tokens": 51,
+          "prefill_ms": 24,
+          "decode_ms": 614,
+          "load_ms": 3,
+          "embed_ms": 0
+        },
+        "Retriever": {
+          "ms": 78,
+          "chat_calls": 0,
+          "prompt_tokens": 0,
+          "output_tokens": 0,
+          "prefill_ms": 0,
+          "decode_ms": 0,
+          "load_ms": 7,
+          "embed_ms": 76
+        },
+        "Knowledge": {
+          "ms": 1165,
+          "chat_calls": 1,
+          "prompt_tokens": 1119,
+          "output_tokens": 75,
+          "prefill_ms": 163,
+          "decode_ms": 949,
+          "load_ms": 4,
+          "embed_ms": 0
+        }
+      }
+    },
+    {
+      "id": "g17",
+      "question": "ถ้าสั่งซื้อของด่วนหน้างานด้วยเงินสดย่อยไม่เกิน 2,000 บาท ต้องขอใบกำกับภาษีเต็มรูปทุกครั้งมั้ยครับ",
+      "expected": {
+        "intent": "out_of_scope",
+        "module": "UNKNOWN",
+        "outcome": "out_of_scope"
+      },
+      "actual": {
+        "intent": "how_to",
+        "module": "AP",
+        "outcome": "ticket"
+      },
+      "intent_ok": false,
+      "module_ok": null,
+      "retrieval_ok": null,
+      "outcome_ok": false,
+      "content_ok": null,
+      "top_score": 0.5428,
+      "searches": 1,
+      "queries": [
+        "ถ้าสั่งซื้อของด่วนหน้างานด้วยเงินสดย่อยไม่เกิน 2,000 บาท ต้องขอใบกำกับภาษีเต็มรูปทุกครั้งมั้ยครับ"
+      ],
+      "hits": [
+        "PR-1",
+        "PO-4",
+        "PO-3",
+        "PO-2",
+        "AP-3",
+        "AP-2"
+      ],
+      "reply": "ยังไม่พบวิธีแก้ในคู่มือ จึงเปิด Ticket T-261113-200729-EBFD ให้ทีม Support งานบัญชีการเงินแล้ว (ความเร่งด่วน: low)\nเพื่อให้แก้ได้เร็วขึ้น กรุณาเตรียม: ขั้นตอนการสั่งซื้อที่ผู้ใช้ทำ, ประเภทของสินค้าที่ซื้อ, วิธีการจ่ายเงินที่ใช้",
+      "evidence": "",
+      "latency_s": 3.35,
+      "stages": {
+        "Router": {
+          "ms": 1112,
+          "chat_calls": 1,
+          "prompt_tokens": 746,
+          "output_tokens": 85,
+          "prefill_ms": 30,
+          "decode_ms": 1034,
+          "load_ms": 4,
+          "embed_ms": 0
+        },
+        "Retriever": {
+          "ms": 38,
+          "chat_calls": 0,
+          "prompt_tokens": 0,
+          "output_tokens": 0,
+          "prefill_ms": 0,
+          "decode_ms": 0,
+          "load_ms": 6,
+          "embed_ms": 36
+        },
+        "Ticket": {
+          "ms": 2198,
+          "chat_calls": 1,
+          "prompt_tokens": 408,
+          "output_tokens": 175,
+          "prefill_ms": 52,
+          "decode_ms": 2121,
+          "load_ms": 3,
+          "embed_ms": 0
+        }
+      }
+    },
+    {
+      "id": "g18",
+      "question": "กดรีเซ็ตรหัสผ่านใหม่ตามลิงก์ในเมลแล้ว พอล็อกอินมันเด้งกลับมาหน้าใส่รหัสซ้ำวนลูปเข้าโปรแกรมไม่ได้เลยค่ะ",
+      "expected": {
+        "intent": "problem",
+        "module": "GENERAL",
+        "outcome": "ticket"
+      },
+      "actual": {
+        "intent": "problem",
+        "module": "UNKNOWN",
+        "outcome": "ticket"
+      },
+      "intent_ok": true,
+      "module_ok": false,
+      "retrieval_ok": null,
+      "outcome_ok": true,
+      "content_ok": null,
+      "top_score": 0.6558,
+      "searches": 1,
+      "queries": [
+        "กดรีเซ็ตรหัสผ่านใหม่ตามลิงก์ในเมลแล้วแต่พอล็อกอินกลับมาหน้าใส่รหัสผ่านซ้ำวนลูปไม่สามารถเข้าโปรแกรมได้"
+      ],
+      "hits": [
+        "FAQ-12",
+        "FAQ-1",
+        "FAQ-3",
+        "AP-6"
+      ],
+      "reply": "ยังไม่พบวิธีแก้ในคู่มือ จึงเปิด Ticket T-261113-200732-11F8 ให้IT Helpdesk L2แล้ว (ความเร่งด่วน: high)\nเพื่อให้แก้ได้เร็วขึ้น กรุณาเตรียม: เลขที่เอกสารหรือชื่อผู้ใช้ที่เกี่ยวข้อง, ภาพหน้าจอที่แสดงปัญหา, เวลาที่เกิดปัญหา",
+      "evidence": "",
+      "latency_s": 3.11,
+      "stages": {
+        "Router": {
+          "ms": 959,
+          "chat_calls": 1,
+          "prompt_tokens": 739,
+          "output_tokens": 75,
+          "prefill_ms": 27,
+          "decode_ms": 908,
+          "load_ms": 4,
+          "embed_ms": 0
+        },
+        "Retriever": {
+          "ms": 16,
+          "chat_calls": 0,
+          "prompt_tokens": 0,
+          "output_tokens": 0,
+          "prefill_ms": 0,
+          "decode_ms": 0,
+          "load_ms": 3,
+          "embed_ms": 15
+        },
+        "Knowledge": {
+          "ms": 473,
+          "chat_calls": 1,
+          "prompt_tokens": 1126,
+          "output_tokens": 20,
+          "prefill_ms": 165,
+          "decode_ms": 261,
+          "load_ms": 4,
+          "embed_ms": 0
+        },
+        "Ticket": {
+          "ms": 1662,
+          "chat_calls": 1,
+          "prompt_tokens": 423,
+          "output_tokens": 131,
+          "prefill_ms": 60,
+          "decode_ms": 1575,
+          "load_ms": 3,
+          "embed_ms": 0
+        }
+      }
+    },
+    {
+      "id": "g19",
+      "question": "บช. คีย์ตั้งหนี้ไม่ได้ ขึ้น AP-E02 เพราะซัพปรับราคาขึ้นจากตอนเปิด PO ต้องแก้ยังไง",
+      "expected": {
+        "intent": "problem",
+        "module": "AP",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "problem",
+        "module": "AP",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": true,
+      "top_score": 0.7392,
+      "searches": 1,
+      "queries": [
+        "บันทึกตั้งหนี้เจ้าหนี้ไม่สำเร็จ เกิดข้อผิดพลาดรหัส AP-E02 เนื่องจากซัพพลายเออร์ปรับราคาสินค้าขึ้นจากที่เปิดใบสั่งซื้อ ต้องทำอย่างไร"
+      ],
+      "hits": [
+        "AP-6",
+        "PO-6",
+        "AP-2",
+        "PO-4",
+        "AP-1",
+        "AP-5"
+      ],
+      "reply": "ต้องให้ฝ่ายจัดซื้อทำ Revision ของ PO ก่อน",
+      "evidence": "รหัส AP-E02 ยอดไม่ตรงกับใบรับสินค้า จำนวนหรือราคาในใบแจ้งหนี้ไม่ตรงกับใบรับสินค้าหรือใบสั่งซื้อ ให้ตรวจสอบว่ารับของครบหรือไม่ ถ้าราคาเปลี่ยนต้องให้ฝ่ายจัดซื้อทำ Revision ของ PO ก่อน",
+      "latency_s": 3.46,
+      "stages": {
+        "Router": {
+          "ms": 1269,
+          "chat_calls": 1,
+          "prompt_tokens": 733,
+          "output_tokens": 99,
+          "prefill_ms": 26,
+          "decode_ms": 1200,
+          "load_ms": 4,
+          "embed_ms": 0
+        },
+        "Retriever": {
+          "ms": 62,
+          "chat_calls": 0,
+          "prompt_tokens": 0,
+          "output_tokens": 0,
+          "prefill_ms": 0,
+          "decode_ms": 0,
+          "load_ms": 6,
+          "embed_ms": 60
+        },
+        "Knowledge": {
+          "ms": 2127,
+          "chat_calls": 1,
+          "prompt_tokens": 1651,
+          "output_tokens": 140,
+          "prefill_ms": 327,
+          "decode_ms": 1747,
+          "load_ms": 4,
+          "embed_ms": 0
+        }
+      }
+    },
+    {
+      "id": "g20",
+      "question": "วันหยุดนักขัตฤกษ์เดือนหน้าบริษัทหยุดชดเชยวันไหนบ้างคะ จะได้วางแผนลาพักร้อน",
+      "expected": {
+        "intent": "out_of_scope",
+        "module": "UNKNOWN",
+        "outcome": "out_of_scope"
+      },
+      "actual": {
+        "intent": "out_of_scope",
+        "module": "UNKNOWN",
+        "outcome": "out_of_scope"
+      },
+      "intent_ok": true,
+      "module_ok": null,
+      "retrieval_ok": null,
+      "outcome_ok": true,
+      "content_ok": null,
+      "top_score": null,
+      "searches": 0,
+      "queries": [],
+      "hits": [],
+      "reply": "ขออภัย ผู้ช่วยนี้ตอบเฉพาะเรื่องการใช้งานโปรแกรม SiteERP เช่น ใบขอซื้อ ใบสั่งซื้อ รับสินค้า เจ้าหนี้ และงบประมาณโครงการ",
+      "evidence": "",
+      "latency_s": 0.78,
+      "stages": {
+        "Router": {
+          "ms": 775,
+          "chat_calls": 1,
+          "prompt_tokens": 725,
+          "output_tokens": 54,
+          "prefill_ms": 25,
+          "decode_ms": 653,
+          "load_ms": 8,
+          "embed_ms": 36
+        },
+        "Guard": {
+          "ms": 0,
+          "chat_calls": 0,
+          "prompt_tokens": 0,
+          "output_tokens": 0,
+          "prefill_ms": 0,
+          "decode_ms": 0,
+          "load_ms": 0,
+          "embed_ms": 0
+        }
+      }
+    }
+  ]
+}
