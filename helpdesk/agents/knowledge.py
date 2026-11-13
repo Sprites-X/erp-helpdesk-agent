@@ -57,7 +57,7 @@ SCHEMA = {
 SYSTEM_EVIDENCE = """คุณคือเจ้าหน้าที่ Helpdesk ของโปรแกรม SiteERP ตอบคำถามโดยใช้ข้อมูลใน CONTEXT เท่านั้น ตอบเป็น JSON ทำ 2 ขั้น
 
 ขั้นที่ 1 หาหลักฐาน: อ่าน CONTEXT ให้ครบทุก doc แล้วคัดลอก "ประโยคที่ตอบคำถามได้ตรงที่สุด" มาใส่ evidence
-แบบคำต่อคำ ห้ามแก้คำ และใส่ id ของ doc นั้นใน doc_id
+แบบคำต่อคำ ห้ามแก้คำ และใส่ id ของ doc นั้นใน doc_id{strict_rule}
 - ผู้ใช้มักใช้คำไม่ตรงกับคู่มือ (เช่น "ย้ายงบ" = "โอนงบ", "กี่เจ้า" = "กี่ราย") ให้ถือว่าเป็นเรื่องเดียวกัน
 - ข้อความแจ้งเตือนหรือเงื่อนไขที่คู่มืออธิบายไว้ ถือว่าคู่มือมีวิธีแก้ ให้คัดลอกประโยควิธีแก้มา
 - ถ้าไม่มีประโยคใดตอบคำถามได้ ให้ evidence = "" และ doc_id = ""
@@ -66,6 +66,12 @@ SYSTEM_EVIDENCE = """คุณคือเจ้าหน้าที่ Helpdes
 
 ขั้นที่ 2 ตอบ: ถ้ามี evidence ให้เขียน answer เป็นภาษาไทยสั้น กระชับ โดยใช้ข้อมูลจาก doc นั้นเท่านั้น และใส่เงื่อนไขหรือตัวเลข
 สำคัญที่อยู่ในประโยคหลักฐานให้ครบ ถ้าเป็นขั้นตอนให้เรียงเป็นข้อ ถ้าไม่มี evidence ให้ answer = "" ห้ามเดา"""
+STRICT_RULE = ("\nหลักฐานต้องเป็นประโยคเนื้อหา ห้ามใช้หัวเรื่องในวงเล็บ [ ] บรรทัดแรกของ doc "
+               "หรือบรรทัดที่ขึ้นต้นด้วย \"ถาม:\" ของ FAQ")
+
+
+def evidence_system() -> str:
+    return SYSTEM_EVIDENCE.replace("{strict_rule}", STRICT_RULE if config.STRICT_EVIDENCE else "")
 SCHEMA_EVIDENCE = {"type": "object",
             "properties": {"evidence": {"type": "string"}, "doc_id": {"type": "string"}, "answer": {"type": "string"}},
             "required": ["evidence", "doc_id", "answer"]}
@@ -75,13 +81,22 @@ def squash(s: str) -> str:
     return "".join(s.split()).lower()
 
 
+def evidence_text(doc_text: str) -> str:
+    """ส่วนของ chunk ที่ใช้เป็นหลักฐานได้: ตัดหัวเรื่องที่เติมไว้ตอนแบ่ง chunk และบรรทัดคำถามของ FAQ ออก
+    เพราะสองส่วนนี้บอกแค่ว่าเอกสารพูดเรื่องอะไร ไม่ได้บอกคำตอบ"""
+    lines = doc_text.split("\n")
+    if lines and lines[0].startswith("[") and lines[0].rstrip().endswith("]"):
+        lines = lines[1:]
+    return "\n".join(l for l in lines if not l.startswith("ถาม:"))
+
+
 def evidence_in_docs(evidence: str, hits: list[dict]) -> str | None:
     """โค้ดตรวจว่าประโยคหลักฐานมีอยู่จริงในเอกสาร คืน id ของเอกสารที่เจอ (ยอมให้ต่างได้เล็กน้อย)"""
     ev = squash(evidence)
     if len(ev) < 12:
         return None
     for h in hits:
-        doc = squash(h["text"])
+        doc = squash(evidence_text(h["text"]) if config.STRICT_EVIDENCE else h["text"])
         if ev in doc:
             return h["id"]
         m = SequenceMatcher(None, ev, doc, autojunk=False).find_longest_match(0, len(ev), 0, len(doc))
@@ -142,7 +157,7 @@ def answer(question: str, intent: str, hits: list[dict]) -> tuple[dict, str]:
         return answer_by_rules(question, intent, hits), "rules"
     user = f"CONTEXT:\n{format_context(hits)}\n\nประเภท: {intent}\nข้อความจากผู้ใช้: {question}"
     try:
-        out = chat_json(SYSTEM_EVIDENCE, user, SCHEMA_EVIDENCE)
+        out = chat_json(evidence_system(), user, SCHEMA_EVIDENCE)
     except LLMError as e:
         return {"grounded": False, "answer": "", "citations": [], "error": str(e)}, "llm error → ส่งต่อ ticket"
 

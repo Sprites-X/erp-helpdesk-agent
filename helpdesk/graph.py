@@ -25,6 +25,7 @@ from .agents.knowledge import propose_query
 from .agents.router import route
 from .agents.ticket import create_ticket
 from .index import search
+from .llm import take_calls
 
 
 class HelpdeskState(TypedDict, total=False):
@@ -52,6 +53,19 @@ def _ms(t0: float) -> int:
     return int((time.perf_counter() - t0) * 1000)
 
 
+def _llm_usage() -> dict:
+    """สรุปการเรียกโมเดลที่เกิดขึ้นในขั้นนี้ (เวลาเป็น ms)"""
+    calls = take_calls()
+    chat = [c for c in calls if c["kind"] == "chat"]
+    return {"chat_calls": len(chat),
+            "prompt_tokens": sum(c["prompt_tokens"] for c in chat),
+            "output_tokens": sum(c["output_tokens"] for c in chat),
+            "prefill_ms": round(sum(c["prefill_ms"] for c in chat)),
+            "decode_ms": round(sum(c["decode_ms"] for c in chat)),
+            "load_ms": round(sum(c["load_ms"] for c in calls)),
+            "embed_ms": round(sum(c["wall_ms"] for c in calls if c["kind"] == "embed"))}
+
+
 def router_node(state: HelpdeskState) -> dict:
     t0 = time.perf_counter()
     out, how = route(state["question"])
@@ -69,7 +83,7 @@ def router_node(state: HelpdeskState) -> dict:
             detail += f"\nRouter บอกนอกขอบเขต แต่ตรงกับ {best[0]['id']} ({best[0]['score']:.2f}) → ถือว่าอยู่ในขอบเขต"
     return {"intent": out["intent"], "module": out["module"], "search_query": out["rewritten_query"],
             "tried_queries": [], "next_query": "",
-            "trace": [{"agent": "Router", "how": how, "ms": _ms(t0), "detail": detail}]}
+            "trace": [{"agent": "Router", "how": how, "ms": _ms(t0), "detail": detail, "llm": _llm_usage()}]}
 
 
 def retrieve_node(state: HelpdeskState) -> dict:
@@ -91,7 +105,7 @@ def retrieve_node(state: HelpdeskState) -> dict:
     top = max((h["score"] for h in hits), default=0.0)
     detail = note + "\n" + "\n".join(f"{h['score']:.3f}  {h['id']:10s} {h['title']}" for h in hits)
     return {"hits": hits, "top_score": top, "tried_queries": tried + [state["search_query"]], "next_query": "",
-            "trace": [{"agent": "Retriever", "how": "vector search", "ms": _ms(t0), "detail": detail}]}
+            "trace": [{"agent": "Retriever", "how": "vector search", "ms": _ms(t0), "detail": detail, "llm": _llm_usage()}]}
 
 
 def answer_node(state: HelpdeskState) -> dict:
@@ -116,7 +130,7 @@ def answer_node(state: HelpdeskState) -> dict:
         detail = "ตอบจากคู่มือไม่ได้ → ส่งต่อ Ticket agent"
     if res.get("error"):
         detail += f"\n⚠ {res['error']}"
-    update["trace"] = [{"agent": "Knowledge", "how": how, "ms": _ms(t0), "detail": detail}]
+    update["trace"] = [{"agent": "Knowledge", "how": how, "ms": _ms(t0), "detail": detail, "llm": _llm_usage()}]
     return update
 
 
@@ -130,7 +144,7 @@ def ticket_node(state: HelpdeskState) -> dict:
     if ticket.get("info_needed"):
         reply += "\nเพื่อให้แก้ได้เร็วขึ้น กรุณาเตรียม: " + ", ".join(ticket["info_needed"])
     return {"ticket": ticket, "ticket_reason": reason, "outcome": "ticket", "reply": reply,
-            "trace": [{"agent": "Ticket", "how": how, "ms": _ms(t0), "detail": f"เหตุผล: {reason}"}]}
+            "trace": [{"agent": "Ticket", "how": how, "ms": _ms(t0), "detail": f"เหตุผล: {reason}", "llm": _llm_usage()}]}
 
 
 def out_of_scope_node(state: HelpdeskState) -> dict:
@@ -173,4 +187,5 @@ def build_graph():
 
 
 def run(question: str, save_ticket: bool = True) -> HelpdeskState:
+    take_calls()  # ล้างสถิติที่ค้างจากงานก่อนหน้า (เช่นตอน build index)
     return build_graph().invoke({"question": question, "save_ticket": save_ticket, "trace": []})

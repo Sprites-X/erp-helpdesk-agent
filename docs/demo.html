@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {color: #98e024; text-decoration-color: #98e024}
+.r2 {font-weight: bold}
+.r3 {color: #58d1eb; text-decoration-color: #58d1eb; font-weight: bold}
+.r4 {color: #58d1eb; text-decoration-color: #58d1eb}
+.r5 {color: #727272; text-decoration-color: #727272; font-weight: bold}
+.r6 {color: #727272; text-decoration-color: #727272}
+.r7 {color: #326e7b; text-decoration-color: #326e7b; font-weight: bold}
+.r8 {color: #845115; text-decoration-color: #845115}
+.r9 {color: #800635; text-decoration-color: #800635}
+.r10 {color: #f4005f; text-decoration-color: #f4005f}
+.r11 {color: #527618; text-decoration-color: #527618; font-weight: bold}
+.r12 {color: #fd971f; text-decoration-color: #fd971f}
+.r13 {color: #9d65ff; text-decoration-color: #9d65ff; font-weight: bold}
+body {
+    color: #d9d9d9;
+    background-color: #0c0c0c;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit"><span class="r1">────────────────────────────────── </span><span class="r2">สถานการณ์ </span><span class="r3">1</span><span class="r2">/</span><span class="r3">4</span><span class="r2">: คำถามวิธีใช้ → ตอบพร้อมอ้างอิง</span><span class="r1"> ───────────────────────────────────</span>
+
+<span class="r2">ผู้ใช้:</span> PO อนุมัติไปแล้ว อยากเพิ่มจำนวนต้องทำยังไง
+<span class="r4">▶ Router</span> <span class="r5">(</span><span class="r6">llm, </span><span class="r7">765</span><span class="r6"> ms, เรียกโมเดล </span><span class="r7">1</span><span class="r6"> ครั้ง · อ่าน </span><span class="r7">706</span><span class="r6"> token · สร้าง </span><span class="r7">58</span><span class="r6"> token</span><span class="r5">)</span>
+    <span class="r8">intent</span><span class="r6">=</span><span class="r9">how_to</span><span class="r6">  </span><span class="r8">module</span><span class="r6">=</span><span class="r9">PO</span>
+    <span class="r6">คำค้นใหม่: วิธีการเพิ่มจำนวนสินค้าในใบสั่งซื้อที่ได้รับอนุมัติแล้ว</span>
+<span class="r10">▶ Retriever</span> <span class="r5">(</span><span class="r6">vector search, </span><span class="r7">145</span><span class="r6"> ms</span><span class="r5">)</span>
+    <span class="r6">ค้นในโมดูล PO + ทุกโมดูล แล้วรวมผล </span><span class="r5">(</span><span class="r6">มาจากโมดูลอื่น </span><span class="r7">2</span><span class="r6"> รายการ</span><span class="r5">)</span>
+    <span class="r7">0.697</span><span class="r6">  PO-</span><span class="r7">4</span><span class="r6">       การแก้ไขใบสั่งซื้อหลังอนุมัติ </span><span class="r5">(</span><span class="r6">Revision</span><span class="r5">)</span>
+    <span class="r7">0.682</span><span class="r6">  PO-</span><span class="r7">2</span><span class="r6">       การแปลงใบขอซื้อเป็นใบสั่งซื้อ</span>
+    <span class="r7">0.659</span><span class="r6">  PR-</span><span class="r7">2</span><span class="r6">       การสร้างใบขอซื้อ</span>
+    <span class="r7">0.640</span><span class="r6">  FAQ-</span><span class="r7">7</span><span class="r6">      รับของเกินจากที่สั่งได้ไหม</span>
+    <span class="r7">0.634</span><span class="r6">  PO-</span><span class="r7">1</span><span class="r6">       ภาพรวมใบสั่งซื้อ</span>
+    <span class="r7">0.618</span><span class="r6">  PO-</span><span class="r7">5</span><span class="r6">       การส่งใบสั่งซื้อให้ผู้ขาย</span>
+<span class="r1">▶ Knowledge</span> <span class="r5">(</span><span class="r6">llm + ตรวจหลักฐาน, </span><span class="r7">2508</span><span class="r6"> ms, เรียกโมเดล </span><span class="r7">1</span><span class="r6"> ครั้ง · อ่าน </span><span class="r7">1551</span><span class="r6"> token · สร้าง </span><span class="r7">167</span><span class="r6"> token</span><span class="r5">)</span>
+    <span class="r6">ตอบได้จากเอกสาร PO-</span><span class="r7">4</span>
+<span class="r1">┌────────────────────────────────────────────────── คำตอบ ──────────────────────────────────────────────────┐</span>
+<span class="r1">│</span> ต้องสร้าง PO ฉบับแก้ไข (Revision) ใช้เลขเดิมต่อท้ายด้วย -R1, -R2 แล้วส่งอนุมัติใหม่ตามวงเงินล่าสุด                          <span class="r1">│</span>
+<span class="r1">│</span>                                                                                                           <span class="r1">│</span>
+<span class="r1">│</span> <span class="r6">อ้างอิง: PO-4</span>                                                                                               <span class="r1">│</span>
+<span class="r1">│</span> <span class="r6">หลักฐานจากคู่มือ: “PO ที่อนุมัติแล้วแก้ไขโดยตรงไม่ได้ ให้กด สร้าง Revision ระบบจะสร้าง PO ฉบับแก้ไขโดยใช้เลขเดิมต่อท้ายด้วย -R1,</span> <span class="r1">│</span>
+<span class="r1">│</span> <span class="r6">-R2 ตามลำดับ และต้องส่งอนุมัติใหม่ตามวงเงินล่าสุด”</span>                                                                  <span class="r1">│</span>
+<span class="r1">└───────────────────────────────────────────────────────────────────────────────────────────────────────────┘</span>
+<span class="r6">ใช้เวลารวม </span><span class="r7">3.43</span><span class="r6"> วินาที | </span><span class="r8">backend</span><span class="r6">=</span><span class="r9">ollama</span><span class="r6"> </span><span class="r8">model</span><span class="r6">=</span><span class="r9">qwen2</span><span class="r6">.</span><span class="r11">5:7b</span>
+<span class="r1">───────────────────────────────── </span><span class="r2">สถานการณ์ </span><span class="r3">2</span><span class="r2">/</span><span class="r3">4</span><span class="r2">: แจ้ง error ที่มีในคู่มือ → บอกวิธีแก้</span><span class="r1"> ─────────────────────────────────</span>
+
+<span class="r2">ผู้ใช้:</span> บันทึกรับของไม่ได้ ขึ้น RCV-E01
+<span class="r4">▶ Router</span> <span class="r5">(</span><span class="r6">llm, </span><span class="r7">659</span><span class="r6"> ms, เรียกโมเดล </span><span class="r7">1</span><span class="r6"> ครั้ง · อ่าน </span><span class="r7">703</span><span class="r6"> token · สร้าง </span><span class="r7">47</span><span class="r6"> token</span><span class="r5">)</span>
+    <span class="r8">intent</span><span class="r6">=</span><span class="r9">problem</span><span class="r6">  </span><span class="r8">module</span><span class="r6">=</span><span class="r9">RCV</span>
+    <span class="r6">คำค้นใหม่: บันทึกรับสินค้าแล้วเกิดข้อผิดพลาดรหัส RCV-E01</span>
+<span class="r10">▶ Retriever</span> <span class="r5">(</span><span class="r6">vector search, </span><span class="r7">57</span><span class="r6"> ms</span><span class="r5">)</span>
+    <span class="r6">ค้นในโมดูล RCV + ทุกโมดูล แล้วรวมผล </span><span class="r5">(</span><span class="r6">มาจากโมดูลอื่น </span><span class="r7">0</span><span class="r6"> รายการ</span><span class="r5">)</span>
+    <span class="r7">0.735</span><span class="r6">  RCV-</span><span class="r7">5</span><span class="r6">      ข้อผิดพลาดที่พบบ่อยในการรับสินค้า</span>
+    <span class="r7">0.608</span><span class="r6">  RCV-</span><span class="r7">3</span><span class="r6">      การรับสินค้าบางส่วน</span>
+    <span class="r7">0.601</span><span class="r6">  RCV-</span><span class="r7">4</span><span class="r6">      การคืนสินค้า</span>
+    <span class="r7">0.598</span><span class="r6">  RCV-</span><span class="r7">1</span><span class="r6">      ภาพรวมการรับสินค้า</span>
+<span class="r1">▶ Knowledge</span> <span class="r5">(</span><span class="r6">llm + ตรวจหลักฐาน, </span><span class="r7">2655</span><span class="r6"> ms, เรียกโมเดล </span><span class="r7">1</span><span class="r6"> ครั้ง · อ่าน </span><span class="r7">1323</span><span class="r6"> token · สร้าง </span><span class="r7">187</span><span class="r6"> token</span><span class="r5">)</span>
+    <span class="r6">ตอบได้จากเอกสาร RCV-</span><span class="r7">5</span>
+<span class="r1">┌────────────────────────────────────────────────── คำตอบ ──────────────────────────────────────────────────┐</span>
+<span class="r1">│</span> ระบบไม่สามารถบันทึกรับของได้เนื่องจากจำนวนรับเกิน 5 เปอร์เซ็นต์ของจำนวนสั่งซื้อ ให้ฝ่ายจัดซื้อสร้าง Revision ของ PO             <span class="r1">│</span>
+<span class="r1">│</span> เพื่อเพิ่มจำนวนก่อน                                                                                            <span class="r1">│</span>
+<span class="r1">│</span>                                                                                                           <span class="r1">│</span>
+<span class="r1">│</span> <span class="r6">อ้างอิง: RCV-5</span>                                                                                              <span class="r1">│</span>
+<span class="r1">│</span> <span class="r6">หลักฐานจากคู่มือ: “รหัส RCV-E01 จำนวนรับเกินจำนวนสั่งซื้อ ระบบยอมให้รับเกินได้ไม่เกิน 5 เปอร์เซ็นต์ของจำนวนสั่งซื้อ</span>               <span class="r1">│</span>
+<span class="r1">│</span> <span class="r6">ถ้าเกินกว่านั้นให้ฝ่ายจัดซื้อสร้าง Revision ของ PO เพื่อเพิ่มจำนวนก่อน”</span>                                                   <span class="r1">│</span>
+<span class="r1">└───────────────────────────────────────────────────────────────────────────────────────────────────────────┘</span>
+<span class="r6">ใช้เวลารวม </span><span class="r7">3.38</span><span class="r6"> วินาที | </span><span class="r8">backend</span><span class="r6">=</span><span class="r9">ollama</span><span class="r6"> </span><span class="r8">model</span><span class="r6">=</span><span class="r9">qwen2</span><span class="r6">.</span><span class="r11">5:7b</span>
+<span class="r1">────────────────────────────────── </span><span class="r2">สถานการณ์ </span><span class="r3">3</span><span class="r2">/</span><span class="r3">4</span><span class="r2">: ปัญหาที่คู่มือไม่มี → เปิด Ticket</span><span class="r1"> ───────────────────────────────────</span>
+
+<span class="r2">ผู้ใช้:</span> กดปุ่มพิมพ์เช็คแล้วโปรแกรมค้าง หน้าจอขาว ต้องปิดทิ้งทุกครั้ง
+<span class="r4">▶ Router</span> <span class="r5">(</span><span class="r6">llm, </span><span class="r7">808</span><span class="r6"> ms, เรียกโมเดล </span><span class="r7">1</span><span class="r6"> ครั้ง · อ่าน </span><span class="r7">721</span><span class="r6"> token · สร้าง </span><span class="r7">61</span><span class="r6"> token</span><span class="r5">)</span>
+    <span class="r8">intent</span><span class="r6">=</span><span class="r9">problem</span><span class="r6">  </span><span class="r8">module</span><span class="r6">=</span><span class="r9">UNKNOWN</span>
+    <span class="r6">คำค้นใหม่: กดปุ่มพิมพ์เช็คแล้วโปรแกรมค้างหน้าจอขาวต้องปิดทิ้งทุกครั้งทำอย่างไร</span>
+<span class="r10">▶ Retriever</span> <span class="r5">(</span><span class="r6">vector search, </span><span class="r7">18</span><span class="r6"> ms</span><span class="r5">)</span>
+    <span class="r6">ค้นทุกโมดูล</span>
+    <span class="r7">0.523</span><span class="r6">  FAQ-</span><span class="r7">6</span><span class="r6">      แอปขึ้นว่ารอซิงก์ทั้งวัน</span>
+    <span class="r7">0.496</span><span class="r6">  FAQ-</span><span class="r7">15</span><span class="r6">     PR ค้างอนุมัติหลายวัน</span>
+    <span class="r7">0.488</span><span class="r6">  RCV-</span><span class="r7">3</span><span class="r6">      การรับสินค้าบางส่วน</span>
+    <span class="r7">0.467</span><span class="r6">  PO-</span><span class="r7">4</span><span class="r6">       การแก้ไขใบสั่งซื้อหลังอนุมัติ </span><span class="r5">(</span><span class="r6">Revision</span><span class="r5">)</span>
+<span class="r12">▶ Ticket</span> <span class="r5">(</span><span class="r6">llm, </span><span class="r7">1671</span><span class="r6"> ms, เรียกโมเดล </span><span class="r7">1</span><span class="r6"> ครั้ง · อ่าน </span><span class="r7">386</span><span class="r6"> token · สร้าง </span><span class="r7">129</span><span class="r6"> token</span><span class="r5">)</span>
+    <span class="r6">เหตุผล: ไม่พบเอกสารที่เกี่ยวข้อง </span><span class="r5">(</span><span class="r6">คะแนนสูงสุด </span><span class="r7">0.52</span><span class="r6"> &lt; </span><span class="r7">0.55</span><span class="r5">)</span>
+<span class="r12">┌─────────────────────────────────────────────── เปิด Ticket ────────────────────────────────────────────────┐</span>
+<span class="r12">│</span> ยังไม่พบวิธีแก้ในคู่มือ จึงเปิด Ticket T-261113-170744-705C ให้IT Helpdesk L2แล้ว (ความเร่งด่วน: high)                  <span class="r12">│</span>
+<span class="r12">│</span> เพื่อให้แก้ได้เร็วขึ้น กรุณาเตรียม: เลขที่เอกสารที่ผู้ใช้พยายามพิมพ์เช็ค, ภาพหน้าจอที่แสดงปัญหา, เวลาที่เกิดปัญหา                     <span class="r12">│</span>
+<span class="r12">└───────────────────────────────────────────────────────────────────────────────────────────────────────────┘</span>
+<span class="r2">{</span>
+  <span class="r13">&quot;ticket_id&quot;</span>: <span class="r1">&quot;T-261113-170744-705C&quot;</span>,
+  <span class="r13">&quot;created_at&quot;</span>: <span class="r1">&quot;2026-11-13T17:07:44&quot;</span>,
+  <span class="r13">&quot;status&quot;</span>: <span class="r1">&quot;open&quot;</span>,
+  <span class="r13">&quot;module&quot;</span>: <span class="r1">&quot;UNKNOWN&quot;</span>,
+  <span class="r13">&quot;module_name&quot;</span>: <span class="r1">&quot;ไม่ทราบ&quot;</span>,
+  <span class="r13">&quot;assigned_team&quot;</span>: <span class="r1">&quot;IT Helpdesk L2&quot;</span>,
+  <span class="r13">&quot;title&quot;</span>: <span class="r1">&quot;ปัญหาโปรแกรมค้างเมื่อกดพิมพ์เช็ค&quot;</span>,
+  <span class="r13">&quot;priority&quot;</span>: <span class="r1">&quot;high&quot;</span>,
+  <span class="r13">&quot;summary&quot;</span>: <span class="r1">&quot;ผู้ใช้ไม่สามารถใช้งานโมดูลพิมพ์เช็คได้เนื่องจากโปรแกรมค้างและหน้าจอขาว&quot;</span>,
+  <span class="r13">&quot;info_needed&quot;</span>: <span class="r2">[</span>
+    <span class="r1">&quot;เลขที่เอกสารที่ผู้ใช้พยายามพิมพ์เช็ค&quot;</span>,
+    <span class="r1">&quot;ภาพหน้าจอที่แสดงปัญหา&quot;</span>,
+    <span class="r1">&quot;เวลาที่เกิดปัญหา&quot;</span>
+  <span class="r2">]</span>,
+  <span class="r13">&quot;original_message&quot;</span>: <span class="r1">&quot;กดปุ่มพิมพ์เช็คแล้วโปรแกรมค้าง หน้าจอขาว ต้องปิดทิ้งทุกครั้ง&quot;</span>,
+  <span class="r13">&quot;kb_checked&quot;</span>: <span class="r2">[</span>
+    <span class="r1">&quot;FAQ-6 แอปขึ้นว่ารอซิงก์ทั้งวัน&quot;</span>,
+    <span class="r1">&quot;FAQ-15 PR ค้างอนุมัติหลายวัน&quot;</span>,
+    <span class="r1">&quot;RCV-3 การรับสินค้าบางส่วน&quot;</span>
+  <span class="r2">]</span>
+<span class="r2">}</span>
+<span class="r6">ใช้เวลารวม </span><span class="r7">2.50</span><span class="r6"> วินาที | </span><span class="r8">backend</span><span class="r6">=</span><span class="r9">ollama</span><span class="r6"> </span><span class="r8">model</span><span class="r6">=</span><span class="r9">qwen2</span><span class="r6">.</span><span class="r11">5:7b</span>
+<span class="r1">──────────────────────────────────── </span><span class="r2">สถานการณ์ </span><span class="r3">4</span><span class="r2">/</span><span class="r3">4</span><span class="r2">: ไม่เกี่ยวกับระบบ → ปฏิเสธ</span><span class="r1"> ─────────────────────────────────────</span>
+
+<span class="r2">ผู้ใช้:</span> แนะนำร้านกาแฟแถวไซต์งานบางนาหน่อย
+<span class="r4">▶ Router</span> <span class="r5">(</span><span class="r6">llm, </span><span class="r7">465</span><span class="r6"> ms, เรียกโมเดล </span><span class="r7">1</span><span class="r6"> ครั้ง · อ่าน </span><span class="r7">695</span><span class="r6"> token · สร้าง </span><span class="r7">32</span><span class="r6"> token</span><span class="r5">)</span>
+    <span class="r8">intent</span><span class="r6">=</span><span class="r9">out_of_scope</span><span class="r6">  </span><span class="r8">module</span><span class="r6">=</span><span class="r9">UNKNOWN</span>
+    <span class="r6">คำค้นใหม่: ร้านกาแฟแถวไซต์งานบางนา</span>
+<span class="r10">▶ Guard</span> <span class="r5">(</span><span class="r6">rule, </span><span class="r7">0</span><span class="r6"> ms</span><span class="r5">)</span>
+    <span class="r6">นอกขอบเขต ไม่ค้นเอกสาร</span>
+<span class="r10">┌──────────────────────────────────────────────── นอกขอบเขต ────────────────────────────────────────────────┐</span>
+<span class="r10">│</span> ขออภัย ผู้ช่วยนี้ตอบเฉพาะเรื่องการใช้งานโปรแกรม SiteERP เช่น ใบขอซื้อ ใบสั่งซื้อ รับสินค้า เจ้าหนี้ และงบประมาณโครงการ          <span class="r10">│</span>
+<span class="r10">└───────────────────────────────────────────────────────────────────────────────────────────────────────────┘</span>
+<span class="r6">ใช้เวลารวม </span><span class="r7">0.47</span><span class="r6"> วินาที | </span><span class="r8">backend</span><span class="r6">=</span><span class="r9">ollama</span><span class="r6"> </span><span class="r8">model</span><span class="r6">=</span><span class="r9">qwen2</span><span class="r6">.</span><span class="r11">5:7b</span>
+</code></pre>
+</body>
+</html>

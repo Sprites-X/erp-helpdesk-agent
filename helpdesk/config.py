@@ -14,7 +14,9 @@ EVAL_REPORT = ROOT / "outputs" / "eval_report.json"
 
 # ollama = ใช้โมเดลจริงผ่าน Ollama | stub = กฎง่าย ๆ ไม่ต้องมี GPU ไว้เช็กว่า pipeline รันได้
 BACKEND = os.getenv("LLM_BACKEND", "ollama").lower()
-OLLAMA_URL = os.getenv("OLLAMA_URL", "http://localhost:11434").rstrip("/")
+# ใช้ 127.0.0.1 ไม่ใช้ localhost: บน Windows ชื่อ localhost ถูกแปลงเป็น IPv6 (::1) ก่อน แต่ Ollama รับแค่ IPv4
+# การต่อแต่ละครั้งจึงเสียเวลารอราว 2 วินาทีก่อนถอยไปใช้ IPv4 (วัดได้ด้วย tools/probe_ollama.py)
+OLLAMA_URL = os.getenv("OLLAMA_URL", "http://127.0.0.1:11434").rstrip("/")
 CHAT_MODEL = os.getenv("CHAT_MODEL", "qwen2.5:7b")
 EMBED_MODEL = os.getenv("EMBED_MODEL", "bge-m3")
 
@@ -32,3 +34,7 @@ MAX_OUTPUT_TOKENS = int(os.getenv("MAX_OUTPUT_TOKENS", "500"))
 # ถ้า Router บอกว่านอกขอบเขต แต่คำถามตรงกับเอกสารในคลังด้วยคะแนนอย่างน้อยเท่านี้ ให้ถือว่าอยู่ในขอบเขต
 SCOPE_RESCUE_SCORE = float(os.getenv("SCOPE_RESCUE_SCORE", "0.55" if BACKEND == "ollama" else "0.30"))
 MAX_CHUNK_CHARS = 800
+# 1 = หลักฐานต้องเป็นเนื้อหา ไม่นับหัวเรื่องที่เติมไว้หน้า chunk และบรรทัด "ถาม:" ของ FAQ
+# (เจอว่าโมเดลคัดลอกหัวเรื่องมาเป็นหลักฐานได้ ซึ่งผ่านการตรวจแบบเดิมเพราะหัวเรื่องอยู่ใน chunk จริง)
+# 0 = แบบเดิม ใช้ทดลองเทียบผล
+STRICT_EVIDENCE = os.getenv("STRICT_EVIDENCE", "1") == "1"

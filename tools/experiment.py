@@ -44,7 +44,7 @@ def run_variant(name: str, question: str, intent: str, hits: list[dict]) -> dict
             out = chat_json(K.SYSTEM_RULES + (K.FEWSHOT if name == "B" else ""), user, K.SCHEMA)
             grounded = bool(out.get("grounded")) and bool(out.get("answer", "").strip())
         else:
-            out = chat_json(K.SYSTEM_EVIDENCE + (FEWSHOT_C if name == "D" else ""), user, K.SCHEMA_EVIDENCE)
+            out = chat_json(K.evidence_system() + (FEWSHOT_C if name == "D" else ""), user, K.SCHEMA_EVIDENCE)
             found = K.evidence_in_docs(out.get("evidence", ""), hits)
             out["evidence_verified_in"] = found
             grounded = found is not None and bool(out.get("answer", "").strip())

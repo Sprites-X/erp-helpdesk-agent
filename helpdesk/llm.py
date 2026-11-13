@@ -3,6 +3,7 @@ import http.client
 import json
 import math
 import re
+import time
 import urllib.error
 import urllib.request
 import zlib
@@ -16,6 +17,25 @@ class LLMError(RuntimeError):
 
 # ไม่ผ่าน proxy ของระบบ เพราะ Ollama รันอยู่บนเครื่องตัวเอง
 _opener = urllib.request.build_opener(urllib.request.ProxyHandler({}))
+
+# บันทึกเวลาและจำนวน token ของทุกการเรียก Ollama เพื่อดูว่าเวลาหมดไปที่ขั้นไหน
+# Ollama ส่งเวลาแยกมาให้ (หน่วย nanosecond): prefill = อ่าน prompt, decode = สร้างคำตอบทีละ token
+_calls: list[dict] = []
+
+
+def _stats(kind: str, data: dict, wall_s: float) -> dict:
+    def ms(key: str) -> float:
+        return round(data.get(key, 0) / 1e6, 1)
+    return {"kind": kind, "wall_ms": round(wall_s * 1000, 1), "load_ms": ms("load_duration"),
+            "prompt_tokens": data.get("prompt_eval_count", 0), "prefill_ms": ms("prompt_eval_duration"),
+            "output_tokens": data.get("eval_count", 0), "decode_ms": ms("eval_duration")}
+
+
+def take_calls() -> list[dict]:
+    """คืนสถิติของการเรียกโมเดลทั้งหมดตั้งแต่ครั้งก่อนที่เรียกฟังก์ชันนี้ แล้วล้างรายการ"""
+    out = _calls[:]
+    _calls.clear()
+    return out
 
 
 def _post(path: str, payload: dict, timeout: int = 180) -> dict:
@@ -60,6 +80,7 @@ def parse_json(text: str) -> dict:
 
 def chat_json(system: str, user: str, schema: dict, temperature: float = 0.0) -> dict:
     """เรียกโมเดลแชตแล้วบังคับให้ตอบตาม JSON schema (Ollama structured outputs)"""
+    t0 = time.perf_counter()
     data = _post("/api/chat", {
         "model": config.CHAT_MODEL,
         "messages": [{"role": "system", "content": system}, {"role": "user", "content": user}],
@@ -67,6 +88,7 @@ def chat_json(system: str, user: str, schema: dict, temperature: float = 0.0) ->
         "stream": False,
         "options": {"temperature": temperature, "seed": config.SEED, "num_predict": config.MAX_OUTPUT_TOKENS},
     })
+    _calls.append(_stats("chat", data, time.perf_counter() - t0))
     return parse_json(data.get("message", {}).get("content", ""))
 
 
@@ -75,7 +97,9 @@ def embed(texts: list[str]) -> list[list[float]]:
         return [hash_embed(t) for t in texts]
     vectors = []
     for i in range(0, len(texts), 32):
+        t0 = time.perf_counter()
         data = _post("/api/embed", {"model": config.EMBED_MODEL, "input": texts[i:i + 32]})
+        _calls.append(_stats("embed", data, time.perf_counter() - t0))
         vectors.extend(data["embeddings"])
     return vectors
 

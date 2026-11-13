@@ -1,6 +1,6 @@
 {"id": "q01", "question": "จะสร้างใบขอซื้อต้องเข้าเมนูไหน", "intent": "how_to", "module": "PR", "outcome": "answer", "expected_sources": ["PR-2"], "must_include": ["สร้างใหม่"]}
 {"id": "q02", "question": "PR ยอด 300,000 บาท ใครต้องอนุมัติ", "intent": "how_to", "module": "PR", "outcome": "answer", "expected_sources": ["PR-3", "FAQ-2"], "must_include": ["ผู้จัดการโครงการ"]}
-{"id": "q03", "question": "PO อนุมัติไปแล้ว อยากเพิ่มจำนวนต้องทำยังไง", "intent": "how_to", "module": "PO", "outcome": "answer", "expected_sources": ["PO-4", "FAQ-4", "FAQ-5"], "must_include": ["Revision"]}
+{"id": "q03", "question": "PO อนุมัติไปแล้ว อยากเพิ่มจำนวนต้องทำยังไง", "intent": "how_to", "module": "PO", "outcome": "answer", "expected_sources": ["PO-4", "FAQ-5"], "must_include": ["Revision"]}
 {"id": "q04", "question": "ซื้อของเกินแสนต้องมีใบเสนอราคากี่เจ้า", "intent": "how_to", "module": "PO", "outcome": "answer", "expected_sources": ["PO-3"], "must_include": ["3"]}
 {"id": "q05", "question": "ของมาส่งไม่ครบ บันทึกรับยังไง", "intent": "how_to", "module": "RCV", "outcome": "answer", "expected_sources": ["RCV-3"], "must_include": ["ค้างรับ"]}
 {"id": "q06", "question": "ของที่รับมาชำรุดต้องคืนยังไง", "intent": "how_to", "module": "RCV", "outcome": "answer", "expected_sources": ["RCV-4"], "must_include": ["คืนสินค้า"]}

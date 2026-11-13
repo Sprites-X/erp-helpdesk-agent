@@ -9,3 +9,4 @@ _scratch/
 /*_log.txt
 /*.log
 /experiment_stdout.txt
+.pytest_cache/

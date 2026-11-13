@@ -5,10 +5,14 @@
   - Retrieval hit@k: เอกสารที่ควรเจออยู่ใน top-k ไหม
   - Outcome: ตัดสินใจถูกไหมว่าจะตอบ / เปิด Ticket / ปฏิเสธ
   - Content: คำตอบมีข้อเท็จจริงสำคัญครบไหม (เช็ก keyword)
-  - Latency
+  - Latency รวม และแยกตามขั้น (เวลา, จำนวนครั้งที่เรียกโมเดล, token ที่อ่าน/สร้าง)
 
-รัน:  python eval.py            วัดผลทั้งชุด (ไม่บันทึก Ticket จริง)
-      python eval.py --sweep    แสดงผลถ้าเปลี่ยนค่า MIN_SCORE ใช้ช่วยเลือก threshold
+ก่อนจับเวลาจะรันคำถามอุ่นเครื่อง 1 ข้อ (ไม่นับผล) เพื่อไม่ให้เวลาโหลดโมเดลปนกับเวลาตอบ
+
+รัน:  python eval.py                        วัดผลชุด 1 (ไม่บันทึก Ticket จริง)
+      python eval.py --file <ไฟล์.jsonl>     วัดชุดอื่น
+      python eval.py --sweep                แสดงผลถ้าเปลี่ยนค่า MIN_SCORE ใช้ช่วยเลือก threshold
+      python eval.py --tag 3b               ต่อท้ายชื่อไฟล์ผล ใช้ตอนเทียบหลายโมเดล
 """
 import argparse
 import json
@@ -34,17 +38,60 @@ def rate(values) -> tuple[int, int]:
     return sum(vals), len(vals)
 
 
+USAGE_KEYS = ["chat_calls", "prompt_tokens", "output_tokens", "prefill_ms", "decode_ms", "load_ms", "embed_ms"]
+
+
+def stage_usage(trace: list[dict]) -> dict:
+    """รวมเวลาและการใช้โมเดลของแต่ละขั้น (ขั้นเดียวกันอาจทำงาน 2 รอบเมื่อมีการค้นซ้ำ)"""
+    out: dict[str, dict] = {}
+    for step in trace:
+        agg = out.setdefault(step["agent"], {"ms": 0, **{k: 0 for k in USAGE_KEYS}})
+        agg["ms"] += step["ms"]
+        for k in USAGE_KEYS:
+            agg[k] += step.get("llm", {}).get(k, 0)
+    return out
+
+
+def stage_table(records: list[dict]) -> tuple[Table, dict]:
+    n = len(records)
+    agents = [a for a in ["Router", "Retriever", "Knowledge", "Ticket"] if any(a in r["stages"] for r in records)]
+    t = Table(title=f"เวลาแยกตามขั้น (เฉลี่ยต่อคำถาม จาก {n} ข้อ)")
+    for col in ["ขั้น", "ทำงานใน", "เวลา ms", "เรียกโมเดล", "token อ่าน", "token สร้าง", "prefill ms", "decode ms", "สัดส่วนเวลา"]:
+        t.add_column(col, justify="left" if col == "ขั้น" else "right")
+    total_ms = sum(st["ms"] for r in records for st in r["stages"].values()) or 1
+    summary = {}
+    for a in agents + ["รวม"]:
+        rows = [r["stages"][a] for r in records if a in r["stages"]] if a != "รวม" else \
+               [{k: sum(st[k] for st in r["stages"].values()) for k in ["ms", *USAGE_KEYS]} for r in records]
+        avg = {k: sum(x[k] for x in rows) / n for k in ["ms", *USAGE_KEYS]}
+        summary[a] = {"questions": len(rows), **{k: round(v, 1) for k, v in avg.items()}}
+        share = sum(x["ms"] for x in rows) / total_ms
+        t.add_row(a, f"{len(rows)}/{n}", f"{avg['ms']:.0f}", f"{avg['chat_calls']:.2f}", f"{avg['prompt_tokens']:.0f}",
+                  f"{avg['output_tokens']:.0f}", f"{avg['prefill_ms']:.0f}", f"{avg['decode_ms']:.0f}", f"{share:.0%}")
+    return t, summary
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--sweep", action="store_true")
     parser.add_argument("--file", default=str(config.EVAL_FILE), help="ไฟล์ชุดคำถาม (.jsonl)")
+    parser.add_argument("--tag", default="", help="ต่อท้ายชื่อไฟล์ผล เช่น ชื่อโมเดล")
+    parser.add_argument("--no-warmup", action="store_true", help="ไม่รันคำถามอุ่นเครื่องก่อนจับเวลา")
     args = parser.parse_args()
 
     eval_file = Path(args.file)
-    report_file = config.EVAL_REPORT if eval_file == config.EVAL_FILE else config.EVAL_REPORT.with_name(f"eval_report_{eval_file.stem}.json")
-    items = [json.loads(l) for l in eval_file.read_text(encoding="utf-8").splitlines() if l.strip()]
+    name = "eval_report" if eval_file == config.EVAL_FILE else f"eval_report_{eval_file.stem}"
+    report_file = config.EVAL_REPORT.with_name(name + (f"_{args.tag}" if args.tag else "") + ".json")
+    items = [json.loads(l) for l in eval_file.read_text(encoding="utf-8-sig").splitlines() if l.strip()]
     records = []
     with console.status("กำลังรันชุดทดสอบ...") as status:
+        if config.BACKEND != "stub" and not args.no_warmup:
+            status.update("อุ่นเครื่อง: โหลดโมเดลเข้า GPU (ไม่นับผล)")
+            try:
+                run("PO อนุมัติแล้วแก้ไขยังไง", save_ticket=False)
+            except (LLMError, RuntimeError) as e:
+                console.print(f"[red]หยุดการทดสอบ:[/red] {e}")
+                raise SystemExit(1)
         for i, item in enumerate(items, 1):
             status.update(f"กำลังรัน {i}/{len(items)}: {item['question'][:40]}")
             t0 = time.perf_counter()
@@ -72,10 +119,12 @@ def main():
                 "queries": st.get("tried_queries", []),
                 "hits": hit_ids,
                 "reply": reply,
+                "evidence": st.get("evidence", ""),
                 "latency_s": round(latency, 2),
+                "stages": stage_usage(st.get("trace", [])),
             })
 
-    t = Table(title=f"ผลรายข้อ [{eval_file.name}] (backend={config.BACKEND}, model={config.CHAT_MODEL}, MIN_SCORE={config.MIN_SCORE}, seed={config.SEED})")
+    t = Table(title=f"ผลรายข้อ [{eval_file.name}{' · ' + args.tag if args.tag else ''}] (backend={config.BACKEND}, model={config.CHAT_MODEL}, MIN_SCORE={config.MIN_SCORE}, seed={config.SEED})")
     for col in ["id", "คำถาม", "intent", "โมดูล", "เจอเอกสาร", "ผลลัพธ์ (คาด→จริง)", "เนื้อหา", "top score", "วินาที"]:
         t.add_column(col)
     for r in records:
@@ -109,6 +158,10 @@ def main():
     s.add_row("ควรตอบได้แต่เปิด Ticket", str(false_ticket))
     s.add_row("เวลาเฉลี่ย / ช้าสุด", f"{summary['latency_avg_s']:.2f} / {summary['latency_max_s']:.2f} วินาที")
     console.print(s)
+    if config.BACKEND != "stub":
+        stages, summary["stages"] = stage_table(records)
+        console.print(stages)
+        console.print("[dim]prefill = เวลาอ่าน prompt, decode = เวลาสร้างคำตอบทีละ token; ส่วนที่เหลือของเวลาคือค้นเอกสาร embedding และ overhead[/dim]")
 
     if args.sweep:
         sw = Table(title="ถ้าเปลี่ยน MIN_SCORE (ประมาณจาก top score ของรอบนี้ ดูเฉพาะด่านคัดกรองก่อน Knowledge agent)")

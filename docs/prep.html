@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {font-style: italic}
+.r2 {font-weight: bold}
+.r3 {color: #98e024; text-decoration-color: #98e024}
+.r4 {color: #fd971f; text-decoration-color: #fd971f}
+.r5 {color: #58d1eb; text-decoration-color: #58d1eb; font-weight: bold}
+.r6 {color: #f4005f; text-decoration-color: #f4005f}
+body {
+    color: #d9d9d9;
+    background-color: #0c0c0c;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit"><span class="r1">                                                   Data preparation: คู่มือ (PDF → ข้อความ)                                                    </span>
+┌───────────────────┬────────────────┬──────────────┬─────────────────────┬────────────────────┬────────────────────┬────────────┬────────┐
+│<span class="r2">                   </span>│<span class="r2">                </span>│<span class="r2">              </span>│<span class="r2">                     </span>│<span class="r2">      ลบ zero-width </span>│<span class="r2">                    </span>│<span class="r2">            </span>│<span class="r2">        </span>│
+│<span class="r2"> ไฟล์               </span>│<span class="r2"> ลบหัว/ท้ายกระดาษ </span>│<span class="r2"> ต่อบรรทัดที่ถูกตัด </span>│<span class="r2"> แก้สระอำที่แตก (ํา → ำ) </span>│<span class="r2">              space </span>│<span class="r2"> แปลงเลขไทยเป็นอารบิก </span>│<span class="r2"> ยุบช่องว่างซ้ำ </span>│<span class="r2"> chunks </span>│
+├───────────────────┼────────────────┼──────────────┼─────────────────────┼────────────────────┼────────────────────┼────────────┼────────┤
+│ manual_ap.txt     │              4 │           16 │                   5 │                  9 │                  9 │          1 │      6 │
+│ manual_budget.txt │              4 │           14 │                   3 │                 10 │                  8 │          3 │      5 │
+│ manual_po.txt     │              4 │           16 │                   3 │                 16 │                  5 │          4 │      6 │
+│ manual_pr.txt     │              4 │           18 │                   4 │                 26 │                  7 │          8 │      5 │
+│ manual_rcv.txt    │              4 │           16 │                   3 │                  5 │                  0 │          5 │      5 │
+│ <span class="r2">รวม</span>               │             <span class="r2">20</span> │           <span class="r2">80</span> │                  <span class="r2">18</span> │                 <span class="r2">66</span> │                 <span class="r2">29</span> │         <span class="r2">21</span> │     <span class="r2">27</span> │
+└───────────────────┴────────────────┴──────────────┴─────────────────────┴────────────────────┴────────────────────┴────────────┴────────┘
+<span class="r1">  Data preparation: FAQ (CSV)   </span>
+┌──────────────────────┬───────┐
+│<span class="r2"> รายการ               </span>│<span class="r2"> จำนวน </span>│
+├──────────────────────┼───────┤
+│ แถวที่รับเข้า            │    15 │
+│ ล้าง HTML ในคำตอบ     │     4 │
+│ คำถามซ้ำ (เก็บฉบับล่าสุด) │     1 │
+│ คำตอบว่าง (ตัดทิ้ง)      │     1 │
+│ เหลือใช้งาน            │    13 │
+└──────────────────────┴───────┘
+ปรับชื่อโมดูลให้เป็นมาตรฐาน: <span class="r3">&#x27;ใบขอซื้อ&#x27;</span>→PR, <span class="r3">&#x27;Purchase Order&#x27;</span>→PO, <span class="r3">&#x27;po&#x27;</span>→PO, <span class="r3">&#x27;PO &#x27;</span>→PO, <span class="r3">&#x27;รับของ&#x27;</span>→RCV, <span class="r3">&#x27;GR&#x27;</span>→RCV, <span class="r3">&#x27;บัญชีเจ้าหนี้&#x27;</span>→AP, <span class="r3">&#x27;Budget&#x27;</span>→BUDGET,
+<span class="r3">&#x27;งบประมาณ&#x27;</span>→BUDGET, <span class="r3">&#x27;ทั่วไป&#x27;</span>→GENERAL, <span class="r3">&#x27;general&#x27;</span>→GENERAL, <span class="r3">&#x27;pr&#x27;</span>→PR
+chunks ต่อโมดูล: <span class="r4">AP</span>=<span class="r5">8</span>, <span class="r4">BUDGET</span>=<span class="r5">7</span>, <span class="r4">GENERAL</span>=<span class="r5">2</span>, <span class="r4">PO</span>=<span class="r5">8</span>, <span class="r4">PR</span>=<span class="r5">8</span>, <span class="r4">RCV</span>=<span class="r5">7</span>
+<span class="r3">────────────────────────────────────────────────── </span>ตัวอย่าง before <span class="r6">/</span> after <span class="r2">(</span>manual_ap.txt<span class="r2">)</span><span class="r3"> ──────────────────────────────────────────────────</span>
+<span class="r6">BEFORE</span> ๑.  ภาพรวมเจ้าหนี้⏎ โมดูลเจ้าหนี้ใช้ตั้งหนี้จากใบแจ้งหนี้ของผู้ขายและผู้รับเหมาช่วง⏎ และวางแผนการจ่ายเงิน การ⟨ZWSP⟩ตั้งหนี้ทุกครั้งต้องอ้างอิงใบสั่งซื้อหร ⏎ ือสัญญาจ้าง⏎
+⏎ <span class="r5">2</span>. การตั้งหนี้และการจับคู่สามทาง <span class="r2">(</span><span class="r5">3</span>-Way Matching<span class="r2">)</span>⏎ ก่อนตั้ง⟨ZWSP⟩หนี้ ระบบจะเทียบเอกสาร ๓ ใบ คือ ใบสั
+<span class="r3">AFTER </span> <span class="r5">1</span>. ภาพรวมเจ้าหนี้⏎ โมดูลเจ้าหนี้ใช้ตั้งหนี้จากใบแจ้งหนี้ของผู้ขายและผู้รับเหมาช่วงและวางแผนการจ่ายเงิน การตั้งหนี้ทุกครั้งต้องอ้างอิงใบสั่งซื้อหรือสัญญาจ้าง⏎ ⏎ <span class="r5">2</span>.
+การตั้งหนี้และการจับคู่สามทาง <span class="r2">(</span><span class="r5">3</span>-Way Matching<span class="r2">)</span>⏎ ก่อนตั้งหนี้ ระบบจะเทียบเอกสาร <span class="r5">3</span> ใบ คือ ใบสั่งซื้อ ใบ
+
+<span class="r3">สร้าง index เสร็จ</span> <span class="r5">40</span> chunks → storage\chroma
+</code></pre>
+</body>
+</html>

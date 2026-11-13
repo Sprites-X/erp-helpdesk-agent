@@ -1,0 +1,1564 @@
+{
+  "config": {
+    "backend": "ollama",
+    "chat_model": "qwen2.5:7b",
+    "embed_model": "bge-m3",
+    "min_score": 0.55,
+    "top_k": 4
+  },
+  "summary": {
+    "intent_ok": {
+      "correct": 20,
+      "total": 22
+    },
+    "module_ok": {
+      "correct": 17,
+      "total": 20
+    },
+    "retrieval_ok": {
+      "correct": 16,
+      "total": 16
+    },
+    "outcome_ok": {
+      "correct": 20,
+      "total": 22
+    },
+    "content_ok": {
+      "correct": 14,
+      "total": 16
+    },
+    "answered_but_should_ticket": 0,
+    "ticket_but_should_answer": 1,
+    "latency_avg_s": 3.06,
+    "latency_max_s": 13.05,
+    "re_searched": 2,
+    "re_searched_then_answered_correctly": 1,
+    "stages": {
+      "Router": {
+        "questions": 22,
+        "ms": 609.0,
+        "chat_calls": 1.0,
+        "prompt_tokens": 702.2,
+        "output_tokens": 45.0,
+        "prefill_ms": 22.1,
+        "decode_ms": 550.3,
+        "load_ms": 4.3,
+        "embed_ms": 2.0
+      },
+      "Retriever": {
+        "questions": 21,
+        "ms": 43.8,
+        "chat_calls": 0.0,
+        "prompt_tokens": 0.0,
+        "output_tokens": 0.0,
+        "prefill_ms": 0.0,
+        "decode_ms": 0.0,
+        "load_ms": 6.2,
+        "embed_ms": 41.0
+      },
+      "Knowledge": {
+        "questions": 18,
+        "ms": 1885.0,
+        "chat_calls": 1.0,
+        "prompt_tokens": 1305.1,
+        "output_tokens": 125.1,
+        "prefill_ms": 233.5,
+        "decode_ms": 1610.9,
+        "load_ms": 3.6,
+        "embed_ms": 0.0
+      },
+      "Ticket": {
+        "questions": 6,
+        "ms": 522.0,
+        "chat_calls": 0.3,
+        "prompt_tokens": 102.5,
+        "output_tokens": 40.8,
+        "prefill_ms": 11.7,
+        "decode_ms": 501.5,
+        "load_ms": 1.0,
+        "embed_ms": 0.0
+      },
+      "รวม": {
+        "questions": 22,
+        "ms": 3059.9,
+        "chat_calls": 2.2,
+        "prompt_tokens": 2109.9,
+        "output_tokens": 210.9,
+        "prefill_ms": 267.3,
+        "decode_ms": 2662.7,
+        "load_ms": 15.1,
+        "embed_ms": 43.0
+      }
+    }
+  },
+  "records": [
+    {
+      "id": "h01",
+      "question": "แนบไฟล์ใน PR ได้ขนาดสูงสุดเท่าไหร่",
+      "expected": {
+        "intent": "how_to",
+        "module": "PR",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "how_to",
+        "module": "PR",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": true,
+      "top_score": 0.6224,
+      "searches": 1,
+      "queries": [
+        "ขนาดไฟล์ที่สามารถแนบในใบขอซื้อสูงสุดคือเท่าใด"
+      ],
+      "hits": [
+        "PR-2",
+        "PO-3",
+        "PR-1",
+        "PR-3",
+        "FAQ-1"
+      ],
+      "reply": "ขนาดไฟล์ที่สามารถแนบได้สูงสุดคือ 10 MB ต่อไฟล์",
+      "evidence": "แนบไฟล์ประกอบได้ เช่น รูปหน้างานหรือแบบก่อสร้าง ขนาดไม่เกิน 10 MB ต่อไฟล์",
+      "latency_s": 2.21,
+      "stages": {
+        "Router": {
+          "ms": 631,
+          "chat_calls": 1,
+          "prompt_tokens": 703,
+          "output_tokens": 47,
+          "prefill_ms": 23,
+          "decode_ms": 574,
+          "load_ms": 4,
+          "embed_ms": 0
+        },
+        "Retriever": {
+          "ms": 30,
+          "chat_calls": 0,
+          "prompt_tokens": 0,
+          "output_tokens": 0,
+          "prefill_ms": 0,
+          "decode_ms": 0,
+          "load_ms": 7,
+          "embed_ms": 27
+        },
+        "Knowledge": {
+          "ms": 1541,
+          "chat_calls": 1,
+          "prompt_tokens": 1487,
+          "output_tokens": 94,
+          "prefill_ms": 292,
+          "decode_ms": 1197,
+          "load_ms": 3,
+          "embed_ms": 0
+        }
+      }
+    },
+    {
+      "id": "h02",
+      "question": "PR เกินห้าแสนต้องผ่านใครเพิ่ม",
+      "expected": {
+        "intent": "how_to",
+        "module": "PR",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "how_to",
+        "module": "PR",
+        "outcome": "ticket"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": true,
+      "outcome_ok": false,
+      "content_ok": false,
+      "top_score": 0.7101,
+      "searches": 2,
+      "queries": [
+        "ใบขอซื้อที่มูลค่าเกินห้าแสนบาทต้องผ่านการอนุมัติด้วยวิธีใด",
+        "การอนุมัติ PR ที่มูลค่าเกิน 500,000 บาท"
+      ],
+      "hits": [
+        "FAQ-2",
+        "PR-3",
+        "FAQ-15",
+        "PR-1",
+        "PR-2",
+        "PO-3"
+      ],
+      "reply": "ยังไม่พบวิธีแก้ในคู่มือ จึงเปิด Ticket T-261113-170543-51D0 ให้ทีม Support งานจัดซื้อแล้ว (ความเร่งด่วน: low)\nเพื่อให้แก้ได้เร็วขึ้น กรุณาเตรียม: ขั้นตอนการอนุมัติใบจ่ายเงินที่มูลค่าเกิน 500,000 บาท, เอกสารที่ต้องแนบเพิ่มเติมเมื่อมูลค่าเกิน 500,000 บาท, ลำดับการอนุมัติใบจ่ายเงินที่มูลค่าเกิน 500,000 บาท",
+      "evidence": "",
+      "latency_s": 13.05,
+      "stages": {
+        "Router": {
+          "ms": 738,
+          "chat_calls": 1,
+          "prompt_tokens": 698,
+          "output_tokens": 56,
+          "prefill_ms": 21,
+          "decode_ms": 686,
+          "load_ms": 4,
+          "embed_ms": 0
+        },
+        "Retriever": {
+          "ms": 117,
+          "chat_calls": 0,
+          "prompt_tokens": 0,
+          "output_tokens": 0,
+          "prefill_ms": 0,
+          "decode_ms": 0,
+          "load_ms": 13,
+          "embed_ms": 111
+        },
+        "Knowledge": {
+          "ms": 9559,
+          "chat_calls": 3,
+          "prompt_tokens": 3430,
+          "output_tokens": 667,
+          "prefill_ms": 644,
+          "decode_ms": 8814,
+          "load_ms": 11,
+          "embed_ms": 0
+        },
+        "Ticket": {
+          "ms": 2634,
+          "chat_calls": 1,
+          "prompt_tokens": 371,
+          "output_tokens": 207,
+          "prefill_ms": 41,
+          "decode_ms": 2555,
+          "load_ms": 4,
+          "embed_ms": 0
+        }
+      }
+    },
+    {
+      "id": "h03",
+      "question": "PR ที่กลายเป็น PO ไปแล้วยกเลิกได้ไหม",
+      "expected": {
+        "intent": "how_to",
+        "module": "PR",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "how_to",
+        "module": "PR",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": true,
+      "top_score": 0.6455,
+      "searches": 1,
+      "queries": [
+        "หลังจากแปลง PR ให้เป็น PO แล้ว สามารถยกเลิก PO นั้นได้หรือไม่"
+      ],
+      "hits": [
+        "PR-4",
+        "PO-4",
+        "FAQ-5",
+        "PO-1",
+        "FAQ-1",
+        "FAQ-15"
+      ],
+      "reply": "ไม่สามารถยกเลิก PR ที่กลายเป็น PO ได้ ต้องไปยกเลิกที่ใบสั่งซื้อแทน",
+      "evidence": "PR ที่ถูกแปลงเป็นใบสั่งซื้อแล้วยกเลิกไม่ได้ ต้องไปยกเลิกที่ใบสั่งซื้อแทน",
+      "latency_s": 2.44,
+      "stages": {
+        "Router": {
+          "ms": 690,
+          "chat_calls": 1,
+          "prompt_tokens": 701,
+          "output_tokens": 53,
+          "prefill_ms": 21,
+          "decode_ms": 646,
+          "load_ms": 4,
+          "embed_ms": 0
+        },
+        "Retriever": {
+          "ms": 48,
+          "chat_calls": 0,
+          "prompt_tokens": 0,
+          "output_tokens": 0,
+          "prefill_ms": 0,
+          "decode_ms": 0,
+          "load_ms": 6,
+          "embed_ms": 45
+        },
+        "Knowledge": {
+          "ms": 1701,
+          "chat_calls": 1,
+          "prompt_tokens": 1408,
+          "output_tokens": 110,
+          "prefill_ms": 267,
+          "decode_ms": 1395,
+          "load_ms": 3,
+          "embed_ms": 0
+        }
+      }
+    },
+    {
+      "id": "h04",
+      "question": "PO ใบเดียวรวมของจากหลาย PR ได้หรือเปล่า",
+      "expected": {
+        "intent": "how_to",
+        "module": "PO",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "how_to",
+        "module": "PO",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": true,
+      "top_score": 0.7205,
+      "searches": 1,
+      "queries": [
+        "สามารถสร้างใบสั่งซื้อจากหลายใบขอซื้อได้หรือไม่"
+      ],
+      "hits": [
+        "PO-1",
+        "PO-2",
+        "PR-1",
+        "PO-4",
+        "PO-3"
+      ],
+      "reply": "ได้ แต่ต้องเป็นโครงการเดียวกันและผู้ขายรายเดียวกัน",
+      "evidence": "PO หนึ่งใบรวมรายการจากหลาย PR ได้ ถ้าเป็นโครงการเดียวกันและผู้ขายรายเดียวกัน",
+      "latency_s": 2.02,
+      "stages": {
+        "Router": {
+          "ms": 627,
+          "chat_calls": 1,
+          "prompt_tokens": 699,
+          "output_tokens": 47,
+          "prefill_ms": 21,
+          "decode_ms": 573,
+          "load_ms": 4,
+          "embed_ms": 0
+        },
+        "Retriever": {
+          "ms": 45,
+          "chat_calls": 0,
+          "prompt_tokens": 0,
+          "output_tokens": 0,
+          "prefill_ms": 0,
+          "decode_ms": 0,
+          "load_ms": 8,
+          "embed_ms": 42
+        },
+        "Knowledge": {
+          "ms": 1348,
+          "chat_calls": 1,
+          "prompt_tokens": 1444,
+          "output_tokens": 83,
+          "prefill_ms": 257,
+          "decode_ms": 1054,
+          "load_ms": 3,
+          "embed_ms": 0
+        }
+      }
+    },
+    {
+      "id": "h05",
+      "question": "เลขที่ PO ฉบับแก้ไขจะออกมาเป็นแบบไหน",
+      "expected": {
+        "intent": "how_to",
+        "module": "PO",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "how_to",
+        "module": "PO",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": true,
+      "top_score": 0.6599,
+      "searches": 1,
+      "queries": [
+        "เลขที่ PO ฉบับแก้ไขจะมีรูปแบบเป็นอย่างไร"
+      ],
+      "hits": [
+        "PO-4",
+        "FAQ-5",
+        "AP-6",
+        "PO-6",
+        "PO-1"
+      ],
+      "reply": "เลขที่ PO ฉบับแก้ไขจะออกมาเป็นเลขเดิมต่อท้ายด้วย -R1 หรือ -R2 ตามลำดับ",
+      "evidence": "ระบบจะสร้าง PO ฉบับแก้ไขโดยใช้เลขเดิมต่อท้ายด้วย -R1, -R2 ตามลำดับ",
+      "latency_s": 2.22,
+      "stages": {
+        "Router": {
+          "ms": 577,
+          "chat_calls": 1,
+          "prompt_tokens": 698,
+          "output_tokens": 43,
+          "prefill_ms": 22,
+          "decode_ms": 524,
+          "load_ms": 4,
+          "embed_ms": 0
+        },
+        "Retriever": {
+          "ms": 37,
+          "chat_calls": 0,
+          "prompt_tokens": 0,
+          "output_tokens": 0,
+          "prefill_ms": 0,
+          "decode_ms": 0,
+          "load_ms": 6,
+          "embed_ms": 34
+        },
+        "Knowledge": {
+          "ms": 1601,
+          "chat_calls": 1,
+          "prompt_tokens": 1422,
+          "output_tokens": 102,
+          "prefill_ms": 262,
+          "decode_ms": 1304,
+          "load_ms": 3,
+          "embed_ms": 0
+        }
+      }
+    },
+    {
+      "id": "h06",
+      "question": "อยากส่ง PO ให้ซัพพลายเออร์ทางเมล ทำยังไง",
+      "expected": {
+        "intent": "how_to",
+        "module": "PO",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "how_to",
+        "module": "PO",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": true,
+      "top_score": 0.69,
+      "searches": 2,
+      "queries": [
+        "应该如何通过邮件发送采购订单？",
+        "ส่ง PO ผ่านอีเมล"
+      ],
+      "hits": [
+        "PO-5",
+        "FAQ-3",
+        "PO-4",
+        "PO-1",
+        "PO-2",
+        "RCV-2"
+      ],
+      "reply": "หลังอนุมัติ PO ให้กด 'ส่งอีเมล' ระบบจะแนบไฟล์ PDF ของ PO ไปยังอีเมลผู้ขายที่บันทึกไว้",
+      "evidence": "[ใบสั่งซื้อ (PO) > การส่งใบสั่งซื้อให้ผู้ขาย]\nหลังอนุมัติ กด ส่งอีเมล ระบบจะแนบไฟล์ PDF ของ PO ไปยังอีเมลผู้ขายที่บันทึกไว้ หรือกด พิมพ์ เพื่อพิมพ์ฉบับที่มีลายเซ็นผู้อนุมัติ",
+      "latency_s": 5.79,
+      "stages": {
+        "Router": {
+          "ms": 390,
+          "chat_calls": 1,
+          "prompt_tokens": 706,
+          "output_tokens": 28,
+          "prefill_ms": 22,
+          "decode_ms": 336,
+          "load_ms": 4,
+          "embed_ms": 0
+        },
+        "Retriever": {
+          "ms": 59,
+          "chat_calls": 0,
+          "prompt_tokens": 0,
+          "output_tokens": 0,
+          "prefill_ms": 0,
+          "decode_ms": 0,
+          "load_ms": 13,
+          "embed_ms": 53
+        },
+        "Knowledge": {
+          "ms": 5336,
+          "chat_calls": 3,
+          "prompt_tokens": 3339,
+          "output_tokens": 368,
+          "prefill_ms": 542,
+          "decode_ms": 4657,
+          "load_ms": 13,
+          "embed_ms": 0
+        }
+      }
+    },
+    {
+      "id": "h07",
+      "question": "หน้างานไม่มีเน็ต บันทึกรับของได้ไหม",
+      "expected": {
+        "intent": "how_to",
+        "module": "RCV",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "problem",
+        "module": "RCV",
+        "outcome": "answer"
+      },
+      "intent_ok": false,
+      "module_ok": true,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": true,
+      "top_score": 0.6042,
+      "searches": 1,
+      "queries": [
+        "มีปัญหาในการบันทึกรับสินค้าเมื่อไม่มีเน็ต"
+      ],
+      "hits": [
+        "RCV-2",
+        "RCV-3",
+        "RCV-1",
+        "RCV-5"
+      ],
+      "reply": "ได้ แอปจะเก็บข้อมูลไว้และส่งอัตโนมัติเมื่อกลับมาออนไลน์",
+      "evidence": "ถ้าไม่มีอินเทอร์เน็ต แอปจะเก็บข้อมูลไว้และส่งอัตโนมัติเมื่อกลับมาออนไลน์",
+      "latency_s": 2.31,
+      "stages": {
+        "Router": {
+          "ms": 639,
+          "chat_calls": 1,
+          "prompt_tokens": 702,
+          "output_tokens": 46,
+          "prefill_ms": 22,
+          "decode_ms": 559,
+          "load_ms": 3,
+          "embed_ms": 0
+        },
+        "Retriever": {
+          "ms": 43,
+          "chat_calls": 0,
+          "prompt_tokens": 0,
+          "output_tokens": 0,
+          "prefill_ms": 0,
+          "decode_ms": 0,
+          "load_ms": 6,
+          "embed_ms": 40
+        },
+        "Knowledge": {
+          "ms": 1621,
+          "chat_calls": 1,
+          "prompt_tokens": 1394,
+          "output_tokens": 104,
+          "prefill_ms": 248,
+          "decode_ms": 1324,
+          "load_ms": 4,
+          "embed_ms": 0
+        }
+      }
+    },
+    {
+      "id": "h08",
+      "question": "ซัพพลายเออร์บอกว่าจะไม่ส่งของที่เหลือแล้ว ต้องทำอะไรกับ PO",
+      "expected": {
+        "intent": "how_to",
+        "module": "RCV",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "how_to",
+        "module": "PO",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": false,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": true,
+      "top_score": 0.6506,
+      "searches": 1,
+      "queries": [
+        "เมื่อซัพพลายเออร์บอกว่าจะไม่ส่งของที่เหลือแล้ว ต้องทำอย่างไรกับใบสั่งซื้อ"
+      ],
+      "hits": [
+        "RCV-3",
+        "PR-4",
+        "PO-4",
+        "PO-1",
+        "PO-2",
+        "PO-5"
+      ],
+      "reply": "กดปิดยอดค้างรับใน PO",
+      "evidence": "หากผู้ขายแจ้งว่าจะไม่ส่งส่วนที่เหลือ ให้ฝ่ายจัดซื้อกด ปิดยอดค้างรับ ใน PO",
+      "latency_s": 2.28,
+      "stages": {
+        "Router": {
+          "ms": 859,
+          "chat_calls": 1,
+          "prompt_tokens": 713,
+          "output_tokens": 65,
+          "prefill_ms": 25,
+          "decode_ms": 800,
+          "load_ms": 4,
+          "embed_ms": 0
+        },
+        "Retriever": {
+          "ms": 61,
+          "chat_calls": 0,
+          "prompt_tokens": 0,
+          "output_tokens": 0,
+          "prefill_ms": 0,
+          "decode_ms": 0,
+          "load_ms": 7,
+          "embed_ms": 58
+        },
+        "Knowledge": {
+          "ms": 1359,
+          "chat_calls": 1,
+          "prompt_tokens": 1627,
+          "output_tokens": 78,
+          "prefill_ms": 316,
+          "decode_ms": 994,
+          "load_ms": 4,
+          "embed_ms": 0
+        }
+      }
+    },
+    {
+      "id": "h09",
+      "question": "อัตราหัก ณ ที่จ่ายของผู้ขายรายนี้ผิด ต้องแก้ตรงไหน",
+      "expected": {
+        "intent": "how_to",
+        "module": "AP",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "how_to",
+        "module": "AP",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": true,
+      "top_score": 0.6545,
+      "searches": 1,
+      "queries": [
+        "วิธีแก้ไขอัตราหัก ณ ที่จ่ายของผู้ขายรายนี้ในระบบ"
+      ],
+      "hits": [
+        "AP-3",
+        "PO-4",
+        "FAQ-5",
+        "PR-4",
+        "AP-6",
+        "FAQ-9"
+      ],
+      "reply": "ต้องแก้ไขอัตราหัก ณ ที่จ่ายที่ข้อมูลผู้ขาย ไม่ควรแก้ในเอกสารจ่ายเงินทีละใบ",
+      "evidence": "ระบบคำนวณภาษีหัก ณ ที่จ่ายจากประเภทเงินได้ที่ตั้งไว้ในข้อมูลผู้ขาย เช่น ค่าจ้างทำของหรือค่าบริการ และออกหนังสือรับรองการหักภาษีณ ที่จ่ายให้อัตโนมัติเมื่อจ่ายเงิน ถ้าอัตราไม่ถูกต้อง ให้ฝ่ายบัญชีแก้ที่ข้อมูลผู้ขาย ไม่ควรแก้ในเอกสารจ่ายเงินทีละใบ",
+      "latency_s": 3.64,
+      "stages": {
+        "Router": {
+          "ms": 681,
+          "chat_calls": 1,
+          "prompt_tokens": 710,
+          "output_tokens": 49,
+          "prefill_ms": 24,
+          "decode_ms": 600,
+          "load_ms": 5,
+          "embed_ms": 0
+        },
+        "Retriever": {
+          "ms": 43,
+          "chat_calls": 0,
+          "prompt_tokens": 0,
+          "output_tokens": 0,
+          "prefill_ms": 0,
+          "decode_ms": 0,
+          "load_ms": 6,
+          "embed_ms": 40
+        },
+        "Knowledge": {
+          "ms": 2915,
+          "chat_calls": 1,
+          "prompt_tokens": 1560,
+          "output_tokens": 203,
+          "prefill_ms": 296,
+          "decode_ms": 2580,
+          "load_ms": 3,
+          "embed_ms": 0
+        }
+      }
+    },
+    {
+      "id": "h10",
+      "question": "ทำชุดจ่ายเงินให้เจ้าหนี้ยังไง",
+      "expected": {
+        "intent": "how_to",
+        "module": "AP",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "how_to",
+        "module": "AP",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": true,
+      "top_score": 0.6486,
+      "searches": 1,
+      "queries": [
+        "应该如何为供应商创建付款单？"
+      ],
+      "hits": [
+        "PO-2",
+        "AP-5",
+        "PR-2",
+        "PO-1",
+        "AP-1",
+        "AP-2"
+      ],
+      "reply": "ไปที่เมนู เจ้าหนี้ > วางแผนจ่ายเงิน แล้วเลือกช่วงวันครบกำหนด ระบบจะแสดงหนี้ที่ครบกำหนดพร้อมยอดหลังหักภาษีและเงินประกันผลงาน แล้วเลือกรายการ แล้วกด สร้างชุดจ่ายเงิน ส่งไฟล์โอนเงินไปยังธนาคาร หรือพิมพ์เช็ค",
+      "evidence": "1) ไปที่เมนู เจ้าหนี้ > วางแผนจ่ายเงิน แล้วเลือกช่วงวันครบกำหนด\n2) ระบบจะแสดงหนี้ที่ครบกำหนดพร้อมยอดหลังหักภาษีและเงินประกันผลงาน\n3) เลือกรายการ แล้วกด สร้างชุดจ่ายเงิน\n4) ส่งไฟล์โอนเงินไปยังธนาคาร หรือพิมพ์เช็ค",
+      "latency_s": 3.83,
+      "stages": {
+        "Router": {
+          "ms": 421,
+          "chat_calls": 1,
+          "prompt_tokens": 699,
+          "output_tokens": 28,
+          "prefill_ms": 22,
+          "decode_ms": 340,
+          "load_ms": 3,
+          "embed_ms": 0
+        },
+        "Retriever": {
+          "ms": 62,
+          "chat_calls": 0,
+          "prompt_tokens": 0,
+          "output_tokens": 0,
+          "prefill_ms": 0,
+          "decode_ms": 0,
+          "load_ms": 6,
+          "embed_ms": 59
+        },
+        "Knowledge": {
+          "ms": 3346,
+          "chat_calls": 1,
+          "prompt_tokens": 1577,
+          "output_tokens": 236,
+          "prefill_ms": 296,
+          "decode_ms": 2995,
+          "load_ms": 4,
+          "embed_ms": 0
+        }
+      }
+    },
+    {
+      "id": "h11",
+      "question": "อยากเพิ่มงบรวมของทั้งโครงการ ต้องทำยังไง",
+      "expected": {
+        "intent": "how_to",
+        "module": "BUDGET",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "how_to",
+        "module": "BUDGET",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": true,
+      "top_score": 0.6787,
+      "searches": 1,
+      "queries": [
+        "วิธีการเพิ่มงบประมาณรวมของโครงการอย่างไร"
+      ],
+      "hits": [
+        "BUDGET-3",
+        "BUDGET-2",
+        "BUDGET-1",
+        "PR-2",
+        "BUDGET-5"
+      ],
+      "reply": "ต้องทำใบเพิ่มงบประมาณ ซึ่่งผู้บริหารต้องอนุมัติ",
+      "evidence": "หากต้องการเพิ่มงบรวมของโครงการ ต้องทำใบเพิ่มงบประมาณ ซึ่่งผู้บริหารต้องอนุมัติ",
+      "latency_s": 2.13,
+      "stages": {
+        "Router": {
+          "ms": 546,
+          "chat_calls": 1,
+          "prompt_tokens": 703,
+          "output_tokens": 40,
+          "prefill_ms": 22,
+          "decode_ms": 486,
+          "load_ms": 5,
+          "embed_ms": 0
+        },
+        "Retriever": {
+          "ms": 33,
+          "chat_calls": 0,
+          "prompt_tokens": 0,
+          "output_tokens": 0,
+          "prefill_ms": 0,
+          "decode_ms": 0,
+          "load_ms": 7,
+          "embed_ms": 30
+        },
+        "Knowledge": {
+          "ms": 1545,
+          "chat_calls": 1,
+          "prompt_tokens": 1439,
+          "output_tokens": 97,
+          "prefill_ms": 270,
+          "decode_ms": 1238,
+          "load_ms": 3,
+          "embed_ms": 0
+        }
+      }
+    },
+    {
+      "id": "h12",
+      "question": "ตั้งค่าคนรับเมลเตือนงบได้ที่ไหน",
+      "expected": {
+        "intent": "how_to",
+        "module": "BUDGET",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "how_to",
+        "module": "BUDGET",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": true,
+      "top_score": 0.7499,
+      "searches": 1,
+      "queries": [
+        "ตั้งค่าการรับแจ้งเตือนงบประมาณผ่านอีเมลทำอย่างไร"
+      ],
+      "hits": [
+        "BUDGET-5",
+        "BUDGET-2",
+        "FAQ-12",
+        "BUDGET-3"
+      ],
+      "reply": "ตั้งค่าคนรับเมลเตือนงบได้ที่ โครงการ > ตั้งค่า > การแจ้งเตือน",
+      "evidence": "ตั้งค่าผู้รับแจ้งเตือนได้ที่ โครงการ > ตั้งค่า > การแจ้งเตือน",
+      "latency_s": 2.18,
+      "stages": {
+        "Router": {
+          "ms": 658,
+          "chat_calls": 1,
+          "prompt_tokens": 702,
+          "output_tokens": 49,
+          "prefill_ms": 22,
+          "decode_ms": 604,
+          "load_ms": 4,
+          "embed_ms": 0
+        },
+        "Retriever": {
+          "ms": 48,
+          "chat_calls": 0,
+          "prompt_tokens": 0,
+          "output_tokens": 0,
+          "prefill_ms": 0,
+          "decode_ms": 0,
+          "load_ms": 6,
+          "embed_ms": 45
+        },
+        "Knowledge": {
+          "ms": 1474,
+          "chat_calls": 1,
+          "prompt_tokens": 1198,
+          "output_tokens": 97,
+          "prefill_ms": 184,
+          "decode_ms": 1255,
+          "load_ms": 4,
+          "embed_ms": 0
+        }
+      }
+    },
+    {
+      "id": "h13",
+      "question": "มีแอปใช้บนไอโฟนไหม",
+      "expected": {
+        "intent": "how_to",
+        "module": "GENERAL",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "how_to",
+        "module": "UNKNOWN",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": false,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": false,
+      "top_score": 0.5685,
+      "searches": 1,
+      "queries": [
+        "มีแอปใช้บนไอโฟนไหม"
+      ],
+      "hits": [
+        "FAQ-13",
+        "FAQ-6",
+        "FAQ-12",
+        "RCV-2"
+      ],
+      "reply": "ใช่ มีแอปสำหรับ iPhone",
+      "evidence": "ได้ ผ่านแอป SiteERP Site ทั้ง Android และ iOS สำหรับงานหน้างาน",
+      "latency_s": 1.57,
+      "stages": {
+        "Router": {
+          "ms": 556,
+          "chat_calls": 1,
+          "prompt_tokens": 693,
+          "output_tokens": 40,
+          "prefill_ms": 20,
+          "decode_ms": 491,
+          "load_ms": 7,
+          "embed_ms": 14
+        },
+        "Retriever": {
+          "ms": 13,
+          "chat_calls": 0,
+          "prompt_tokens": 0,
+          "output_tokens": 0,
+          "prefill_ms": 0,
+          "decode_ms": 0,
+          "load_ms": 3,
+          "embed_ms": 12
+        },
+        "Knowledge": {
+          "ms": 995,
+          "chat_calls": 1,
+          "prompt_tokens": 1044,
+          "output_tokens": 63,
+          "prefill_ms": 148,
+          "decode_ms": 786,
+          "load_ms": 4,
+          "embed_ms": 0
+        }
+      }
+    },
+    {
+      "id": "h14",
+      "question": "สร้าง PR แล้วเจอ PR-E03",
+      "expected": {
+        "intent": "problem",
+        "module": "PR",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "problem",
+        "module": "PR",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": true,
+      "top_score": 0.6961,
+      "searches": 1,
+      "queries": [
+        "สร้างใบขอซื้อแล้วเกิดข้อผิดพลาดรหัส PR-E03"
+      ],
+      "hits": [
+        "PR-5",
+        "PR-1",
+        "RCV-5",
+        "PO-6",
+        "PR-4",
+        "PR-2"
+      ],
+      "reply": "ให้แก้ไขวันที่ต้องการใช้ของเป็นวันปัจจุบันหรือวันในอนาคต",
+      "evidence": "รหัส PR-E03 วันที่ต้องการใช้ของย้อนหลัง ระบบไม่อนุญาตให้ระบุวันที่ต้องการก่อนวันที่สร้าง PR ให้แก้เป็นวันปัจจุบันหรือวันในอนาคต",
+      "latency_s": 2.75,
+      "stages": {
+        "Router": {
+          "ms": 578,
+          "chat_calls": 1,
+          "prompt_tokens": 693,
+          "output_tokens": 43,
+          "prefill_ms": 20,
+          "decode_ms": 529,
+          "load_ms": 4,
+          "embed_ms": 0
+        },
+        "Retriever": {
+          "ms": 42,
+          "chat_calls": 0,
+          "prompt_tokens": 0,
+          "output_tokens": 0,
+          "prefill_ms": 0,
+          "decode_ms": 0,
+          "load_ms": 6,
+          "embed_ms": 39
+        },
+        "Knowledge": {
+          "ms": 2128,
+          "chat_calls": 1,
+          "prompt_tokens": 1978,
+          "output_tokens": 128,
+          "prefill_ms": 411,
+          "decode_ms": 1680,
+          "load_ms": 5,
+          "embed_ms": 0
+        }
+      }
+    },
+    {
+      "id": "h15",
+      "question": "ทำ PO แล้วระบบเตือนว่าราคาสูงกว่าราคากลาง",
+      "expected": {
+        "intent": "problem",
+        "module": "PO",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "problem",
+        "module": "PO",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": true,
+      "top_score": 0.6873,
+      "searches": 1,
+      "queries": [
+        "ทำ PO แล้วระบบเตือนว่าราคาสูงกว่าราคากลางเกิดข้อผิดพลาดอย่างไร"
+      ],
+      "hits": [
+        "PO-6",
+        "PO-4",
+        "PO-3",
+        "RCV-3",
+        "FAQ-5"
+      ],
+      "reply": "ต้องแนบเหตุผลประกอบ และจะมีผู้อนุมัติเพิ่มอีกหนึ่งขั้น",
+      "evidence": "รหัส PO-E02 ราคาสูงกว่าราคากลาง เกิดเมื่อราคาต่อหน่วยสูงกว่าราคากลางในระบบเกิน 10 เปอร์เซ็นต์ ต้องแนบเหตุผลประกอบ และจะมีผู้อนุมัติเพิ่มอีกหนึ่งขั้น",
+      "latency_s": 2.94,
+      "stages": {
+        "Router": {
+          "ms": 689,
+          "chat_calls": 1,
+          "prompt_tokens": 703,
+          "output_tokens": 51,
+          "prefill_ms": 22,
+          "decode_ms": 628,
+          "load_ms": 4,
+          "embed_ms": 0
+        },
+        "Retriever": {
+          "ms": 50,
+          "chat_calls": 0,
+          "prompt_tokens": 0,
+          "output_tokens": 0,
+          "prefill_ms": 0,
+          "decode_ms": 0,
+          "load_ms": 6,
+          "embed_ms": 47
+        },
+        "Knowledge": {
+          "ms": 2200,
+          "chat_calls": 1,
+          "prompt_tokens": 1369,
+          "output_tokens": 150,
+          "prefill_ms": 239,
+          "decode_ms": 1920,
+          "load_ms": 4,
+          "embed_ms": 0
+        }
+      }
+    },
+    {
+      "id": "h16",
+      "question": "ตั้งหนี้แล้วขึ้น AP-E02",
+      "expected": {
+        "intent": "problem",
+        "module": "AP",
+        "outcome": "answer"
+      },
+      "actual": {
+        "intent": "problem",
+        "module": "AP",
+        "outcome": "answer"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": true,
+      "outcome_ok": true,
+      "content_ok": true,
+      "top_score": 0.6769,
+      "searches": 1,
+      "queries": [
+        "ตั้งหนี้แล้วขึ้นรหัสผิดพลาด AP-E02"
+      ],
+      "hits": [
+        "AP-6",
+        "AP-2",
+        "AP-5",
+        "PR-5",
+        "AP-1"
+      ],
+      "reply": "ตรวจสอบว่ารับของครบหรือไม่ ถ้าราคาเปลี่ยนต้องให้ฝ่ายจัดซื้อทำ Revision ของ PO ก่อน",
+      "evidence": "ยอดไม่ตรงกับใบรับสินค้า จำนวนหรือราคาในใบแจ้งหนี้ไม่ตรงกับใบรับสินค้าหรือใบสั่งซื้อ ให้ตรวจสอบว่ารับของครบหรือไม่ ถ้าราคาเปลี่ยนต้องให้ฝ่ายจัดซื้อทำ Revision ของ PO ก่อน",
+      "latency_s": 2.92,
+      "stages": {
+        "Router": {
+          "ms": 551,
+          "chat_calls": 1,
+          "prompt_tokens": 698,
+          "output_tokens": 41,
+          "prefill_ms": 21,
+          "decode_ms": 499,
+          "load_ms": 4,
+          "embed_ms": 0
+        },
+        "Retriever": {
+          "ms": 55,
+          "chat_calls": 0,
+          "prompt_tokens": 0,
+          "output_tokens": 0,
+          "prefill_ms": 0,
+          "decode_ms": 0,
+          "load_ms": 6,
+          "embed_ms": 52
+        },
+        "Knowledge": {
+          "ms": 2310,
+          "chat_calls": 1,
+          "prompt_tokens": 1512,
+          "output_tokens": 152,
+          "prefill_ms": 280,
+          "decode_ms": 1975,
+          "load_ms": 6,
+          "embed_ms": 0
+        }
+      }
+    },
+    {
+      "id": "h17",
+      "question": "แอปมือถือเด้งออกเองทุกครั้งที่กดถ่ายรูปสินค้าตอนรับของ",
+      "expected": {
+        "intent": "problem",
+        "module": "RCV",
+        "outcome": "ticket"
+      },
+      "actual": {
+        "intent": "problem",
+        "module": "RCV",
+        "outcome": "ticket"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": null,
+      "outcome_ok": true,
+      "content_ok": null,
+      "top_score": 0.497,
+      "searches": 1,
+      "queries": [
+        "แอปมือถือเด้งออกเองทุกครั้งที่กดถ่ายรูปสินค้าตอนรับของ"
+      ],
+      "hits": [
+        "FAQ-6",
+        "RCV-2",
+        "RCV-5",
+        "FAQ-1",
+        "RCV-1"
+      ],
+      "reply": "ยังไม่พบวิธีแก้ในคู่มือ จึงเปิด Ticket T-261113-170625-9622 ให้ทีม Support งานจัดซื้อแล้ว (ความเร่งด่วน: high)\nเพื่อให้แก้ได้เร็วขึ้น กรุณาเตรียม: เลขที่เอกสาร RCV ที่เกิดปัญหา, ภาพหน้าจอหรือวิดีโอที่แสดงปัญหา, เวลานำมาใช้งานและวันที่เกิดปัญหา",
+      "evidence": "",
+      "latency_s": 2.73,
+      "stages": {
+        "Router": {
+          "ms": 721,
+          "chat_calls": 1,
+          "prompt_tokens": 715,
+          "output_tokens": 54,
+          "prefill_ms": 24,
+          "decode_ms": 663,
+          "load_ms": 3,
+          "embed_ms": 0
+        },
+        "Retriever": {
+          "ms": 33,
+          "chat_calls": 0,
+          "prompt_tokens": 0,
+          "output_tokens": 0,
+          "prefill_ms": 0,
+          "decode_ms": 0,
+          "load_ms": 6,
+          "embed_ms": 30
+        },
+        "Ticket": {
+          "ms": 1974,
+          "chat_calls": 1,
+          "prompt_tokens": 393,
+          "output_tokens": 154,
+          "prefill_ms": 53,
+          "decode_ms": 1897,
+          "load_ms": 4,
+          "embed_ms": 0
+        }
+      }
+    },
+    {
+      "id": "h18",
+      "question": "ขึ้น BUDGET-E04 ตอนนำเข้า BOQ",
+      "expected": {
+        "intent": "problem",
+        "module": "BUDGET",
+        "outcome": "ticket"
+      },
+      "actual": {
+        "intent": "problem",
+        "module": "BUDGET",
+        "outcome": "ticket"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": null,
+      "outcome_ok": true,
+      "content_ok": null,
+      "top_score": 0.6055,
+      "searches": 1,
+      "queries": [
+        "นำเข้า BOQ แล้วเกิดข้อผิดพลาดรหัส BUDGET-E04"
+      ],
+      "hits": [
+        "BUDGET-2",
+        "PR-5",
+        "BUDGET-3",
+        "BUDGET-1",
+        "FAQ-10"
+      ],
+      "reply": "ยังไม่พบวิธีแก้ในคู่มือ จึงเปิด Ticket T-261113-170627-2413 ให้ทีม Support งานควบคุมต้นทุนแล้ว (ความเร่งด่วน: medium)\nเพื่อให้แก้ได้เร็วขึ้น กรุณาเตรียม: เลขที่เอกสาร BOQ ที่เกิดปัญหา, ข้อมูลเพิ่มเติมเกี่ยวกับข้อผิดพลาด (หากมี), ขั้นตอนการดำเนินการก่อนเกิดข้อผิดพลาด",
+      "evidence": "",
+      "latency_s": 2.55,
+      "stages": {
+        "Router": {
+          "ms": 590,
+          "chat_calls": 1,
+          "prompt_tokens": 699,
+          "output_tokens": 45,
+          "prefill_ms": 21,
+          "decode_ms": 548,
+          "load_ms": 4,
+          "embed_ms": 0
+        },
+        "Retriever": {
+          "ms": 61,
+          "chat_calls": 0,
+          "prompt_tokens": 0,
+          "output_tokens": 0,
+          "prefill_ms": 0,
+          "decode_ms": 0,
+          "load_ms": 6,
+          "embed_ms": 58
+        },
+        "Knowledge": {
+          "ms": 0,
+          "chat_calls": 0,
+          "prompt_tokens": 0,
+          "output_tokens": 0,
+          "prefill_ms": 0,
+          "decode_ms": 0,
+          "load_ms": 0,
+          "embed_ms": 0
+        },
+        "Ticket": {
+          "ms": 1898,
+          "chat_calls": 1,
+          "prompt_tokens": 369,
+          "output_tokens": 148,
+          "prefill_ms": 40,
+          "decode_ms": 1818,
+          "load_ms": 4,
+          "embed_ms": 0
+        }
+      }
+    },
+    {
+      "id": "h19",
+      "question": "รายงานเจ้าหนี้ยอดรวมไม่ตรงกับงบการเงิน ต่างกันเป็นแสน",
+      "expected": {
+        "intent": "problem",
+        "module": "AP",
+        "outcome": "ticket"
+      },
+      "actual": {
+        "intent": "problem",
+        "module": "AP",
+        "outcome": "ticket"
+      },
+      "intent_ok": true,
+      "module_ok": true,
+      "retrieval_ok": null,
+      "outcome_ok": true,
+      "content_ok": null,
+      "top_score": 0.6544,
+      "searches": 1,
+      "queries": [
+        "ยอดรวมในรายงานเจ้าหนี้ไม่ตรงกับงบการเงิน มีความต่างเป็นแสนทำอย่างไร"
+      ],
+      "hits": [
+        "AP-6",
+        "AP-2",
+        "BUDGET-3",
+        "AP-5",
+        "AP-3"
+      ],
+      "reply": "ยังไม่พบวิธีแก้ในคู่มือ จึงเปิด Ticket T-261113-170630-3FA0 ให้ทีม Support งานบัญชีการเงินแล้ว (ความเร่งด่วน: high)\nเพื่อให้แก้ได้เร็วขึ้น กรุณาเตรียม: เลขที่เอกสารที่เกี่ยวข้อง, ภาพหน้าจอแสดงข้อผิดพลาดหรือข้อมูลที่เกี่ยวข้อง, วันที่และเวลาที่เกิดปัญหา",
+      "evidence": "",
+      "latency_s": 2.88,
+      "stages": {
+        "Router": {
+          "ms": 658,
+          "chat_calls": 1,
+          "prompt_tokens": 707,
+          "output_tokens": 50,
+          "prefill_ms": 23,
+          "decode_ms": 612,
+          "load_ms": 4,
+          "embed_ms": 0
+        },
+        "Retriever": {
+          "ms": 54,
+          "chat_calls": 0,
+          "prompt_tokens": 0,
+          "output_tokens": 0,
+          "prefill_ms": 0,
+          "decode_ms": 0,
+          "load_ms": 6,
+          "embed_ms": 52
+        },
+        "Knowledge": {
+          "ms": 492,
+          "chat_calls": 1,
+          "prompt_tokens": 1485,
+          "output_tokens": 20,
+          "prefill_ms": 184,
+          "decode_ms": 272,
+          "load_ms": 3,
+          "embed_ms": 0
+        },
+        "Ticket": {
+          "ms": 1672,
+          "chat_calls": 1,
+          "prompt_tokens": 379,
+          "output_tokens": 130,
+          "prefill_ms": 42,
+          "decode_ms": 1599,
+          "load_ms": 4,
+          "embed_ms": 0
+        }
+      }
+    },
+    {
+      "id": "h20",
+      "question": "ระบบช้ามากตั้งแต่บ่าย เปิดหน้าไหนก็หมุนค้าง",
+      "expected": {
+        "intent": "problem",
+        "module": "GENERAL",
+        "outcome": "ticket"
+      },
+      "actual": {
+        "intent": "problem",
+        "module": "UNKNOWN",
+        "outcome": "ticket"
+      },
+      "intent_ok": true,
+      "module_ok": false,
+      "retrieval_ok": null,
+      "outcome_ok": true,
+      "content_ok": null,
+      "top_score": 0.5461,
+      "searches": 1,
+      "queries": [
+        "ระบบ SiteERP ช้ามากตั้งแต่บ่าย เปิดหน้าไหนก็หมุนค้าง"
+      ],
+      "hits": [
+        "FAQ-6",
+        "FAQ-15",
+        "FAQ-13",
+        "RCV-2"
+      ],
+      "reply": "ยังไม่พบวิธีแก้ในคู่มือ จึงเปิด Ticket T-261113-170632-0CD5 ให้IT Helpdesk L2แล้ว (ความเร่งด่วน: medium)\nเพื่อให้แก้ได้เร็วขึ้น กรุณาเตรียม: เวลาที่เกิดปัญหา (精确到分钟), 截图或描述卡顿的界面, 其他同事是否也遇到相同问题",
+      "evidence": "",
+      "latency_s": 2.1,
+      "stages": {
+        "Router": {
+          "ms": 629,
+          "chat_calls": 1,
+          "prompt_tokens": 706,
+          "output_tokens": 47,
+          "prefill_ms": 23,
+          "decode_ms": 572,
+          "load_ms": 4,
+          "embed_ms": 0
+        },
+        "Retriever": {
+          "ms": 16,
+          "chat_calls": 0,
+          "prompt_tokens": 0,
+          "output_tokens": 0,
+          "prefill_ms": 0,
+          "decode_ms": 0,
+          "load_ms": 3,
+          "embed_ms": 15
+        },
+        "Ticket": {
+          "ms": 1447,
+          "chat_calls": 1,
+          "prompt_tokens": 375,
+          "output_tokens": 113,
+          "prefill_ms": 41,
+          "decode_ms": 1384,
+          "load_ms": 3,
+          "embed_ms": 0
+        }
+      }
+    },
+    {
+      "id": "h21",
+      "question": "พรุ่งนี้ฝนจะตกที่ไซต์งานไหม",
+      "expected": {
+        "intent": "out_of_scope",
+        "module": "UNKNOWN",
+        "outcome": "out_of_scope"
+      },
+      "actual": {
+        "intent": "out_of_scope",
+        "module": "UNKNOWN",
+        "outcome": "out_of_scope"
+      },
+      "intent_ok": true,
+      "module_ok": null,
+      "retrieval_ok": null,
+      "outcome_ok": true,
+      "content_ok": null,
+      "top_score": null,
+      "searches": 0,
+      "queries": [],
+      "hits": [],
+      "reply": "ขออภัย ผู้ช่วยนี้ตอบเฉพาะเรื่องการใช้งานโปรแกรม SiteERP เช่น ใบขอซื้อ ใบสั่งซื้อ รับสินค้า เจ้าหนี้ และงบประมาณโครงการ",
+      "evidence": "",
+      "latency_s": 0.45,
+      "stages": {
+        "Router": {
+          "ms": 452,
+          "chat_calls": 1,
+          "prompt_tokens": 698,
+          "output_tokens": 29,
+          "prefill_ms": 22,
+          "decode_ms": 350,
+          "load_ms": 8,
+          "embed_ms": 30
+        },
+        "Guard": {
+          "ms": 0,
+          "chat_calls": 0,
+          "prompt_tokens": 0,
+          "output_tokens": 0,
+          "prefill_ms": 0,
+          "decode_ms": 0,
+          "load_ms": 0,
+          "embed_ms": 0
+        }
+      }
+    },
+    {
+      "id": "h22",
+      "question": "ขอสูตรคำนวณปริมาณคอนกรีตเสาเข็มหน่อย",
+      "expected": {
+        "intent": "out_of_scope",
+        "module": "UNKNOWN",
+        "outcome": "out_of_scope"
+      },
+      "actual": {
+        "intent": "how_to",
+        "module": "UNKNOWN",
+        "outcome": "ticket"
+      },
+      "intent_ok": false,
+      "module_ok": null,
+      "retrieval_ok": null,
+      "outcome_ok": false,
+      "content_ok": null,
+      "top_score": 0.4759,
+      "searches": 1,
+      "queries": [
+        "ขอสูตรคำนวณปริมาณคอนกรีตเสาเข็ม"
+      ],
+      "hits": [
+        "PR-3",
+        "AP-4",
+        "AP-2",
+        "BUDGET-5"
+      ],
+      "reply": "ยังไม่พบวิธีแก้ในคู่มือ จึงเปิด Ticket T-261113-170635-CDB7 ให้IT Helpdesk L2แล้ว (ความเร่งด่วน: low)\nเพื่อให้แก้ได้เร็วขึ้น กรุณาเตรียม: ขนาดและลักษณะของเสาเข็ม (ความสูง, รัศมี), ความหนาแน่นของคอนกรีตที่ใช้, วิธีการคำนวณที่ผู้ใช้ได้ลองใช้แล้ว",
+      "evidence": "",
+      "latency_s": 2.39,
+      "stages": {
+        "Router": {
+          "ms": 517,
+          "chat_calls": 1,
+          "prompt_tokens": 703,
+          "output_tokens": 40,
+          "prefill_ms": 23,
+          "decode_ms": 486,
+          "load_ms": 4,
+          "embed_ms": 0
+        },
+        "Retriever": {
+          "ms": 14,
+          "chat_calls": 0,
+          "prompt_tokens": 0,
+          "output_tokens": 0,
+          "prefill_ms": 0,
+          "decode_ms": 0,
+          "load_ms": 3,
+          "embed_ms": 13
+        },
+        "Ticket": {
+          "ms": 1859,
+          "chat_calls": 1,
+          "prompt_tokens": 369,
+          "output_tokens": 145,
+          "prefill_ms": 41,
+          "decode_ms": 1780,
+          "load_ms": 4,
+          "embed_ms": 0
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+# ใช้รันชุดทดสอบ (pytest) และตรวจโค้ด (pyflakes) — ไม่จำเป็นสำหรับการใช้งานปกติ
+-r requirements.txt
+pytest>=8.0
+pyflakes>=3.0

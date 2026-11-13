@@ -2,21 +2,24 @@
 
 รัน:  python prep.py              (ทำครบทุกขั้น)
       python prep.py --no-index   (ทำแค่ clean + chunk ไม่ต้องเปิด Ollama)
+      python prep.py --save-html docs/prep.html   (บันทึกรายงานบนหน้าจอเป็น HTML)
 """
 import argparse
 import json
 import re
+from pathlib import Path
 from collections import Counter
 
 from rich.console import Console
 from rich.table import Table
+from rich.terminal_theme import MONOKAI
 
 from helpdesk import config
 from helpdesk.prep.chunk import chunk_manual
 from helpdesk.prep.clean import clean_text
 from helpdesk.prep.faq import load_faq
 
-console = Console()
+console = Console(record=True)  # record=True เพื่อบันทึกหน้าจอเป็น HTML ได้
 
 FIX_LABELS = {
     "header_footer_removed": "ลบหัว/ท้ายกระดาษ",
@@ -42,7 +45,17 @@ def first_section(text: str) -> str:
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--no-index", action="store_true", help="ไม่สร้าง embedding/index")
+    parser.add_argument("--save-html", metavar="PATH", help="บันทึกรายงานบนหน้าจอเป็นไฟล์ HTML")
     args = parser.parse_args()
+    try:
+        prepare(args)
+    finally:
+        if args.save_html:
+            Path(args.save_html).parent.mkdir(parents=True, exist_ok=True)
+            console.save_html(args.save_html, theme=MONOKAI)  # พื้นมืดแบบหน้าจอเทอร์มินัล
+
+
+def prepare(args) -> None:
 
     clean_dir = config.PROCESSED_DIR / "clean"
     clean_dir.mkdir(parents=True, exist_ok=True)
